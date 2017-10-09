@@ -2,47 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JSconf EU 2018</title>
+    <title>JSConf EU 2018</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.1/css/tachyons.min.css"/>
 
     <style media="screen">
-    /*@font-face {
-      font-family: GT Walsheim Pro;
-      font-weight: 400;
-      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Regular.eot");
-      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Regular.eot?#iefix") format("embedded-opentype"), url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Regular.woff") format("woff"), url("//2017.cssconf.eu/assets/fonts/fonts/GT-Walsheim-Regular.ttf") format("truetype");
-    }
-
-    @font-face {
-      font-family: GT Walsheim Pro;
-      font-weight: 600;
-      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Medium.eot");
-      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Medium.eot?#iefix") format("embedded-opentype"), url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Medium.woff") format("woff"), url("//2017.cssconf.eu/assets/fonts/fonts/GT-Walsheim-Medium.ttf") format("truetype");
-    }*/
 
     :root {
       --color-white: #FFF;
-      --color-off-white: #FBFAF6;
-      --color-white-grey: #F6F6F6;
-      --color-grey-dark: #2B2B2B;
-      --color-salmon: #FF6D56;
-      --color-red: #EA3A3A;
-      --color-mint: #42CDB2;
-      --color-green: #3EC446;
-      --color-yellow: #FFE90A;
-      --color-yellow-50: #FDE093;
-      --color-yolk: #FBC227;
-      --color-rose: #FA99B4;
-      --color-plum: #544EBF;
-      --color-blue: #2176FF;
-      --color-blue-70: #639FFF;
-      --color-blue-dark: #21303B;
-      --color-blue-light: #5CCAEB;
+      --color-off-white: #f5f6f7;
+      --color-grey-dark: #272d38;
+      --color-blue: #051ADD;
+      --color-pink: #E00079;
+      font-size: 100%;
+    }
+
+    @media (min-width: 60rem) {
+      :root {
+        font-size: 112.5%;
+      }
+    }
+
+    @media (min-width: 90rem) {
+      :root {
+        font-size: 125%;
+      }
     }
 
     body {
-      font-family: 'GT Walsheim Pro', Helvetica, sans-serif;
+      font-family: "jaf-domus", sans-serif;
       line-height: 1.666;
       letter-spacing: 0.025em;
       background-color: var(--color-off-white);
@@ -63,38 +51,26 @@
     a:hover,
     a:focus {
       text-decoration: underline;
-      color: var(--color-salmon);
-    }
-
-    .wrapper {
-      background-color: var(--color-white);
+      color: var(--color-pink);
     }
 
     .cta {
       display: inline-block;
       padding: 1rem;
-      border: solid 5px var(--color-blue);
-      font-size: 1.5rem;
+      color: var(--color-grey-dark);
+      border: solid 2px var(--color-grey-dark);
+      font-size: 1rem;
     }
 
     .cta:hover,
     .cta:focus {
-      color: var(--color-salmon);
-      border-color: var(--color-salmon);
+      color: var(--color-pink);
+      border-color: var(--color-pink);
       text-decoration: none;
     }
 
     .footer-li {
       display: inline;
-    }
-
-    .footer-li:after {
-      content: " ";
-      display: inline-block;
-      width: 1px;
-      height: 1rem;
-      background-color: var(--color-white);
-      vertical-align: -0.15rem;
     }
 
     .footer-li a {
@@ -103,29 +79,36 @@
     }
 
     </style>
-
+    <script src="https://use.typekit.net/gug4wmv.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
-    <div class="flex flex-column items-center justify-center vh-100 pa3">
-      <div class="mw6 tc pa3 pa4-l wrapper">
-        {{logo.svg}}
-        <h1 class="lh-title pv3">
+    <div class="flex flex-column items-center justify-center vh-100">
+      <div class="mw6 tc pa3 pa4-l">
+
+        <svg id="jsconf-eu-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 110" class="mw4 mt3 center">
+          <defs><style>.cls-1{fill:#e00079;}</style></defs><title>JSConf EU 2018</title><g id="logoname"><path class="cls-1" d="M5,103.85c0,2.18,0,3.25-1.68,4.9-.68.68-1.06.86-1.45.86a1.48,1.48,0,0,1-1.45-1.38c0-.57.52-.82.91-1.23.84-.84.84-1.86.84-3.18V97.1A1.77,1.77,0,0,1,2.36,96a1.38,1.38,0,0,1,1.2-.41,1.39,1.39,0,0,1,1.2.41A1.77,1.77,0,0,1,5,97.1Z"/><path class="cls-1" d="M12.71,100.88a3.44,3.44,0,0,1,1.77,3c0,2.27-1.9,3.54-4.17,3.54a5.54,5.54,0,0,1-2.43-.54c-.57-.29-1-.66-1-1.29s.43-1.36,1.13-1.36,1.27.82,2.36.82c.79,0,1.32-.41,1.32-1.06s-.64-1.09-1.43-1.5C8.86,101.81,7,101,7,98.86s1.79-3.4,4-3.4c1.57,0,3.25.68,3.25,1.73a1.33,1.33,0,0,1-1.18,1.31c-.64,0-1.22-.66-2.13-.66-.7,0-1.13.38-1.13.86C9.83,99.63,11.44,100,12.71,100.88Z"/><path class="cls-1" d="M21.55,104.88a3.54,3.54,0,0,0,1.36-.27,4.06,4.06,0,0,1,1.25-.46c.73,0,1.13.88,1.13,1.41a1.4,1.4,0,0,1-.8,1.14,6.33,6.33,0,0,1-3.09.73,6,6,0,0,1,.05-12,6.26,6.26,0,0,1,3,.72,1.37,1.37,0,0,1,.8,1.16c0,.55-.38,1.43-1.13,1.43a4.13,4.13,0,0,1-1.34-.46A3.69,3.69,0,0,0,21.41,98c-1.57,0-3,1-3,3.38S19.9,104.88,21.55,104.88Z"/><path class="cls-1" d="M32.34,95.4a5.76,5.76,0,0,1,6.12,6,5.83,5.83,0,0,1-6.17,6.06,5.76,5.76,0,0,1-6.12-6A5.83,5.83,0,0,1,32.34,95.4Zm0,9.66c2,0,3.27-1.32,3.27-3.61s-1.29-3.63-3.29-3.63S29,99.14,29,101.43,30.32,105.06,32.32,105.06Z"/><path class="cls-1" d="M43.08,105.8a1.72,1.72,0,0,1-.21,1.11,1.34,1.34,0,0,1-1.14.43,1.36,1.36,0,0,1-1.16-.43,1.74,1.74,0,0,1-.21-1.11V96.66c0-.68.48-1.11,1.48-1.11a2.08,2.08,0,0,1,1.9,1.06l4.61,6V97.1A1.72,1.72,0,0,1,48.55,96a1.34,1.34,0,0,1,1.14-.43,1.36,1.36,0,0,1,1.16.43,1.72,1.72,0,0,1,.21,1.11v9.16c0,.75-.48,1.13-1.31,1.13a2,2,0,0,1-1.75-1l-4.94-6.31Z"/><path class="cls-1" d="M56.46,105.8a1.74,1.74,0,0,1-.21,1.11,1.33,1.33,0,0,1-1.16.43,1.37,1.37,0,0,1-1.18-.43,1.74,1.74,0,0,1-.21-1.11V97c0-.93.38-1.29,1.32-1.29h4.13a1.82,1.82,0,0,1,1.09.2,1.2,1.2,0,0,1,.43,1.06A1.21,1.21,0,0,1,60.23,98a1.82,1.82,0,0,1-1.09.2H56.46v2.07h2.18a1.82,1.82,0,0,1,1.09.2,1.16,1.16,0,0,1,.43,1,1.18,1.18,0,0,1-.43,1.06,1.82,1.82,0,0,1-1.09.2H56.46Z"/><path class="cls-1" d="M62.06,107.39a1.59,1.59,0,1,1,1.59-1.59A1.49,1.49,0,0,1,62.06,107.39Z"/><path class="cls-1" d="M68.49,100h1.95a1.94,1.94,0,0,1,1.09.18,1.43,1.43,0,0,1,0,2,1.94,1.94,0,0,1-1.09.18H68.49v2.49h3a1.94,1.94,0,0,1,1.09.18,1.43,1.43,0,0,1,0,2,1.94,1.94,0,0,1-1.09.18H67.12c-1,0-1.32-.38-1.32-1.32V97c0-1,.36-1.32,1.32-1.32h4a1.94,1.94,0,0,1,1.09.18,1.43,1.43,0,0,1,0,2,1.94,1.94,0,0,1-1.09.18H68.49Z"/><path class="cls-1" d="M81.73,104.33a3.17,3.17,0,0,0,.52-2.07V97.1A1.77,1.77,0,0,1,82.47,96a1.9,1.9,0,0,1,2.36,0A1.77,1.77,0,0,1,85,97.1v5a5.41,5.41,0,0,1-1,3.81,5.12,5.12,0,0,1-4.17,1.54,5,5,0,0,1-4.13-1.54,5.34,5.34,0,0,1-1-3.83v-5A1.77,1.77,0,0,1,74.9,96a2,2,0,0,1,2.4,0,1.77,1.77,0,0,1,.21,1.13v5.15a3.16,3.16,0,0,0,.5,2.07,2.32,2.32,0,0,0,1.88.72A2.26,2.26,0,0,0,81.73,104.33Z"/></g><path id="heart" class="cls-1" d="M82.61.4H4a3,3,0,0,0-3,3V82a3,3,0,0,0,3,3H82.61a3,3,0,0,0,3-3V3.4A3,3,0,0,0,82.61.4Zm-14,59.73L54.06,74.71,39.47,60.12C34.93,55.58,35,49,39.16,44.86a10.54,10.54,0,0,1,14.9,0,10.54,10.54,0,0,1,14.9,0C73.09,49,73.19,55.58,68.65,60.12Z"/>
+        </svg>
+
+        <p class="mt3 f6 f5-m">
           June 2nd &amp; 3rd 2018
           <br>
           Berlin, Germany
-        </h1>
-        <p class="center pa3">
-          JSConf EU is <em>the</em> labour-of-love conference for the JavaScript community in Europe.
-          <br>
-          <a href="https://www.youtube.com/watch?v=-mxPPmQs2G8" target="_blank">Watch the 2017 film here</a>
         </p>
 
         <p class="pa3">
           <a href="https://confirmsubscription.com/h/d/879A481DB04CB70D" class="lh-title cta">Subscribe to Updates</a>
         </p>
+
+        <p class="mb3 ph3-ns f6 f5-m">
+          JSConf EU is <em>the</em> labour-of-love conference for the JavaScript community in Europe.
+          <br>
+          <a href="https://www.youtube.com/watch?v=-mxPPmQs2G8" target="_blank">Watch the 2017 film here</a>
+        </p>
+
       </div>
 
-      <ul class="m0 pa0 pt3 pt4-m pt5-l tc f7 f6-m">
+      <ul class="mb0 pa0 pt2 tc f7 f6-m">
        <li class="footer-li"><a href="https://twitter.com/jsconfeu">Twitter</a></li>
        <li class="footer-li"><a href="https://www.youtube.com/jsconfeu">YouTube</a></li>
        <li class="footer-li"><a href="https://confirmsubscription.com/h/d/879A481DB04CB70D">Newsletter</a></li>
