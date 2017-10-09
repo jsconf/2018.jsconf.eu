@@ -1,3 +1,139 @@
-<pre># 2018.jsconf.eu
-Disco.
-</pre>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JSconf EU 2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.1/css/tachyons.min.css"/>
+
+    <style media="screen">
+    /*@font-face {
+      font-family: GT Walsheim Pro;
+      font-weight: 400;
+      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Regular.eot");
+      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Regular.eot?#iefix") format("embedded-opentype"), url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Regular.woff") format("woff"), url("//2017.cssconf.eu/assets/fonts/fonts/GT-Walsheim-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: GT Walsheim Pro;
+      font-weight: 600;
+      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Medium.eot");
+      src: url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Medium.eot?#iefix") format("embedded-opentype"), url("//2017.cssconf.eu/assets/fonts/GT-Walsheim-Medium.woff") format("woff"), url("//2017.cssconf.eu/assets/fonts/fonts/GT-Walsheim-Medium.ttf") format("truetype");
+    }*/
+
+    :root {
+      --color-white: #FFF;
+      --color-off-white: #FBFAF6;
+      --color-white-grey: #F6F6F6;
+      --color-grey-dark: #2B2B2B;
+      --color-salmon: #FF6D56;
+      --color-red: #EA3A3A;
+      --color-mint: #42CDB2;
+      --color-green: #3EC446;
+      --color-yellow: #FFE90A;
+      --color-yellow-50: #FDE093;
+      --color-yolk: #FBC227;
+      --color-rose: #FA99B4;
+      --color-plum: #544EBF;
+      --color-blue: #2176FF;
+      --color-blue-70: #639FFF;
+      --color-blue-dark: #21303B;
+      --color-blue-light: #5CCAEB;
+    }
+
+    body {
+      font-family: 'GT Walsheim Pro', Helvetica, sans-serif;
+      line-height: 1.666;
+      letter-spacing: 0.025em;
+      background-color: var(--color-off-white);
+      color: var(--color-grey-dark);
+    }
+
+    a, input, button {
+      transition-property: color, border-color, background-color;
+      transition-duration: .1s;
+      transition-timing-function: ease-in-out;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--color-blue);
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      color: var(--color-salmon);
+    }
+
+    .wrapper {
+      background-color: var(--color-white);
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 1rem;
+      border: solid 5px var(--color-blue);
+      font-size: 1.5rem;
+    }
+
+    .cta:hover,
+    .cta:focus {
+      color: var(--color-salmon);
+      border-color: var(--color-salmon);
+      text-decoration: none;
+    }
+
+    .footer-li {
+      display: inline;
+    }
+
+    .footer-li:after {
+      content: " ";
+      display: inline-block;
+      width: 1px;
+      height: 1rem;
+      background-color: var(--color-white);
+      vertical-align: -0.15rem;
+    }
+
+    .footer-li a {
+      display: inline-block;
+      padding: .25rem 1rem;
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="flex flex-column items-center justify-center vh-100 pa3">
+      <div class="mw6 tc pa3 pa4-l wrapper">
+        {{logo.svg}}
+        <h1 class="lh-title pv3">
+          June 1st 2018
+          <br>
+          Berlin, Germany
+        </h1>
+        <p class="center pa3">
+          CSSConf EU is a one-day, one-track community conference dedicated to
+          everyone who loves and writes CSS.
+          <br>
+          <a href="https://www.youtube.com/playlist?list=PL37ZVnwpeshF0XmpjKBJ3-0kvr3b5ZpJR" target="_blank">Watch the 2017 film here</a>
+        </p>
+
+        <p class="pa3">
+          <a href="https://confirmsubscription.com/h/d/879A481DB04CB70D" class="lh-title cta">Subscribe to Updates</a>
+        </p>
+      </div>
+
+      <ul class="m0 pa0 pt3 pt4-m pt5-l tc f7 f6-m">
+       <li class="footer-li"><a href="https://twitter.com/cssconfeu">Twitter</a></li>
+       <li class="footer-li"><a href="https://www.facebook.com/cssconfeu/">Facebook</a></li>
+       <li class="footer-li"><a href="https://www.youtube.com/playlist?list=PL37ZVnwpeshF0XmpjKBJ3-0kvr3b5ZpJR">YouTube</a></li>
+       <li class="footer-li"><a href="https://confirmsubscription.com/h/d/879A481DB04CB70D">Newsletter</a></li>
+       <li class="footer-li"><a href="mailto:contact@cssconf.eu">Sponsor Information</a></li>
+       <li class="footer-li"><a href="https://2017.cssconf.eu/code-of-conduct/">Code of Conduct</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
