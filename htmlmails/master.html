@@ -71,7 +71,9 @@
             max-width:600px !important;
         }
         a.button{
-            display:block;
+            display: inline-block;
+            padding: 13px 5px !important;
+            margin-right: 5px;
         }
         .image{
             vertical-align:bottom;
@@ -155,13 +157,13 @@
             text-align:left;
         }
         .headerContainer .textContent a,.headerContainer .textContent p a{
-            color:#E10079;
+            color:#E00079;
             font-weight:normal;
             text-decoration:underline;
         }
 
         .textContent a,.textContent p a{
-            color:#E10079;
+            color:#E00079;
             font-weight:normal;
             text-decoration:underline;
         }
@@ -195,7 +197,7 @@
             text-align:left;
         }
         .bodyContainer .textContent a,.bodyContainer .textContent p a{
-            color:#E10079;
+            color:#E00079;
             font-weight:normal;
             text-decoration:underline;
         }
@@ -210,6 +212,25 @@
             padding-top:45px;
             padding-bottom:63px;
         }
+
+
+        td[class="button"] a{
+            font-weight: normal !important;
+            color: #E00079 !important;
+            text-decoration: none;
+        }
+        .button {
+            display: inline-block !important;
+            margin-top: -4px !important;
+            margin-right: 4px !important;
+            margin-bottom: 10px;
+            padding: 16px !important;
+            border: 2px solid #E00079 !important;
+            background-color: #fff !important;
+            color: #E00079 !important;
+            cursor: pointer !important;
+        }
+
         @media only screen and (min-width:768px){
             .templateContainer{
                 width:600px !important;
@@ -356,52 +377,6 @@
                                                     </table>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td valign="top" class="textBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                    <!--[if mso]>
-                                                    <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-                                                        <tr>
-                                                            <td valign="top" width="600" style="width:600px;">
-                                                    <![endif]-->
-                                                    <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff" width="100%" class="textContentContainer">
-                                                        <tbody>
-                                                        <tr>
-
-                                                            <td valign="top" class="textContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
-                                                                <h1 style="display: block;margin: 0;padding: 0;color: #999999;font-family: Georgia;font-size: 20px;font-style: italic;font-weight: normal;line-height: 125%;letter-spacing: normal;text-align: center;">
-                                                                    <singleline> 2nd & 3rd June </singleline>
-                                                                </h1>
-                                                                <h1 style="display: block;margin: 0;padding: 0;color: #E10079;font-family: Helvetica;font-size: 40px;font-style: normal;font-weight: bold;line-height: 150%;letter-spacing: normal;text-align: center;">
-                                                                    <singleline> Save the date </singleline>
-                                                                </h1>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <!--[if mso]>
-                                                    </td>
-                                                    </tr>
-                                                    </table>
-                                                    <![endif]-->
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="dividerBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;">
-                                            <tbody class="dividerBlockOuter">
-                                            <tr>
-                                                <td class="dividerBlockInner" style="min-width: 100%;padding: 27px 18px 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                    <table class="dividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                                                <span></span>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
                                             </tbody>
                                         </table>
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="textBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
@@ -417,13 +392,75 @@
                                                     <![endif]-->
                                                     <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" class="textContentContainer">
                                                         <tbody>
+                                                        <repeater>
+                                                            <layout label="Headline Gray">
+                                                                <tr>
+                                                                    <td valign="top" class="textContent" style="padding-top: 10px;padding-right: 0px;padding-bottom: 5px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                                                        <h1 style="display: block;margin: 0;padding: 0;color: #999999;font-family: Georgia;font-size: 20px;font-style: italic;font-weight: normal;line-height: 125%;letter-spacing: normal;text-align: center;">
+                                                                            <singleline> 2nd & 3rd June </singleline>
+                                                                        </h1>
+                                                                    </td>
+                                                                </tr>
+                                                            </layout>
+                                                            <layout label="Headline Pink">
+                                                                <tr>
+                                                                    <td valign="top" class="textContent" style="padding-top: 0;padding-right: 20px;padding-bottom: 20px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                                                        <h1 style="display: block;margin: 0;padding: 0;color: #E00079;font-family: Helvetica;font-size: 40px;font-style: normal;font-weight: bold;line-height: 150%;letter-spacing: normal;text-align: center;">
+                                                                            <singleline> Save the date </singleline>
+                                                                        </h1>
+                                                                    </td>
+                                                                </tr>
+                                                            </layout>
+                                                        <layout label='Text'>
+                                                            <tr>
+                                                                <td valign="top" class="textContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 10px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                                                    <p style="margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                                                        <multiline label="Black/Text" repeatertitle='true'>
+                                                                            Multilinte text <br> bla
+                                                                        </multiline>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </layout>
+                                                        <layout label='CTA'>
+                                                            <tr>
+                                                                <td style="padding:0 0 20px;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <table align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                                                                    <tr>
+                                                                                        <td height="7" style="font-size:0; line-height:0;">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td class="button" align="center" style="font:22px/26px Helvetica, Arial, sans-serif; background-color:#fff">
+                                                                                            <singleline label='CTA link'>
+                                                                                                <a style="color:#E00079;font-weight:bold;text-decoration:none" href="https://2018.jsconf.eu">JSConf EU 2018</a>
+                                                                                            </singleline>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td height="7" style="font-size:0; line-height:0;">
+                                                                                            &nbsp;
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </layout>
+                                                        </repeater>
+
                                                         <tr>
-                                                            <td valign="top" class="textContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
-                                                                <p style="margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
-                                                                    <multiline>Multilinte text <br> bla</multiline>
-                                                                </p>
+                                                            <td valign="top" height="10" class="textContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #0C1222;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                                                <span></span>
                                                             </td>
                                                         </tr>
+
                                                         </tbody>
                                                     </table>
                                                     <!--[if mso]>
