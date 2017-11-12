@@ -1,4 +1,5 @@
 @import 'normalize.css';
+@import 'tachyons';
 @import '_vars-colors.css';
 @import '_utility-backgrounds.css';
 @import '_buttons.css';
