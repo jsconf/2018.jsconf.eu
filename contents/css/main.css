@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import '_vars-breakpoints.css';
+@import 'tachyons';
 @import '_vars-colors.css';
 @import '_typography.css';
 @import '_layout.css';
