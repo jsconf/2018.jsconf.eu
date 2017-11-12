@@ -1,0 +1,24 @@
+/* Media Queries and Breakpoints */
+
+/* Use Like this:
+
+@media (--medium) {
+  p {
+    background: red;
+  }
+}
+this resolves to:
+@media (min-width: 64em) {
+  p {
+    background:red;
+  }
+}
+*/
+
+/* mobile first media queries, use these whenever possible */
+
+@custom-media --xsmall (width >= 30rem); /* 480px */
+@custom-media --small (width >= 40rem); /* 640px */
+@custom-media --medium (width >= 64rem); /* 1024px */
+@custom-media --large (width >= 87.5rem); /* 1400px */
+@custom-media --huge (width >= 110rem); /* 1600px */

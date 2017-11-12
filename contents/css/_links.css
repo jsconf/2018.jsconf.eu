@@ -1,0 +1,24 @@
+/* Default Links */
+a {
+  color: var(--evalblack);
+  text-decoration: none;
+  &:hover, &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+/* Links on dark background */
+.link--white {
+  color: var(--clearwhite);
+  &:hover, &:focus {
+    color: var(--returnrose);
+  }
+}
+
+.link--underline {
+  border-bottom: 3px solid var(--returnrose);
+  &:hover, &:focus {
+    border-color: var(--callbackpink);
+  }
+}

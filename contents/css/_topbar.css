@@ -1,0 +1,27 @@
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3rem;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.topbar-logo {
+  justify-self: start;
+  color: var(--clearwhite);
+}
+
+.topbar-nav {
+  display: none;
+  @media (--medium) {
+    display: flex;
+  }
+}
+
+.topbar-toggle {
+  display: block;
+  @media (--medium) {
+    display: none;
+  }
+}

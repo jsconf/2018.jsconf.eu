@@ -1,0 +1,22 @@
+/* Default Layout */
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  width: calc((100vw)-(2 * .75rem));
+  min-width: 18.5rem;
+  max-width: 60rem; /* 960px */
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--clearwhite);
+  @media (--small) {
+    width: calc((100vw)-(2 * 2rem));
+  }
+  @media (--large) {
+    width: calc((100vw)-(2 * 5rem));
+  }
+}

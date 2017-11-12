@@ -1,0 +1,48 @@
+:root {
+  font-size: 100%; /* 16px */
+  @media (--large) {
+    font-size: 112.5%; /* 18px */
+  }
+  @media (--huge) {
+    font-size: 125%; /* 20px */
+  }
+}
+
+body {
+  font-family: "jaf-domus", sans-serif;
+  line-height: 1.666;
+  letter-spacing: 0.025em;
+  color: var(--evalblack);
+  background-color: var(--promiselinen);
+  background-image: url('../images/pattern.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+input, button, textarea {
+  font-family: "jaf-domus", sans-serif;
+}
+
+/* Typography */
+
+p {
+  line-height: 1.6364;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+
+.heading--spaced {
+  line-height: 1.625;
+  text-transform: uppercase;
+  letter-spacing: 3.78%;
+  border-bottom: 4px solid var(--evalblack);
+}
+
+.heading--massive {
+  font-size: 3rem;
+  line-height: 2.8125;
+}

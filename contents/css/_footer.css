@@ -1,0 +1,6 @@
+.footer {
+  padding: .5rem;
+  @media (--medium) {
+    padding: .75rem;
+  }
+}
