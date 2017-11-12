@@ -96,7 +96,12 @@ p {
 
 .topbar-nav {
   display: none;
+
   @media (--medium) {
+    display: flex;
+  }
+
+  &.shown {
     display: flex;
   }
 }
