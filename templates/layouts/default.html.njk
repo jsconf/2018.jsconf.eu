@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+      {% if page.name %}
+        {{ page.name }} -
+      {% endif %}
+      {{ name }}
+    </title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e2007a">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="{{ contents.css["main.css"].url }}">
+    <script src="https://use.typekit.net/gug4wmv.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body class="sticky-footer-container">
+
+    {% block topbar %}
+      {% include "../partials/topbar.html.njk" %}
+    {% endblock %}
+
+    <div class="sticky-footer-container__content">
+      {% block header %}{% endblock %}
+      
+      {% block content %}
+        Hello I am default content 😗
+      {% endblock %}
+    </div>
+
+    {% block footer %}
+      {% include "../partials/footer.html.njk" %}
+    {% endblock %}
+    
+    <script type="text/javascript">
+	var _gauges = _gauges || [];
+	(function() {
+	  var t   = document.createElement('script');
+	  t.type  = 'text/javascript';
+	  t.async = true;
+	  t.id    = 'gauges-tracker';
+	  t.setAttribute('data-site-id', '50570251f5a1f57282000003');
+	  t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+	  t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+	  var s = document.getElementsByTagName('script')[0];
+	  s.parentNode.insertBefore(t, s);
+	})();
+    </script>
+  </body>
+</html>
