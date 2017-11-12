@@ -1,21 +1,21 @@
-# 2018.cssconf.eu
+# 2018.JSconf.eu
 
-This repository hosts the sourcecode and the website (in branch [`gh-pages`][gh-pages]) of the CSSconf EU site 2018.
+This repository hosts the sourcecode and the website (in branch [`gh-pages`][gh-pages]) of the JSonf EU site 2018.
 
-## up and running:
+## Develop
 
     npm install
     npm start
 
 Should bring up the server on port 8080
 
-## where is...
+## Where to find …
 
  - stylesheets: in `contents/css`. `contents/css/main.css` is the file that is pulled through postcss to become `/css/main.css` on the hosted site.
 
  - javascript: java*what*? nothing there yet. (will go into `contents/js` if needed)
 
- - assets: `contents/fonts`, `contents/icons`, `contents/images`, ... I guess the pattern is clear.
+ - assets: `contents/fonts`, `contents/icons`, `contents/images`, … and so on.
 
  - postcss-configuration
    - `config.json`: main configuration (which file, which plugins)
@@ -26,21 +26,21 @@ Should bring up the server on port 8080
    - `templates/pages` is for page-specific templates. So if there are special markup-needs for a given site, this is the place it belongs.
    - `templates/partials` is for smaller template-snippets that need to be reused or are just confusing to look at in a bigger file.
    - `templates/_macros.njk` contains all sorts of macro-definitions (called "mixins" in other template-engines, mostly used for often reused chunks of template-logic)
-   - `templates/filters`: you can drop js functions here that will then be available (after enabling them in `config.json`) in templates as filters. 
-   
+   - `templates/filters`: you can drop js functions here that will then be available (after enabling them in `config.json`) in templates as filters.
+
      For example `{{ someValue | myCoolFilterFunction }}` will call the exported function from `templates/filters/myCoolFilterFunction.js` with `someValue` as parameter. The value returned from that function is rendered.
 
- - the content: content (like real content now) is also found in the `contents` directory. For now, we support json and markdown files (with frontmatter) here. The [wintersmith-documentation][] has a good (and short) introduction to that. 
+ - the content: content (like real content now) is also found in the `contents` directory. For now, we support json and markdown files (with frontmatter) here. The [wintersmith-documentation][] has a good (and short) introduction to that.
 
    Even shorter: every (json or markdown) file is rendered as html-file by the same name (so `contents/blub.json` is rendered as `blub.html`). It has to contain a `template`-parameter (either in the json or in the [frontmatter][] of the markdown-file) that points to the template that will render the page.
 
-## about the templates...
+## About the Templates
 
 We're using the [nunjucks template-engine][]. It's great. It's a clone of the very popular jinja2 engine for python (only slightly different to jekylls liquid templates).
 
 Have a look at the [templating docs][] if you don't know it yet. Also contains hints about editor-support you might want to install.
 
-### data in templates
+### Data in Templates
 
 Data from the `locals`-section from `config.json` as well as node-modules loaded via `require` in `config.json` is available in the templates as global variables, so a variable `locals.someValue === "something"` is accessible via `{{ someValue }}` in all templates.
 
@@ -49,14 +49,14 @@ The current page is always accessible via `page`, the values from the frontmatte
 It is always possible to access any content from everywhere in the content-tree (that is what the `contents`-directory is called internally).
 That is what the variable `contents` is for. This represents the contents-directory as a object-hierarchy. So, to get the URL of the file `contents/images/some-image.png`, you can use `{{ contents.images['some-image.png'].url }}`.
 
-## debugging wintersmith..
+## Debugging Wintersmith
 
 There might be better ways, but this works for me:
 
 First, start application with `--inspect` flag:
 
     node --inspect node_modules/.bin/wintersmith --verbose preview`
-    
+
 Next, go to [chrome://inspect](chrome://inspect) in chrome and "Open dedicated DevTools for Node". This should connect a new devtools-instance to the wintersmith-server running in node.
 
 Depending on what you want to debug, find the corresponding file, set a breakpoint or enable break on caught exceptions or whatever. To have a look at the content-tree you can do this:
@@ -64,7 +64,7 @@ Depending on what you want to debug, find the corresponding file, set a breakpoi
 In the sources-panel, search for and open (Cmd+O) the file `plugins/nunjucks.js`, find the `NunjucksTemplate.render`-function towards the bottom of the file and put a breakpoint there. Reload the page.
 
 
-[gh-pages]: https://github.com/cssconf/2018.cssconf.eu/tree/gh-pages
+[gh-pages]: https://github.com/jsconf/2018.jsconf.eu/tree/gh-pages
 [nunjucks template-engine]: https://mozilla.github.io/nunjucks/
 [templating docs]: https://mozilla.github.io/nunjucks/templating.html
 [wintersmith-documentation]: https://github.com/jnordberg/wintersmith#quick-start
