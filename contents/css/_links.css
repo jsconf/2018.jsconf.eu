@@ -2,6 +2,7 @@
 a {
   color: var(--evalblack);
   text-decoration: none;
+  transition: all .25s ease-out;
   &:hover, &:focus {
     outline: none;
     text-decoration: none;

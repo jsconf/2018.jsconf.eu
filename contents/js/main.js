@@ -6,7 +6,7 @@
   const topbarToggle = document.getElementById('topbar-toggle');
 
   topbarToggle.addEventListener('click', function () {
-    topbarNav.classList.toggle('shown');
+    topbarNav.classList.toggle('topbar-nav--is-visible');
   });
-  
+
 })();

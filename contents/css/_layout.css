@@ -7,16 +7,19 @@
 }
 
 .main-wrapper {
-  width: calc((100vw)-(2 * .75rem));
+  --outer-margin: 1.5rem;
+  margin-top: var(--outer-margin);
+  margin-bottom: var(--outer-margin);
+  width: calc((100vw)-(2 * var(--outer-margin)));
   min-width: 18.5rem;
   max-width: 60rem; /* 960px */
   margin-right: auto;
   margin-left: auto;
   background-color: var(--clearwhite);
   @media (--small) {
-    width: calc((100vw)-(2 * 2rem));
+    --outer-margin: 2rem;
   }
   @media (--large) {
-    width: calc((100vw)-(2 * 5rem));
+    --outer-margin: 5rem;
   }
 }
