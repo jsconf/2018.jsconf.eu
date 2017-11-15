@@ -10,6 +10,7 @@
 
 body {
   font-family: "jaf-domus", sans-serif;
+  font-variant: diagonal-fractions;
   line-height: 1.666;
   letter-spacing: 0.025em;
   color: var(--evalblack);
