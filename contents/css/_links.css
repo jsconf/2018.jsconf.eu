@@ -18,8 +18,19 @@ a {
 }
 
 .link--underline {
-  border-bottom: 3px solid var(--returnrose);
+  border-bottom: 4px solid var(--returnrose);
   &:hover, &:focus {
-    border-color: var(--callbackpink);
+    background-color: var(--returnrose);
+  }
+}
+
+.link--tertiary {
+  color: var(--evalblacklight);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  &:hover, &:focus {
+    border-top: 4px solid var(--getdaycloud);
+    border-bottom: 4px solid var(--getdaycloud);
+    background-color: var(--getdaycloud);
   }
 }
