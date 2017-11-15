@@ -12,14 +12,19 @@
   margin-bottom: var(--outer-margin);
   width: calc((100vw)-(2 * var(--outer-margin)));
   min-width: 18.5rem;
-  max-width: 60rem; /* 960px */
+  max-width: 87.5rem; /* 1400px */
   margin-right: auto;
   margin-left: auto;
-  background-color: var(--clearwhite);
   @media (--small) {
     --outer-margin: 2rem;
   }
   @media (--large) {
     --outer-margin: 5rem;
   }
+}
+
+.container {
+  max-width: 60rem; /* 960px */
+  margin-right: auto;
+  margin-left: auto;
 }

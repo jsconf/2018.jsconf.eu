@@ -34,3 +34,21 @@ a {
     background-color: var(--getdaycloud);
   }
 }
+
+.link--nav {
+  padding: .5rem 1rem;
+  @media (--large) {
+    display: inline-block;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.link--footer {
+  display: block;
+  padding: 1rem;
+  @media (--small) {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+  }
+}
