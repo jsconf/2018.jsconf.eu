@@ -17,6 +17,13 @@ a {
   }
 }
 
+.link--promiselinen {
+  color: var(--promiselinen);
+  &:hover, &:focus {
+    color: var(--returnrose);
+  }
+}
+
 .link--underline {
   border-bottom: 4px solid var(--returnrose);
   &:hover, &:focus {
