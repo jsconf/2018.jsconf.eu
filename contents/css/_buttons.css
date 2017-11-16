@@ -1,8 +1,6 @@
 .btn {
   --button-color: var(--callbackpink);
   --button-color-inverse: #fff;
-
-  font-size: 1rem;
   line-height: 1;
   white-space: nowrap;
   background-color: var(--button-color);
@@ -54,20 +52,13 @@
   --button-color: var(--timeoutblue);
 }
 
-.btn--undefinedpurple {
-  --button-color: var(--undefinedpurple);
-}
-
 .btn--evalblack {
   --button-color: var(--evalblack);
 }
 
-/* smaller button in topbar with dark background on hover */
-
-.btn--topbar {
-  font-size: .875rem;
-  padding: .25rem .75rem;
-  border-width: 3px;
+/* this one works on dark backgrounds only */
+.btn--undefinedpurple {
+  --button-color: var(--undefinedpurple);
   &:hover, &:focus {
     color: var(--returnrose);
   }

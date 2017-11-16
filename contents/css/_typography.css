@@ -22,15 +22,18 @@ input, button, textarea {
 
 /* Typography */
 
-p {
+p, ul, ol, blockquote {
   line-height: 1.6364;
+}
+
+p, ul, ol, blockquote {
   @media (--xsmall) {
     font-size: 1.375rem;
   }
 }
 
-main, .topbar, .footer, .btn--topbar {
-  @media (--large) {
+main {
+  @media (--xsmall) {
     font-size: 1.375rem;
   }
 }
