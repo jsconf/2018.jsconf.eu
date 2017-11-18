@@ -16,7 +16,8 @@
     "smartypants": true
   },
   "nunjucks": {
-    "filterdir": "./templates/filters"
+    "filterdir": "./templates/filters",
+    "filters": ["log", "dumpsafe"]
   },
   "postcss": {
     "from": "contents/css/main.css",
