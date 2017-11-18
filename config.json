@@ -5,7 +5,7 @@
     "owner": "JSConf EU Team",
     "description": ""
   },
-  "plugins": ["./plugins/postcss.js", "./plugins/nunjucks.js"],
+  "plugins": ["./plugins/postcss.js", "./plugins/nunjucks.js", "./plugins/svg.js"],
   "require": {
     "moment": "moment",
     "_": "underscore",
