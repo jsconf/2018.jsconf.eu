@@ -31,12 +31,12 @@ module.exports = (env, cb) => {
   env.registerGenerator('SVGSprite', (contents, cb) => {
     // The sprite will always live here in the content tree
     const filename = 'svg/sprite.svg';
-    const idContentPairs = keyValPairs(contents.svg);
+    const filenameContentPairs = keyValPairs(contents.svg);
     
     const readSvgs = () => (
-      Promise.all(idContentPairs.map(([id, content]) => (
+      Promise.all(filenameContentPairs.map(([filename, content]) => (
         Promise.all([
-          Promise.resolve(id),
+          Promise.resolve(filename.replace('.svg', '')),
           readFile(content.filepath.full, 'utf8')
         ])
       )))
