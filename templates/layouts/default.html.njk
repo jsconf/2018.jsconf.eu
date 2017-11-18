@@ -24,6 +24,9 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+      {{ contents.svg['sprite.svg'].sprite }}
+    </div>
     <div class="layout-wrapper">
 
       {% block topbar %}
