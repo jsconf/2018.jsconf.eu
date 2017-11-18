@@ -5,6 +5,10 @@ const svgstore = require('svgstore');
 const readFile = promisify(fs.readFile);
 
 module.exports = (env, cb) => {
+  /**
+   * Only really needed to provide the actual sprite markup to templates
+   * (This is not available by default)
+   */
   class SVGSpritePlugin extends env.ContentPlugin {
     constructor(filename, sprite) {
       super();
