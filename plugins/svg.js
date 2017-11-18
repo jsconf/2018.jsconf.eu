@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const svgstore = require('svgstore');
-const stringify = require('json-stringify-safe');
 
 const readFile = promisify(fs.readFile);
 
