@@ -1,10 +1,12 @@
 {% extends "../layouts/default.html.njk" %}
 
+{% from "../_macros.njk" import svgIcon %}
+
 {% block content %}
   <section class="tc">
     <div class="container">
       <div class="mv5 mt6-l ph5 center">
-        <img src="images/jsconf-logo-full.svg" alt="JSConf EU Logo" class="w-100">
+        {{ svgIcon('jsconf-logo-full') }}
       </div>
       <p class="mb5">
         June 2nd & 3rd 2018 &mdash; Berlin, Germany

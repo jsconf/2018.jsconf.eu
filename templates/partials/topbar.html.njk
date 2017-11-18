@@ -1,6 +1,8 @@
+{% from "../_macros.njk" import svgIcon %}
+
 <div class="topbar bg--evalblack">
   <a href="/" class="topbar-logo flex-auto flex items-center" title="Home">
-    <img src="/images/jsconf-heart.svg" alt="" class="mw2 mr2">
+    {{ svgIcon('jsconf-heart') }}
     <span class="nowrap">
       <span class="topbar-logo-text">JSConf EU</span>
       <span class="topbar-logo-date">June 2nd & 3rd 2018</span>
@@ -14,10 +16,10 @@
       <a href="/sponsors" class="link--promiselinen link--nav">Sponsors</a>
       <div class="social-links flex items-center">
         <a href="https://www.youtube.com/jsconfeu" class="link--promiselinen link--nav-icon" title="YouTube">
-          <img src="/images/icon-yt.svg" alt="" class="db w-100">
+          {{ svgIcon('icon-yt')}}
         </a>
         <a href="https://twitter.com/jsconfeu" class="link--promiselinen link--nav-icon" title="Twitter">
-          <img src="/images/icon-twitter.svg" alt="" class="db w-100">
+          {{ svgIcon('icon-twitter')}}
         </a>
       </div>
     </nav>
