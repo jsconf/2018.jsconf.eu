@@ -10,8 +10,7 @@
   --outer-margin: 1.5rem;
   margin-top: var(--outer-margin);
   margin-bottom: var(--outer-margin);
-  width: calc((100vw)-(2 * var(--outer-margin)));
-  min-width: 18.5rem;
+  width: calc((100vw) - (2 * var(--outer-margin)));
   max-width: 87.5rem; /* 1400px */
   margin-right: auto;
   margin-left: auto;
@@ -27,4 +26,64 @@
   max-width: 60rem; /* 960px */
   margin-right: auto;
   margin-left: auto;
+}
+
+/*  GRID
+  Set up the main grid template.
+  12 columns, limited to 960px.
+  With a fluid outer margin formed by the first and last column.
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(1rem, 3.75rem)) 1fr;
+  grid-gap: 1.25rem;
+}
+
+/* Grid Areas
+  These are used for grid patterns that we re-use in multiple places,
+  e.g. a 4 column wide heading next to a 5 column wide content block, or
+  e.g. an image pulled out of the 12 inner columns to the edge of the most outer column.
+*/
+.grid-head {
+  grid-area: a;
+}
+
+.grid-content {
+  grid-area: b;
+}
+
+.grid-4-5 {
+  grid-template-areas:
+    ". a a a a a a a a a a a a ."
+    ". b b b b b b b b b b b b ."
+  ;
+  @media (--large) {
+    grid-template-areas:
+      ". . a a a a a b b b b . . ."
+    ;
+  }
+}
+
+.grid-5-4 {
+  grid-template-areas:
+    ". a a a a a a a a a a a a ."
+    ". b b b b b b b b b b b b ."
+  ;
+  @media (--large) {
+    grid-template-areas:
+      ". . . b b b b b a a a a . ."
+    ;
+  }
+}
+
+.grid-pull-content-6-start {
+  grid-template-areas:
+    "m m m m m m m . . . . . . ."
+  ;
+}
+
+.grid-pull-content-6-end {
+  grid-template-areas:
+    ". . . . . . . m m m m m m m"
+  ;
 }
