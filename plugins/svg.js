@@ -60,7 +60,6 @@ module.exports = (env, cb) => {
 
     const optimizeSvg = sprite => (
       svgo.optimize(sprite).then(result => {
-        console.log(result)
         return result.data
       }).catch(err => {
         console.error('no', err)
