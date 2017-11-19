@@ -35,8 +35,12 @@
 */
 .grid {
   display: grid;
-  grid-template-columns: 1fr repeat(12, minmax(1rem, 3.75rem)) 1fr;
-  grid-gap: 1.25rem;
+  grid-template-columns: 1rem repeat(12, minmax(1rem, 3.75rem)) 1rem;
+  grid-gap: .25rem;
+  @media (--small) {
+    grid-template-columns: 1fr repeat(12, minmax(1rem, 3.75rem)) 1fr;
+    grid-gap: 1.25rem;
+  }
 }
 
 /* Grid Items Placement */
