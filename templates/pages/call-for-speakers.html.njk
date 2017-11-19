@@ -2,16 +2,26 @@
 
 {% block content %}
 
-  <div>
-    {{ contents.copy.cfs['open-until.md'].html }}
-  </div>
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['open-until.md'].html }}
+    </div>
+  </section>
 
-  <div>
-    {{ contents.copy.cfs['topics.md'].html }}
-  </div>
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['topics.md'].html }}
+    </div>
+  </section>
 
-  <div>
-    {{ contents.copy.cfs['we-can-help.md'].html }}
-  </div>
+  <section class="grid grid-pull-content-6-end">
+    <img src="https://2017.jsconf.eu/img/what-next.jpg" alt="" class="grid-media">
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['we-can-help.md'].html }}
+    </div>
+  </section>
 
 {% endblock %}

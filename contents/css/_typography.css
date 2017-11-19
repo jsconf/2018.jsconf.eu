@@ -64,7 +64,7 @@ h2, .h2 {
   }
 }
 
-.heading--spaced {
+h2, .heading--spaced {
   line-height: 1.625;
   text-transform: uppercase;
   letter-spacing: 3.78%;

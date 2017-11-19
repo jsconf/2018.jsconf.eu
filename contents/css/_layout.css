@@ -39,17 +39,33 @@
   grid-gap: 1.25rem;
 }
 
+/* Grid Items Placement */
+
+.grid-item-center {
+  grid-column: 2 / span 12;
+  @media (--small) {
+    grid-column: 4 / span 8;
+  }
+}
+
 /* Grid Areas
   These are used for grid patterns that we re-use in multiple places,
   e.g. a 4 column wide heading next to a 5 column wide content block, or
   e.g. an image pulled out of the 12 inner columns to the edge of the most outer column.
 */
+
 .grid-head {
   grid-area: a;
 }
 
 .grid-content {
   grid-area: b;
+}
+
+.grid-media {
+  grid-area: m;
+  max-width: auto;
+  width: 100%;
 }
 
 .grid-4-5 {
@@ -78,12 +94,22 @@
 
 .grid-pull-content-6-start {
   grid-template-areas:
-    "m m m m m m m . . . . . . ."
+    ". . . m m m m m m m m . . ."
   ;
+  @media (--small) {
+    grid-template-areas:
+    "m m m m m m m . . . . . . ."
+    ;
+  }
 }
 
 .grid-pull-content-6-end {
   grid-template-areas:
-    ". . . . . . . m m m m m m m"
+    ". . . m m m m m m m m . . ."
   ;
+  @media (--small) {
+    grid-template-areas:
+      ". . . . . . . m m m m m m m"
+    ;
+  }
 }
