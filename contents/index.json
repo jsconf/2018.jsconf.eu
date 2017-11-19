@@ -1,3 +1,4 @@
 {
+  "pageId": "index",
   "template": "pages/index.html.njk"
 }
