@@ -1,8 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const svgstore = require('svgstore');
+const SVGO = require('svgo');
 
 const readFile = promisify(fs.readFile);
+
+// The sprite will always live here in the content tree
+const filename = 'svg/sprite.svg';
 
 module.exports = (env, cb) => {
   /**
@@ -23,7 +27,7 @@ module.exports = (env, cb) => {
     get sprite() {
       return this._sprite;
     }
-   
+
     getView() {
       return (env, locals, contents, templates, cb) => {
         cb(null, new Buffer(this._sprite));
@@ -31,11 +35,11 @@ module.exports = (env, cb) => {
     }
   }
 
+  const svgo = new SVGO(env.config.svgo);
+
   env.registerGenerator('SVGSprite', (contents, cb) => {
-    // The sprite will always live here in the content tree
-    const filename = 'svg/sprite.svg';
     const filenameContentPairs = keyValPairs(contents.svg);
-    
+
     const readSvgs = () => (
       Promise.all(filenameContentPairs.map(([filename, content]) => (
         Promise.all([
@@ -46,22 +50,35 @@ module.exports = (env, cb) => {
     );
 
     const concatToSprite = idBufferPairs => (
-      idBufferPairs.reduce((sprite, [id, buffer]) => (
-        sprite.add(id, buffer)
-      ), svgstore())
+      idBufferPairs.reduce(
+        (sprite, [id, buffer]) => (
+          sprite.add(id, buffer)
+        ),
+        svgstore(env.config.svgstore)
+      ).toString()
     );
 
-    const createContentTree = spriteObj => (
+    const optimizeSvg = sprite => (
+      svgo.optimize(sprite).then(result => {
+        console.log(result)
+        return result.data
+      }).catch(err => {
+        console.error('no', err)
+      })
+    );
+
+    const createContentTree = sprite => (
       set(
         {},
         filename.split('/'),
-        new SVGSpritePlugin(filename, spriteObj.toString())
+        new SVGSpritePlugin(filename, sprite)
       )
     );
-    
+
     Promise.resolve()
       .then(readSvgs)
       .then(concatToSprite)
+      .then(optimizeSvg)
       .then(createContentTree)
       .then(tree => {
         cb(null, tree);
@@ -85,7 +102,7 @@ function set (obj, path, val) {
       if (child[key] === undefined)
         child[key] = {}
       return child[key];
-    }    
+    }
   }, obj);
 }
 

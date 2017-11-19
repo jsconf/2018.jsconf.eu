@@ -19,6 +19,14 @@
     "filterdir": "./templates/filters",
     "filters": ["log", "dumpsafe"]
   },
+  "svgo": {
+    "plugins": [
+      "removeDoctype",
+      "removeComments",
+      "removeTitle",
+      "removeDesc"
+    ]
+  },
   "postcss": {
     "from": "contents/css/main.css",
     "plugins": [
