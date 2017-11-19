@@ -33,9 +33,11 @@
         {% include "../partials/topbar.html.njk" %}
       {% endblock %}
 
-      {% block header %}{% endblock %}
+      <main class="main-wrapper bg-white page-{{ page.metadata.pageId }}">
+        {% block header %}
+          <h1>{{ page.metadata.title }}</h1>
+        {% endblock %}
 
-      <main class="main-wrapper bg-white">
         {% block content %}
           Sorry, nothing to see here 😗
         {% endblock %}
