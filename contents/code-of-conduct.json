@@ -1,0 +1,5 @@
+{
+  "pageId": "coc",
+  "template": "pages/code-of-conduct.html.njk",
+  "filename": ":file/index.html"
+}
