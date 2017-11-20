@@ -1,7 +1,7 @@
 {% from "../_macros.njk" import svgIcon %}
 
 <div class="topbar bg--evalblack">
-  <a href="/" class="topbar-logo flex-auto flex items-center" title="Home">
+  <a href="{{ env.config.baseUrl }}" class="topbar-logo flex-auto flex items-center" title="Home">
     {{ svgIcon('jsconf-heart', svgClass='w2 h2') }}
     <span class="nowrap ml3">
       <span class="topbar-logo-text">JSConf EU</span>
@@ -10,10 +10,10 @@
   </a>
   <div class="flex items-center">
     <nav id="topbar-nav" class="topbar-nav items-center">
-      <a href="/call-for-speakers" class="link--promiselinen link--nav">Call for Speakers</a>
-      <a href="/scholarships" class="link--promiselinen link--nav">Scholarships</a>
-      <a href="/code-of-conduct" class="link--promiselinen link--nav">Code of Conduct</a>
-      <a href="/sponsors" class="link--promiselinen link--nav">Sponsors</a>
+      <a href="{{ contents['call-for-speakers.json'].url }}" class="link--promiselinen link--nav">Call for Speakers</a>
+      <a href="{{ contents['scholarships.json'].url }}" class="link--promiselinen link--nav">Scholarships</a>
+      <a href="{{ contents['code-of-conduct.json'].url }}" class="link--promiselinen link--nav">Code of Conduct</a>
+      <a href="{{ contents['sponsors.json'].url }}" class="link--promiselinen link--nav">Sponsors</a>
       <div class="social-links flex items-center">
         <a href="https://www.youtube.com/jsconfeu" class="link--promiselinen link--nav-icon" title="YouTube">
           {{ svgIcon('icon-yt')}}
