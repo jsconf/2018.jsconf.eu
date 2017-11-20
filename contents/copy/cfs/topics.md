@@ -13,4 +13,9 @@ We like to see anything that squarely fits into the spectrum of:
  * Fundamentals, in a modern light.
  * The JavaScript community, culture, history, past, present & future, the why the who and the what of what we’re all doing.
  * And finally: Whatever the hell you want; this is your conference.
- 
+
+ For further inspiration, check out the video recordings of JSConf EU 2017’s talks on Youtube [link]
+
+ And remember: Pick whatever you feel passionate about. This is your conference!
+
+ PS: If you can’t find a suitable topic for JSConf EU, or you want to try your luck at more than one event, then consider submitting a talk to our partner conference CSSconf EU – it’s happening in the same venue on the same weekend, and you’re welcome to submit multiple talks.

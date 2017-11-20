@@ -30,7 +30,7 @@
 
 /*  GRID
   Set up the main grid template.
-  12 columns, limited to 960px.
+  12 columns, limited to 960px width.
   With a fluid outer margin formed by the first and last column.
 */
 .grid {
@@ -77,7 +77,7 @@
     ". a a a a a a a a a a a a ."
     ". b b b b b b b b b b b b ."
   ;
-  @media (--large) {
+  @media (--medium) {
     grid-template-areas:
       ". . a a a a a b b b b . . ."
     ;
@@ -89,17 +89,21 @@
     ". a a a a a a a a a a a a ."
     ". b b b b b b b b b b b b ."
   ;
-  @media (--large) {
+  @media (--medium) {
     grid-template-areas:
       ". . . b b b b b a a a a . ."
     ;
   }
 }
 
+.grid-pull-content-6-end,
 .grid-pull-content-6-start {
   grid-template-areas:
     ". . . m m m m m m m m . . ."
   ;
+}
+
+.grid-pull-content-6-start {
   @media (--small) {
     grid-template-areas:
     "m m m m m m m . . . . . . ."
@@ -108,9 +112,6 @@
 }
 
 .grid-pull-content-6-end {
-  grid-template-areas:
-    ". . . m m m m m m m m . . ."
-  ;
   @media (--small) {
     grid-template-areas:
       ". . . . . . . m m m m m m m"
