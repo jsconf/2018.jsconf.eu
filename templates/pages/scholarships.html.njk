@@ -1,4 +1,11 @@
 {% extends "../layouts/default.html.njk" %}
 
 {% block content %}
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.scholarships['scholarships.md'].html }}
+    </div>
+  </section>
+
 {% endblock %}
