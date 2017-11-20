@@ -16,6 +16,7 @@
   margin-left: auto;
   padding-top: 2rem;
   padding-bottom: 3rem;
+  overflow: hidden;
   @media (--small) {
     --outer-margin: 2rem;
     padding-top: 4rem;
@@ -30,12 +31,6 @@
     padding-top: 10rem;
     padding-bottom: 12rem;
   }
-}
-
-.container {
-  max-width: 60rem; /* 960px */
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /*  GRID
@@ -70,16 +65,19 @@
 
 .grid-head {
   grid-area: a;
+  z-index: 1;
 }
 
 .grid-content {
   grid-area: b;
+  z-index: 1;
 }
 
 .grid-media {
   grid-area: m;
   max-width: auto;
   width: 100%;
+  z-index: 1;
 }
 
 .grid-4-5 {
@@ -126,5 +124,22 @@
     grid-template-areas:
       ". . . . . . . m m m m m m m"
     ;
+  }
+}
+
+/* Position Ornaments */
+@media (--small) {
+  .grid-form-home-cfs {
+    grid-column: 1 / 3;
+    grid-row: 1 / 1;
+  }
+
+  .grid-form-home-coc {
+    grid-column: 13 / 15;
+    grid-row: 1 / 1;
+  }
+
+  .svg-scale {
+    transform: scale(3);
   }
 }
