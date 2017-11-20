@@ -46,9 +46,14 @@ h1, .heading--massive {
   font-size: 3rem;
   line-height: .9375;
   margin-bottom: 2rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  text-transform: none;
+  letter-spacing: normal;
   @media (--xsmall) {
     font-size: 4.5rem;
     margin-bottom: 3rem;
+    padding-bottom: 0;
   }
   @media (--medium) {
     font-size: 6rem;

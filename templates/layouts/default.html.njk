@@ -35,11 +35,13 @@
 
       <main class="main-wrapper bg-white page-{{ page.metadata.pageId }}">
         {% block header %}
-          <section class="grid">
-            <div class="grid-item-center">
-              <h1>{{ page.metadata.title }}</h1>
-            </div>
-          </section>
+          {% if page.metadata.title  %}
+            <section class="grid">
+              <div class="grid-item-center">
+                <h1>{{ page.metadata.title }}</h1>
+              </div>
+            </section>
+          {% endif %}
         {% endblock %}
 
         {% block content %}

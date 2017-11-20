@@ -8,17 +8,27 @@
 
 .main-wrapper {
   --outer-margin: 1.5rem;
-  margin-top: var(--outer-margin);
-  margin-bottom: var(--outer-margin);
-  width: calc((100vw) - (2 * var(--outer-margin)));
+  width: calc((100%) - (2 * var(--outer-margin)));
   max-width: 87.5rem; /* 1400px */
+  margin-top: var(--outer-margin);
   margin-right: auto;
+  margin-bottom: var(--outer-margin);
   margin-left: auto;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   @media (--small) {
     --outer-margin: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  @media(--medium) {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
   }
   @media (--large) {
     --outer-margin: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
   }
 }
 
