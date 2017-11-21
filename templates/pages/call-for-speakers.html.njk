@@ -1,0 +1,56 @@
+{% extends "../layouts/default.html.njk" %}
+
+{% block content %}
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['open-until.md'].html }}
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['topics.md'].html }}
+    </div>
+  </section>
+
+  <section class="grid grid-pull-content-6-end">
+    <img src="https://2017.jsconf.eu/img/what-next.jpg" alt="" class="grid-media">
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['we-can-help.md'].html }}
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['perks.md'].html }}
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['selection-process.md'].html }}
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['guidelines.md'].html }}
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['video-recordings.md'].html }}
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {{ contents.copy.cfs['coc.md'].html }}
+    </div>
+  </section>
+{% endblock %}

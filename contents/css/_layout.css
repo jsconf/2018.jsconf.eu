@@ -1,0 +1,145 @@
+/* Default Layout */
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  --outer-margin: 1.5rem;
+  width: calc((100%) - (2 * var(--outer-margin)));
+  max-width: 87.5rem; /* 1400px */
+  margin-top: var(--outer-margin);
+  margin-right: auto;
+  margin-bottom: var(--outer-margin);
+  margin-left: auto;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  overflow: hidden;
+  @media (--small) {
+    --outer-margin: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  @media(--medium) {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+  }
+  @media (--large) {
+    --outer-margin: 5rem;
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+  }
+}
+
+/*  GRID
+  Set up the main grid template.
+  12 columns, limited to 960px width.
+  With a fluid outer margin formed by the first and last column.
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 1rem repeat(12, minmax(1rem, 3.75rem)) 1rem;
+  grid-gap: .25rem;
+  @media (--small) {
+    grid-template-columns: 1fr repeat(12, minmax(1rem, 3.75rem)) 1fr;
+    grid-gap: 1.25rem;
+  }
+}
+
+/* Grid Items Placement */
+
+.grid-item-center {
+  grid-column: 2 / span 12;
+  @media (--small) {
+    grid-column: 4 / span 8;
+  }
+}
+
+/* Grid Areas
+  These are used for grid patterns that we re-use in multiple places,
+  e.g. a 4 column wide heading next to a 5 column wide content block, or
+  e.g. an image pulled out of the 12 inner columns to the edge of the most outer column.
+*/
+
+.grid-head {
+  grid-area: a;
+  z-index: 1;
+}
+
+.grid-content {
+  grid-area: b;
+  z-index: 1;
+}
+
+.grid-media {
+  grid-area: m;
+  max-width: auto;
+  width: 100%;
+  z-index: 1;
+}
+
+.grid-4-5 {
+  grid-template-areas:
+    ". a a a a a a a a a a a a ."
+    ". b b b b b b b b b b b b ."
+  ;
+  @media (--medium) {
+    grid-template-areas:
+      ". . a a a a a b b b b . . ."
+    ;
+  }
+}
+
+.grid-5-4 {
+  grid-template-areas:
+    ". a a a a a a a a a a a a ."
+    ". b b b b b b b b b b b b ."
+  ;
+  @media (--medium) {
+    grid-template-areas:
+      ". . . b b b b b a a a a . ."
+    ;
+  }
+}
+
+.grid-pull-content-6-end,
+.grid-pull-content-6-start {
+  grid-template-areas:
+    ". . . m m m m m m m m . . ."
+  ;
+}
+
+.grid-pull-content-6-start {
+  @media (--small) {
+    grid-template-areas:
+    "m m m m m m m . . . . . . ."
+    ;
+  }
+}
+
+.grid-pull-content-6-end {
+  @media (--small) {
+    grid-template-areas:
+      ". . . . . . . m m m m m m m"
+    ;
+  }
+}
+
+/* Position Ornaments */
+@media (--small) {
+  .grid-form-home-cfs {
+    grid-column: 1 / 3;
+    grid-row: 1 / 1;
+  }
+
+  .grid-form-home-coc {
+    grid-column: 13 / 15;
+    grid-row: 1 / 1;
+  }
+
+  .svg-scale {
+    transform: scale(3);
+  }
+}

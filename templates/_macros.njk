@@ -1,0 +1,8 @@
+{% macro svgIcon(id, svgClass, viewBox = '0 0 16 16', title = '') %}
+  <svg class="svg svg-{{ id }} {{ svgClass }}" viewbox="{{ viewBox }}">
+    {% if title %}
+      <title id='title-{{ id }}'>{{ title }}</title>
+    {% endif %}
+    <use xlink:href="#{{ id }}"></use>
+  </svg>
+{% endmacro %}

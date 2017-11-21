@@ -1,0 +1,42 @@
+{
+  "locals": {
+    "url": "https://j2018.sconf.eu",
+    "name": "JSConf EU",
+    "owner": "JSConf EU Team",
+    "description": ""
+  },
+  "plugins": ["./plugins/postcss.js", "./plugins/nunjucks.js", "./plugins/svg.js"],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "nunjucks": {
+    "filterdir": "./templates/filters",
+    "filters": ["log", "dumpsafe"]
+  },
+  "svgo": {
+    "plugins": [
+      "removeDoctype",
+      "removeComments",
+      "removeTitle",
+      "removeDesc"
+    ]
+  },
+  "postcss": {
+    "from": "contents/css/main.css",
+    "plugins": [
+      "postcss-import",
+      {
+        "path": "postcss-cssnext",
+        "params": { "warnForDuplicates": false }
+      },
+      "css-mqpacker",
+      "cssnano"
+    ]
+  }
+}
