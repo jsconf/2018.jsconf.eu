@@ -1,5 +1,7 @@
 {% extends "../layouts/default.html.njk" %}
 
+{% from "../_macros.njk" import svgIcon %}
+
 {% block content %}
 
   <section class="grid">
@@ -8,13 +10,24 @@
     </div>
   </section>
 
+  <section class="tc grid mv4">
+    <p class="grid-item-center">
+      <a href="XXX" class="btn">
+        Submit A Proposal Now
+      </a>
+    </p>
+  </section>
+
   <section class="grid">
     <div class="grid-item-center">
       {{ contents.copy.cfs['topics.md'].html }}
     </div>
   </section>
 
-  <section class="grid grid-pull-content-6-end">
+  <section class="grid grid-call-out-cfs">
+    <div class="heading--massive grid-c">
+       Pick the topic you feel passionate about. This is your conference.
+    </div>
     <img src="https://2017.jsconf.eu/img/what-next.jpg" alt="" class="grid-media">
   </section>
 
@@ -36,6 +49,14 @@
     </div>
   </section>
 
+  <section class="tc grid mv4">
+    <p class="grid-item-center">
+      <a href="XXX" class="btn">
+        Submit A Proposal Now
+      </a>
+    </p>
+  </section>
+
   <section class="grid">
     <div class="grid-item-center">
       {{ contents.copy.cfs['guidelines.md'].html }}
@@ -52,5 +73,13 @@
     <div class="grid-item-center">
       {{ contents.copy.cfs['coc.md'].html }}
     </div>
+  </section>
+
+  <section class="tc grid mt4 mt6-l">
+    <p class="grid-item-center">
+      <a href="XXX" class="btn">
+        Submit A Proposal Now
+      </a>
+    </p>
   </section>
 {% endblock %}
