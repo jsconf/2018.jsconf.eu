@@ -172,7 +172,9 @@
 /* Background Ornaments via background-image */
 
 .page-cfs {
-  background-image: url('../svg/form-cfs-01.svg');
-  background-size: 125%;
-  background-position: -13rem -2rem;
+  @media (--medium) {
+    background-image: url('../svg/form-cfs-01.svg');
+    background-size: 125%;
+    background-position: -13rem -2rem;
+  }
 }
