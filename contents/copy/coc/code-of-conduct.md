@@ -28,7 +28,7 @@ Event organisers may take action to address anything designed to, or with the cl
 
 If someone makes you or anyone else feel unsafe or unwelcome, please report it as soon as possible. Conference staff can be identified by t-shirts. Harassment and other Code of Conduct violations reduce the value of our event for everyone. We want you to be happy at our event. People like you make our event a better place. You can make a report either personally or anonymously.
 
-## Anonymous report
+### Anonymous report
 
 You can [make an anonymous report here](https://goo.gl/forms/JTszjaub5cJ3stO82). We can’t follow up an anonymous report with you directly, but we will fully investigate it and take whatever action is necessary to prevent a recurrence.
 
