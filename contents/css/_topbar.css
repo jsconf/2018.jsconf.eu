@@ -3,9 +3,6 @@
   @media (--small) {
     --topbar-height: 4rem;
   }
-  @media (--large) {
-    font-size: 1.375rem;
-  }
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -13,6 +10,13 @@
   height: var(--topbar-height);
   padding-right: .5rem;
   padding-left: .5rem;
+  @media (--medium) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  @media (--large) {
+    font-size: 1.375rem;
+  }
 }
 
 .topbar-logo {
@@ -114,7 +118,7 @@
   position: relative;
   z-index: 2;
   height: 3rem;
-  width: 3rem;
+  width: 2rem;
   margin-left: 1rem;
   background: none;
   border: none;

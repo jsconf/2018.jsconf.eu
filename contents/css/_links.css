@@ -9,6 +9,15 @@ a {
   }
 }
 
+/* Default links on main content area */
+.main-wrapper a,
+.link--underline {
+  border-bottom: 4px solid var(--returnrose);
+  &:hover, &:focus {
+    background-color: var(--returnrose);
+  }
+}
+
 /* Links on dark background */
 .link--white {
   color: var(--clearwhite);
@@ -21,13 +30,6 @@ a {
   color: var(--promiselinen);
   &:hover, &:focus {
     color: var(--returnrose);
-  }
-}
-
-.link--underline {
-  border-bottom: 4px solid var(--returnrose);
-  &:hover, &:focus {
-    background-color: var(--returnrose);
   }
 }
 
