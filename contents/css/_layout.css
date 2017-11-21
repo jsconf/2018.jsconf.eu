@@ -134,15 +134,18 @@
 
 /* Position Call Out Headings */
 
-@media (--medium) {
-  .grid-call-out-cfs {
-    @media (--small) {
-      grid-template-areas:
-        "m m m m m m m m . c c c c ."
-      ;
-    }
+.grid-call-out-cfs {
+  grid-template-areas:
+    ". c c c c c c c c c c c c ."
+    ". . . m m m m m m m m . . ."
+  ;
+  @media (--medium) {
+    grid-template-areas:
+      "m m m m m m . c c c c c c ."
+    ;
   }
 }
+
 /* Position Ornaments */
 @media (--medium) {
   .grid-form-home-cfs {

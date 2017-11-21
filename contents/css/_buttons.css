@@ -1,4 +1,5 @@
-.btn {
+.btn,
+.main-wrapper .btn {
   --button-color: var(--callbackpink);
   --button-color-inverse: #fff;
   line-height: 1;
