@@ -17,6 +17,7 @@
   padding-top: 2rem;
   padding-bottom: 3rem;
   overflow: hidden;
+  box-shadow: 0 0 2rem 0 rgba(48,63,98,0.12);
   @media (--small) {
     --outer-margin: 2rem;
     padding-top: 4rem;
@@ -166,4 +167,12 @@
   .svg-scale {
     transform: scale(3);
   }
+}
+
+/* Background Ornaments via background-image */
+
+.page-cfs {
+  background-image: url('../svg/form-cfs-01.svg');
+  background-size: 125%;
+  background-position: -13rem -2rem;
 }
