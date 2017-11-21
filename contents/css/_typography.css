@@ -30,6 +30,9 @@ p, ul, ol, blockquote {
   @media (--xsmall) {
     font-size: 1.375rem;
   }
+  @media (--medium) {
+    font-size: 1.5rem;
+  }
 }
 
 main {
