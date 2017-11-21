@@ -65,14 +65,25 @@
   z-index: 1;
   min-height: 80vh;
   background-color: var(--evalblack);
-  padding-top: 3rem;
+  padding-top: 2rem;
   font-size: 2rem;
+  & .link--nav {
+    padding: 2rem 1rem;
+    @media (--small) {
+      padding-top: 3rem;
+    }
+  }
   & .social-links {
     margin: 0;
   }
   & .link--nav-icon {
-    width: 4rem;
-    margin: 1rem .5rem;;
+    width: 3rem;
+    margin: 1rem .5rem;
+    @media (--xsmall) {
+      width: 4rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
   }
   @media (--xsmall) {
     font-size: 4rem; /*64px*/
