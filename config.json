@@ -5,7 +5,11 @@
     "owner": "JSConf EU Team",
     "description": ""
   },
-  "plugins": ["./plugins/postcss.js", "./plugins/nunjucks.js", "./plugins/svg.js"],
+  "plugins": [
+    "./plugins/postcss.js",
+    "./plugins/nunjucks.js",
+    "./plugins/svg.js"
+  ],
   "require": {
     "moment": "moment",
     "_": "underscore",
@@ -20,12 +24,7 @@
     "filters": ["log", "dumpsafe"]
   },
   "svgo": {
-    "plugins": [
-      "removeDoctype",
-      "removeComments",
-      "removeTitle",
-      "removeDesc"
-    ]
+    "plugins": ["removeDoctype", "removeComments", "removeTitle", "removeDesc"]
   },
   "postcss": {
     "from": "contents/css/main.css",
@@ -33,9 +32,9 @@
       "postcss-import",
       {
         "path": "postcss-cssnext",
-        "params": { "warnForDuplicates": false }
+        "params": {"warnForDuplicates": false}
       },
-      "css-mqpacker",
+      {"path": "css-mqpacker", "params": {"sort": true}},
       "cssnano"
     ]
   }
