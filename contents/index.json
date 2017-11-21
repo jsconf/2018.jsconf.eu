@@ -1,4 +1,5 @@
 {
   "pageId": "index",
-  "template": "pages/index.html.njk"
+  "template": "pages/index.html.njk",
+  "title": "JSConf EU 2018"
 }

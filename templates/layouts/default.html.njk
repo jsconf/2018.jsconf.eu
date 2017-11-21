@@ -3,12 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>
-      {% if page.title %}
-        {{ page.title }} -
-      {% endif %}
-      {{ name }}
-    </title>
+    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
     {% if page.description %}
       <meta name="description" content="{{ page.description }}">
     {% endif %}
@@ -27,9 +22,6 @@
     <script src="https://use.typekit.net/gug4wmv.js" async onload="try{Typekit.load({ async: true });}catch(e){}"></script>
   </head>
   <body>
-    <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
-      {{ contents.svg['sprite.svg'].sprite }}
-    </div>
     <div class="layout-wrapper">
 
       {% block topbar %}
@@ -56,6 +48,10 @@
         {% include "../partials/footer.html.njk" %}
       {% endblock %}
 
+    </div>
+
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+      {{ contents.svg['sprite.svg'].sprite }}
     </div>
 
     <script type="text/javascript">
