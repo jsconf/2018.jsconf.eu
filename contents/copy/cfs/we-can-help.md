@@ -12,4 +12,4 @@ There are about a million reasons why you may not consider yourself a speaker. W
 
 Again, whatever else you might need, we’re here to help. Get in touch: [contact@jsconf.eu](mailto:contact@jsconf.eu ) (please don’t use this email to submit a proposal).
 
-If you need more encouragement, see our blog post on How to write a great talk proposal for a tech conference. [link]
+If you need more encouragement, see our blog post on How to write a great talk proposal for a tech conference. [link] XXX
