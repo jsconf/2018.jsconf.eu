@@ -8,6 +8,10 @@
       <meta name="description" content="{{ page.description }}">
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ contents.css["main.css"].url }}">
+    <script src="{{ contents.js['main.js'].url }}" defer></script>
+    <script src="https://use.typekit.net/gug4wmv.js" async onload="try{Typekit.load({ async: true });}catch(e){}"></script>
+    <link rel="preconnect" href="https://p.typekit.net">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -15,11 +19,6 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="{{ contents.css["main.css"].url }}">
-    <script src="{{ contents.js['main.js'].url }}" defer></script>
-    <link rel="preconnect" href="https://p.typekit.net">
-    <script src="https://use.typekit.net/gug4wmv.js" async onload="try{Typekit.load({ async: true });}catch(e){}"></script>
   </head>
   <body>
     <div class="layout-wrapper">
