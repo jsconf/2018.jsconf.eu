@@ -3,13 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>
-      {% if page.name %}
-        {{ page.name }} -
-      {% endif %}
-      {{ name }}
-    </title>
-    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -20,13 +17,11 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="{{ contents.css["main.css"].url }}">
-    <script src="https://use.typekit.net/gug4wmv.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script src="{{ contents.js['main.js'].url }}" defer></script>
+    <link rel="preconnect" href="https://p.typekit.net">
+    <script src="https://use.typekit.net/gug4wmv.js" async onload="try{Typekit.load({ async: true });}catch(e){}"></script>
   </head>
   <body>
-    <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
-      {{ contents.svg['sprite.svg'].sprite }}
-    </div>
     <div class="layout-wrapper">
 
       {% block topbar %}
@@ -55,7 +50,9 @@
 
     </div>
 
-    <script src="{{ contents.js['main.js'].url }}"></script>
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+      {{ contents.svg['sprite.svg'].sprite }}
+    </div>
 
     <script type="text/javascript">
   var _gauges = _gauges || [];
