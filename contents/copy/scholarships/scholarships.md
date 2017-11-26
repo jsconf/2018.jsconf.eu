@@ -23,4 +23,4 @@ All applicants will be notified of the outcome of their application a few weeks 
 
 ## Contact
 
-If you have any questions please don’t hesitate to contact us at contact@jsconf.eu. You can also [follow us on Twitter](https://twitter.com/jsconfeu) and [subscribe to our newsletter](https://confirmsubscription.com/h/d/879A481DB04CB70D) to stay up to date.
+If you have any questions please don’t hesitate to contact us at contact@jsconf.eu. You can also [follow us on Twitter](https://twitter.com/jsconfeu) and [subscribe to our newsletter](https://confirmsubscription.com/h/d/82029683ADB683FB) to stay up to date.
