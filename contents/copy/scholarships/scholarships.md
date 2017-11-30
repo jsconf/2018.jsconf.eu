@@ -7,11 +7,11 @@ We are very grateful and would like to say a big Thank You to the companies and 
 Anyone from an underrepresented group in tech is invited to apply for a scholarship. This includes, but is not limited to: women, people of color, LGBTQIA+ people, disabled people, and people facing economic or social hardships.
 
 ❤️
-Granting these scholarships is made possible thanks to our [Diversity Support Tickets](https://2018.jsconf.eu/diversity-support-tickets/) initiative and the generous contributions made by our [sponsors](https://2018.jsconf.eu/sponsors). More help is needed – talk to us if you’d like to get involved: [contact@cssconf.eu](mailto:contact@jsconf.eu).
+Granting these scholarships is made possible thanks to our [Diversity Support Tickets](https://ti.to/jsconfeu/jsconf-eu-2018) initiative and the generous contributions made by our [sponsors](https://2018.jsconf.eu/sponsors). More help is needed – talk to us if you’d like to get involved: [contact@cssconf.eu](mailto:contact@jsconf.eu).
 
 ## Application
 
-You are invited to apply for a [single conference ticket for JSConf EU](https://docs.google.com/forms/d/1MDrrmr825HRmZ3UKJRkr5kZvZMM-uG21yNkseC0keoI/) or for a [Combo ticket for JSConf EU and CSSconf EU](https://docs.google.com/forms/d/1tLvWsds4e8JPcDAv5_2-blrbxA_T-LpkiWBuEoBLt7s/). On the application form you will be asked if you need financial help with travel and accommodation.  
+You are invited to apply for a [single conference ticket for JSConf EU](https://docs.google.com/forms/d/1MDrrmr825HRmZ3UKJRkr5kZvZMM-uG21yNkseC0keoI/viewform) or for a [Combo ticket for JSConf EU and CSSconf EU](https://docs.google.com/forms/d/e/1FAIpQLScXcDNJZ1uK5VwdnHzqqrRqfQ-sQk_8mewCzPMn2ln2NbmQUQ/viewform). On the application form you will be asked if you need financial help with travel and accommodation.  
 
 **Please note that we will have two different application deadlines in 2018.**
 
