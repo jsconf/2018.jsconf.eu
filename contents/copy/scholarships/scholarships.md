@@ -7,7 +7,7 @@ We are very grateful and would like to say a big Thank You to the companies and 
 Anyone from an underrepresented group in tech is invited to apply for a scholarship. This includes, but is not limited to: women, people of color, LGBTQIA+ people, disabled people, and people facing economic or social hardships.
 
 ❤️
-Granting these scholarships is made possible thanks to our [Diversity Support Tickets](https://ti.to/jsconfeu/jsconf-eu-2018) initiative and the generous contributions made by our [sponsors](https://2018.jsconf.eu/sponsors). More help is needed – talk to us if you’d like to get involved: [contact@cssconf.eu](mailto:contact@jsconf.eu).
+Granting these scholarships is made possible thanks to our [Diversity Support Tickets](https://ti.to/jsconfeu/jsconf-eu-2018) initiative and the generous contributions made by our [sponsors](https://2018.jsconf.eu/sponsors). More help is needed – talk to us if you’d like to get involved: [contact@jsconf.eu](mailto:contact@jsconf.eu).
 
 ## Application
 
