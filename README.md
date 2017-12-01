@@ -13,7 +13,7 @@ Should bring up the server on port 8080
 
  - stylesheets: in `contents/css`. `contents/css/main.css` is the file that is pulled through postcss to become `/css/main.css` on the hosted site.
 
- - javascript: java*what*? nothing there yet. (will go into `contents/js` if needed)
+ - javascript: in `contents/js`
 
  - assets: `contents/fonts`, `contents/icons`, `contents/images`, … and so on.
 
