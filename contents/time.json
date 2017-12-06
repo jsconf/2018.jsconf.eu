@@ -1,5 +1,5 @@
 {
-  "pageId": "imprint",
+  "pageId": "time",
   "template": "pages/time.html.njk",
   "filename": ":file/index.html",
   "title": "CET"
