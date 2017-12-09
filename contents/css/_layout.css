@@ -27,7 +27,7 @@
     padding-top: 6rem;
     padding-bottom: 8rem;
   }
-  @media (--large) {
+  @media (--xlarge) {
     --outer-margin: 5rem;
     padding-top: 10rem;
     padding-bottom: 12rem;

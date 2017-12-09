@@ -63,7 +63,7 @@ h1, .heading--massive {
     margin-bottom: 3rem;
     padding-bottom: 0;
   }
-  @media (--large) {
+  @media (--xlarge) {
     font-size: 6rem;
     line-height: .9444;
   }
