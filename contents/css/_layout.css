@@ -148,7 +148,19 @@
 }
 
 /* Position Ornaments */
+.grid-form-home-cfs,
+.grid-form-home-coc,
+.grid-form-cfs-01 {
+  display: none;
+}
+
 @media (--medium) {
+  .grid-form-home-cfs,
+  .grid-form-home-coc,
+  .grid-form-cfs-01 {
+    display: block;
+  }
+
   .grid-form-home-cfs {
     grid-column: 1 / 3;
     grid-row: 1 / 1;
