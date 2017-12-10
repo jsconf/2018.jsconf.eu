@@ -13,8 +13,13 @@ a {
 .main-wrapper a,
 .link--underline {
   border-bottom: 4px solid var(--returnrose);
+
+  background: linear-gradient(var(--returnrose), var(--returnrose) 100%) bottom no-repeat;
+  background-size: 100% 0;
+  transition: background-size 0.1s;
+
   &:hover, &:focus {
-    background-color: var(--returnrose);
+    background-size: 100% 100%;
   }
 }
 
