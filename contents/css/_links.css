@@ -51,7 +51,7 @@ a {
 
 .link--nav {
   padding: .5rem 1rem;
-  @media (--large) {
+  @media (--xlarge) {
     display: inline-block;
     padding-right: 2rem;
     padding-left: 2rem;

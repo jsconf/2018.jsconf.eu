@@ -20,8 +20,10 @@ this resolves to:
 @custom-media --xsmall (width >= 30rem); /* 480px */
 @custom-media --small (width >= 40rem); /* 640px */
 @custom-media --medium (width >= 60rem); /* 960px */
-@custom-media --large (width >= 87.5rem); /* 1400px */
-@custom-media --huge (width >= 110rem); /* 1600px */
+@custom-media --large (width >= 75rem); /* 1200px */
+@custom-media --xlarge (width >= 87.5rem); /* 1400px */
+@custom-media --xxlarge (width >= 110rem); /* 1600px */
+@custom-media --xxxlarge (width >= 120rem); /* 1920px */
 
 /* Current Tachyons media queries:
 -ns @media screen and (min-width: 30em) {
@@ -37,7 +39,7 @@ this resolves to:
   @media (--medium) {
     background: yellow;
   }
-  @media (--large) {
+  @media (--xlarge) {
     background: pink;
   }
 }
