@@ -10,7 +10,7 @@ a {
 }
 
 /* Default links on main content area */
-.main-wrapper a,
+.md-content a,
 .link--underline {
   border-bottom: 4px solid var(--returnrose);
 
