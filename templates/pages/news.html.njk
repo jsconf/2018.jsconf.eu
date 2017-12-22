@@ -1,0 +1,19 @@
+{% extends "../layouts/default.html.njk" %}
+
+{% set newsList = contents.news._.pages %}
+
+{% block content %}
+
+  <section class="grid">
+    <div class="grid-item-center md-content">
+      {% for news in newsList %}
+        {% if news.metadata.draft !== true %}
+          <h2>{{ news.title }}</h2>
+          {{ news.html | truncate('150') }}
+          <a href="{{ news.url }}">Read more</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}
