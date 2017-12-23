@@ -8,9 +8,11 @@
     <div class="grid-item-center md-content">
       {% for news in newsList %}
         {% if news.metadata.draft !== true %}
-          <h2>{{ news.title }}</h2>
-          {{ news.html | truncate('150') }}
-          <a href="{{ news.url }}">Read more</a>
+          <article>
+            <h2>{{ news.title }}</h2>
+            {{ news.html | truncate('150') }}
+            <a href="{{ news.url }}">Read more</a>
+          </article>
         {% endif %}
       {% endfor %}
     </div>
