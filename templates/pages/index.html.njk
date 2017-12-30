@@ -57,20 +57,21 @@
     </div>
   </section>
 
+  {% set latest = contents.news._.pages | first %}
   <section class="tc tl-l grid grid-4-5 mb6 mb7-l">
     <div class="grid-form-home-coc">
       {{ svgIcon('form-home-coc', viewBox='0 0 658 725', svgClass="svg-scale") }}
     </div>
     <h2 class="heading--massive grid-head mt0">
-      Mercedes-Benz.io supports Scholarship Program
+      News
     </h2>
     <div class="grid-content">
+      <h3 class="heading--spaced mt0">
+        {{ latest.title }}
+      </h3>
       <p>
-        We are happy to announce that Mercedes-Benz.io will support the JSConf EU and CSSconf EU Scholarship Program by donating funds for 30 additional scholarships per each event.
-        <br><br>
-        This will enable up to 60 people from underrepresented groups to attend two of the largest and most renowned European developer conferences, and experience this unique opportunity to learn, grow, and connect with the community. This is a big step towards our goal of running our yet largest and most impactful scholarship program, and we thank Mercedes-Benz.io for their generous support.
-        <br><br>
-        <a href="http://Mercedes-Benz.io" class="link--underline">Mercedes-Benz.io</a> is Daimler’s digital delivery hub working on products for the Sales and Marketing efforts of Mercedes-Benz and has offices in Berlin, Lisbon, and Stuttgart.
+        {{ latest.html | truncate('300') }}
+        <a href="{{ latest.url }}">Read more</a>
       </p>
     </div>
   </section>
