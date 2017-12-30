@@ -1,0 +1,12 @@
+{% extends "../layouts/default.html.njk" %}
+
+{% block content %}
+  <h1>{{ speaker.fullName }}</h1>
+
+  <article class="grid">
+    <div class="grid-item-center md-content">
+      {{ page.html }}
+    </div>
+  </article>
+
+{% endblock %}
