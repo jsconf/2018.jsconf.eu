@@ -1,6 +1,6 @@
-Holger Blank, Hamburg [@hblank](https://twitter/hblank)<br/>
-Jan Lehnardt, Berlin [@janl](https://twitter/janl)<br/>
-Malte Ubl, San Francisco [@cramforce](https://twitter/cramforce)
+Holger Blank, Hamburg [@hblank](https://twitter.com/hblank)<br/>
+Jan Lehnardt, Berlin [@janl](https://twitter.com/janl)<br/>
+Malte Ubl, San Francisco [@cramforce](https://twitter.com/cramforce)
 
 [contact@jsconf.eu](mailto://contact@jsconf.eu)
 
