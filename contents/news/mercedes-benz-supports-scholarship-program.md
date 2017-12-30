@@ -3,7 +3,7 @@ template: pages/news-item.html.njk
 filename: :file/index.html
 
 title: Mercedes-Benz.io supports Scholarship Program
-date: 2017-12-22
+date: 2017-12-29
 ----
 
 We are happy to announce that [Mercedes-Benz.io](https://mercedes-benz.io/) will support the JSConf EU and CSSconf EU Scholarship Program by donating funds for 30 additional scholarships per each event.
