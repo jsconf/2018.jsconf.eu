@@ -59,6 +59,12 @@ module.exports = function(env, callback) {
     }
   }
 
+  nenv.addFilter('notDraft', function(array) {
+    return array.filter(function(item) {
+      return !item.metadata.draft;
+    })
+  });
+
   env.registerTemplatePlugin('**/*.*(html|nunjucks|njk)', NunjucksTemplate);
   callback();
 };
