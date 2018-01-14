@@ -13,6 +13,7 @@
     "postcss": "^6.0.16",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
+    "postcss-url": "^7.3.0",
     "prettier": "^1.10.2",
     "svgo": "^1.0.3",
     "svgstore": "^2.0.2",
