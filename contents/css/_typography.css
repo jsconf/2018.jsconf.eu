@@ -9,7 +9,7 @@ body {
   letter-spacing: 0.025em;
   color: var(--evalblack);
   background-color: var(--promiselinen);
-  background-image: url('../images/pattern.svg');
+  background-image: url('contents:images/pattern.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
