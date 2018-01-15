@@ -69,6 +69,10 @@ module.exports = function(env, callback) {
   // Transform static URLs into the form:
   // /immutable/$fileHash/filename
   env.plugins.StaticFile.prototype.getFilename = function getFilename () {
+    // Top level files such as CNAME and manifest.json should not be renamed.
+    if (!(/\//.test(this.filepath.relative))) {
+      return this.filepath.relative;
+    }
     const hash = require('crypto').createHash('sha1');
     hash.update(require('fs').readFileSync(this.filepath.full), 'utf8');
     return 'immutable/' + hash.digest('hex') + '/' + this.filepath.relative;
