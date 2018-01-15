@@ -1,6 +1,6 @@
-# 2018.JSconf.eu
+# 2018.JSConf.eu
 
-This repository hosts the sourcecode and the website (in branch [`gh-pages`][gh-pages]) of the JSonf EU site 2018.
+This repository hosts the sourcecode and the website (in branch [`gh-pages`][gh-pages]) of the JSConf EU site 2018.
 
 ## Develop
 
