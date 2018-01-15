@@ -102,7 +102,7 @@
     position: absolute;
     bottom: calc(-1rem + 1px);
     display: block;
-    background: transparent repeat-x url(../svg/zigzag-border.svg);
+    background: transparent repeat-x url(contents:svg/zigzag-border.svg);
     background-size: cover;
   }
 }
