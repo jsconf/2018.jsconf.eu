@@ -27,17 +27,8 @@ module.exports = (wintersmith, callback) => {
       this._text = _text;
     }
 
-    // Transform URLs into the form:
-    // /immutable/$hashOfAllCSSFiles/filename
     getFilename() {
-      const hash = require('crypto').createHash('sha1');
-      const fs = require('fs');
-      const path = 'contents/css/';
-      const files = fs.readdirSync(path);
-      files.forEach(name => {
-        hash.update(fs.readFileSync(path + name), 'utf8');
-      });
-      return 'immutable/' + hash.digest('hex') + '/' + this._filepath.relative;
+      return this._filepath.relative;
     }
 
     getView() {
@@ -49,28 +40,8 @@ module.exports = (wintersmith, callback) => {
           options.plugins = options.plugins || [];
 
           wintersmith.logger.verbose('loading postcss-plugins');
-          // Allows to refer to windersmith resource URLs as
-          // url('contents:directory/filename')
-          options.plugins.push({
-            "path": "postcss-url",
-            "params": {
-              url: asset => {
-                if (asset.url.startsWith('contents:')) {
-                  const path = asset.url.split(':')[1];
-                  const parts = path.split('/');
-                  if (parts.length != 2) {
-                    throw new Error('Expected format contents:directory/filename');
-                  }
-                  return contents[parts[0]][parts[1]].url;
-                }
-                if (!asset.url.startsWith('data:')) {
-                  throw new Error('Use contents: or data: URLs: ' + asset.url);
-                }
-                return asset.url;
-              }
-            }
-          });
           const plugins = options.plugins.map(loadPlugin);
+
           wintersmith.logger.verbose('compile css');
           postcss(plugins)
             .process(this._text, options)
