@@ -185,7 +185,7 @@
 
 .page-cfs {
   @media (--medium) {
-    background-image: url('../svg/form-cfs-01.svg');
+    background-image: url('contents:svg/form-cfs-01.svg');
     background-size: 125%;
     background-position: -13rem -2rem;
   }

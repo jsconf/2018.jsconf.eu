@@ -66,5 +66,20 @@ module.exports = function(env, callback) {
   });
 
   env.registerTemplatePlugin('**/*.*(html|nunjucks|njk)', NunjucksTemplate);
+  // Transform static URLs into the form:
+  // /immutable/$fileHash/filename
+  env.plugins.StaticFile.prototype.getFilename = function getFilename () {
+    const hash = require('crypto').createHash('sha1');
+    hash.update(require('fs').readFileSync(this.filepath.full), 'utf8');
+    return 'immutable/' + hash.digest('hex') + '/' + this.filepath.relative;
+  }
+  // OMG, super hacky way to make local server emit a long max-age. This dramatically
+  // speeds up the dev server responses since all resources are cached unless they
+  // actually changed (in that case the URL changes and hence there is no cache hit).
+  const writeHead = require('http').ServerResponse.prototype.writeHead;
+  require('http').ServerResponse.prototype.writeHead = function(status, headers) {
+    headers['cache-control'] = 'public, max-age=8640000';
+    writeHead.call(this, status, headers);
+  };
   callback();
 };
