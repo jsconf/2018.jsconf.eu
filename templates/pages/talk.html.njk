@@ -1,0 +1,11 @@
+{% extends "../layouts/default.html.njk" %}
+
+{% set talk = page.metadata.talk %}
+
+{% block content %}
+    <h1>{{ talk.title }}</h1>
+
+    <div class="md-content">
+        {{ talk.html }}
+    </div>
+{% endblock %}
