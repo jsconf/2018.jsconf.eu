@@ -1,4 +1,6 @@
 node_modules
+/contents/speakers/*-PREVIEW.md
+/contents/talks/*-PREVIEW.md
 /build
 .\#*
 .DS_Store

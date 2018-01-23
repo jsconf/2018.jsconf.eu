@@ -1,0 +1,13 @@
+{% extends "../layouts/default.html.njk" %}
+
+{% set speakerPages = contents.speakers._.pages %}
+
+{% block content %}
+    <ul>
+        {% for page in speakerPages %}
+            {% set speaker = page.metadata.speaker %}
+
+            <li><a href="{{ page.url }}">{{ speaker.fullName }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
