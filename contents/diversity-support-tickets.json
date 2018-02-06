@@ -1,0 +1,6 @@
+{
+  "pageId": "diversity-support-tickets",
+  "template": "pages/diversity-support-tickets.html.njk",
+  "filename": ":file/index.html",
+  "title": "Diversity Support Tickets"
+}
