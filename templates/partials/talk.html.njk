@@ -1,7 +1,9 @@
 <h1><a href="{{ page.url }}">{{ speaker.firstname }} {{ speaker.lastname }}: {{ speaker.talkTitle }}</a></h1>
 
 <div class="md-content">
-    <img src="{{ speaker.potraitImageUrl }}" align=right>
+    {% if speaker.image.filename %}
+      <img src="{{ contents.images.speaker[speaker.image.filename].url }}" align=right>
+    {% endif %}
     {{ page.html }}
 </div>
 
