@@ -3,15 +3,5 @@
 {% set speaker = page.metadata.speaker %}
 
 {% block content %}
-    <h1>{{ speaker.fullName }}</h1>
-
-    <div class="md-content">
-        {{ page.html }}
-    </div>
-
-    <ul>
-        {% for link in speaker.links %}
-            <li><a href="{{ link.url }}">{{ link.text }}</a></li>
-        {% endfor %}
-    </ul>
+  {% include "../partials/talk.html.njk" %}
 {% endblock %}
