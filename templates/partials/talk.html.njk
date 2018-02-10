@@ -2,7 +2,10 @@
 
 <div class="md-content">
     {% if speaker.image.filename %}
-      <img src="{{ contents.images.speaker[speaker.image.filename].url }}" align=right>
+      <img src="{{ contents.images.speaker[speaker.image.filename].url }}"
+        alt="Portrait photo of {{ speaker.firstname }} {{ speaker.lastname }}"
+        data-aspect-ratio="{{ (speaker.image.height / speaker.image.width) * 100 }}%"
+        align=right>
     {% endif %}
     {{ page.html }}
 </div>
