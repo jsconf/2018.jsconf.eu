@@ -1,0 +1,18 @@
+<h1><a href="{{ page.url }}">{{ speaker.firstname }} {{ speaker.lastname }}: {{ speaker.talkTitle }}</a></h1>
+
+<div class="md-content">
+    <img src="{{ speaker.potraitImageUrl }}" align=right>
+    {{ page.html }}
+</div>
+
+<ul>
+    {% if speaker.links.twitter %}
+      <li class="twitter"><a href="{{ speaker.links.twitter }}">Twitter: {{ speaker.twitterHandle }}</a></li>
+    {% endif %}
+    {% if speaker.links.github %}
+      <li class="github"><a href="{{ speaker.links.github }}">GitHub: {{ speaker.githubHandle }}</a></li>
+    {% endif %}
+    {% if speaker.links.homepage %}
+      <li class="github"><a href="{{ speaker.links.homepage }}">Website</a></li>
+    {% endif %}
+</ul>

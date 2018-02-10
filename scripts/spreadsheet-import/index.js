@@ -113,6 +113,7 @@ const filterUnpublished =
         );
 
         const {content, ...frontmatterData} = record;
+        templateGlobals.title = `${frontmatterData.firstname} ${frontmatterData.lastname}: ${frontmatterData.talkTitle}`
         const frontmatter = yaml.safeDump({
           ...templateGlobals,
           [dataFieldName]: frontmatterData
