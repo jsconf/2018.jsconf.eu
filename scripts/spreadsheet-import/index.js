@@ -8,6 +8,8 @@ const {promisify} = require('util');
 const {getSheetData} = require('./spreadsheet-api');
 const {processSheet, simplifySpreadsheetData} = require('./spreadsheet-utils');
 const rimraf = promisify(require('rimraf'));
+const download = promisify(require('file-download'));
+const getTempName = require('temp-file').getTempName
 
 const timeout = promisify(setTimeout);
 
@@ -105,7 +107,7 @@ const filterUnpublished =
       .filter(r => r.published || !filterUnpublished)
 
       // render md-files
-      .forEach(record => {
+      .forEach(async function(record) {
         const filename = path.join(
           contentRoot,
           contentPath,
@@ -114,6 +116,7 @@ const filterUnpublished =
 
         const {content, ...frontmatterData} = record;
         templateGlobals.title = `${frontmatterData.firstname} ${frontmatterData.lastname}: ${frontmatterData.talkTitle}`
+        frontmatterData.image = (await downloadImage(frontmatterData, !record.published)) || {};
         const frontmatter = yaml.safeDump({
           ...templateGlobals,
           [dataFieldName]: frontmatterData
@@ -136,3 +139,46 @@ const filterUnpublished =
       });
   });
 })().catch(err => console.error(err));
+
+function downloadImage(speaker, preview) {
+  const temp = 'contents/images/speaker/temp/' + getTempName(speaker.id);
+  const url = speaker.potraitImageUrl;
+  delete speaker.potraitImageUrl;
+  function cleanup() {
+    if (fs.existsSync(temp)) {
+      fs.unlinkSync(temp);
+    }
+  }
+  return download(url, {
+    directory: path.dirname(temp),
+    filename: path.basename(temp),
+  }).then(_ => {
+    const buffer = require('read-chunk').sync(temp, 0, 12);
+    const info = require('image-type')(buffer);
+    if (!info) {
+      console.error(chalk.red.bold('Cannot identify image', url));
+      cleanup();
+      return;
+    }
+    const size = require('image-size')(temp);
+    let filename = speaker.firstname + '-' + speaker.lastname;
+    filename = filename.replace(/[^\w]/g, '-');
+    filename = filename.replace(/--/g, '-').toLowerCase();
+    if (preview) {
+      filename += '-PREVIEW'
+    }
+    const fullPath = 'contents/images/speaker/' + filename + '.' + info.ext;
+    console.info('Downloaded ', fullPath);
+    fs.renameSync(temp, fullPath);
+    cleanup();
+    return {
+      filename: filename + '.' + info.ext,
+      width: size.width,
+      height: size.height,
+    };
+  }).catch(err => {
+    console.error(chalk.red.bold('Failed to download', url));
+    cleanup();
+    return;
+  })
+}

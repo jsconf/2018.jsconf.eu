@@ -1,5 +1,7 @@
 node_modules
 /contents/speakers/*-PREVIEW.md
+/contents/images/speaker/*-PREVIEW.*
+/contents/images/speaker/temp/*
 /contents/talks/*-PREVIEW.md
 /build
 .\#*
