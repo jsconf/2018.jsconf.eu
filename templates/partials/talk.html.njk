@@ -1,7 +1,12 @@
 <h1><a href="{{ page.url }}">{{ speaker.firstname }} {{ speaker.lastname }}: {{ speaker.talkTitle }}</a></h1>
 
 <div class="md-content">
-    <img src="{{ speaker.potraitImageUrl }}" align=right>
+    {% if speaker.image.filename %}
+      <img src="{{ contents.images.speaker[speaker.image.filename].url }}"
+        alt="Portrait photo of {{ speaker.firstname }} {{ speaker.lastname }}"
+        data-aspect-ratio="{{ (speaker.image.height / speaker.image.width) * 100 }}%"
+        align=right>
+    {% endif %}
     {{ page.html }}
 </div>
 
