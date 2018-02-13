@@ -3,11 +3,20 @@
 {% set speakerPages = contents.speakers._.pages %}
 
 {% block content %}
-    <ul>
-        {% for page in speakerPages %}
-            {% set speaker = page.metadata.speaker %}
 
-            {% include "../partials/talk.html.njk" %}
-        {% endfor %}
-    </ul>
+  <div class="grid">
+    {% for page in speakerPages %}
+      <section class="grid-item-speaker">
+        <a class="speaker" href="{{ page.url }}">
+          {% set speaker = page.metadata.speaker %}
+
+          {% include '../partials/speaker-picture.html.njk' %}
+
+          <h2 class="heading--spaced heading--no-border">{{ speaker.firstname }} {{ speaker.lastname }}</h2>
+          <p class="ma0">{{ speaker.talkTitle }}</p>
+        </a>
+      </section>
+    {% endfor %}
+  </div>
+
 {% endblock %}

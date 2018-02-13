@@ -92,3 +92,8 @@ h2, .heading--spaced {
     padding-bottom: 0.45rem;
   }
 }
+
+.heading--no-border {
+  border-bottom: none;
+  padding-bottom: 0;
+}

@@ -2,6 +2,14 @@
 
 {% set speaker = page.metadata.speaker %}
 
+{% block header %}
+  <section class="grid">
+    <div class="grid-item-center">
+      <h1>{{ speaker.firstname }} {{ speaker.lastname }}</h1>
+    </div>
+  </section>
+{% endblock %}
+
 {% block content %}
   {% include "../partials/talk.html.njk" %}
 {% endblock %}
