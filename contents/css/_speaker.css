@@ -1,0 +1,38 @@
+.speaker {
+  display: block;
+  text-align: center;
+  @media (--small) {
+    text-align: left;
+  }
+}
+
+.speaker h2 {
+  margin: .25rem 0 0;
+  padding: 0;
+  @media (--small) {
+    margin-top: .75rem;
+  }
+}
+
+.speaker .speaker-picture img {
+  display: inline-block;
+  margin: auto;
+}
+
+.speaker-picture img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  height: 10rem;
+  width: 10rem;
+}
+
+.speaker-talk {
+  padding-bottom: .5rem;
+  border-bottom: 4px solid var(--evalblack);
+  text-align: center;
+  @media (--xsmall) {
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.45rem;
+  }
+}

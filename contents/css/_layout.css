@@ -58,6 +58,42 @@
   }
 }
 
+.grid-item-speaker {
+  grid-column: 4 / span 8;
+  margin-top: 4rem;
+}
+
+@media (--small) {
+  .grid-item-speaker {
+    margin-top: 0;
+  }
+  .grid-item-speaker:nth-child(2n+1) {
+    grid-column: 4 / span 3;
+  }
+  .grid-item-speaker:nth-child(2n+2) {
+    grid-column: span 3 / -4;
+    margin-top: 14rem;
+  }
+}
+
+@media (--medium) {
+  .grid-item-speaker:nth-child(2n+2) {
+    margin-top: 0;
+  }
+  .grid-item-speaker:nth-child(4n+1) {
+    grid-column: 5 / span 3;
+  }
+  .grid-item-speaker:nth-child(4n+2) {
+    grid-column: 11 / span 3;
+  }
+  .grid-item-speaker:nth-child(4n+3) {
+    grid-column: 2 / span 3;
+  }
+  .grid-item-speaker:nth-child(4n+4) {
+    grid-column: 8 / span 3;
+  }
+}
+
 /* Grid Areas
   These are used for grid patterns that we re-use in multiple places,
   e.g. a 4 column wide heading next to a 5 column wide content block, or

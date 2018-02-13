@@ -1,23 +1,23 @@
-<h1><a href="{{ page.url }}">{{ speaker.firstname }} {{ speaker.lastname }}: {{ speaker.talkTitle }}</a></h1>
+<div class="grid mt3">
+  <div class="grid-item-center">
+    {% include './speaker-picture.html.njk' %}
 
-<div class="md-content">
-    {% if speaker.image.filename %}
-      <img src="{{ contents.images.speaker[speaker.image.filename].url }}"
-        alt="Portrait photo of {{ speaker.firstname }} {{ speaker.lastname }}"
-        data-aspect-ratio="{{ (speaker.image.height / speaker.image.width) * 100 }}%"
-        align=right>
-    {% endif %}
+    <header class="speaker-talk">
+      <h2 class="heading--spaced heading--no-border">{{ speaker.talkTitle }}</h2>
+    </header>
+
     {{ page.html }}
-</div>
 
-<ul>
-    {% if speaker.links.twitter %}
-      <li class="twitter"><a href="{{ speaker.links.twitter }}">Twitter: {{ speaker.twitterHandle }}</a></li>
-    {% endif %}
-    {% if speaker.links.github %}
-      <li class="github"><a href="{{ speaker.links.github }}">GitHub: {{ speaker.githubHandle }}</a></li>
-    {% endif %}
-    {% if speaker.links.homepage %}
-      <li class="github"><a href="{{ speaker.links.homepage }}">Website</a></li>
-    {% endif %}
-</ul>
+    <ul>
+      {% if speaker.links.twitter %}
+        <li class="twitter"><a href="{{ speaker.links.twitter }}">Twitter: {{ speaker.twitterHandle }}</a></li>
+      {% endif %}
+      {% if speaker.links.github %}
+        <li class="github"><a href="{{ speaker.links.github }}">GitHub: {{ speaker.githubHandle }}</a></li>
+      {% endif %}
+      {% if speaker.links.homepage %}
+        <li class="github"><a href="{{ speaker.links.homepage }}">Website</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
