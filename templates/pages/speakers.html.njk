@@ -1,6 +1,16 @@
 {% extends "../layouts/default.html.njk" %}
 
 {% set speakerPages = contents.speakers._.pages %}
+{% block bodyclass %}page--speakers{% endblock %}
+{% block header %}
+  {% if page.metadata.title  %}
+    <section class="grid">
+      <div class="grid-item-left">
+        <h1>{{ page.metadata.title }}</h1>
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}
 
 {% block content %}
 

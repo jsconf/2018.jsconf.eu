@@ -1,6 +1,14 @@
+.page--speakers .grid-item-left{
+  grid-column: 4/span 8;;
+  @media (--large) {
+    grid-column: 2/span 8;
+  }
+}
+
 .speaker {
   display: block;
   text-align: center;
+
   @media (--small) {
     text-align: left;
   }
@@ -15,16 +23,55 @@
 }
 
 .speaker .speaker-picture img {
-  display: inline-block;
   margin: auto;
 }
 
-.speaker-picture img {
+.speaker-picture{
+  position: relative;
   border-radius: 50%;
+  overflow: hidden;
+  height: 0;
+  padding-top: var(--image-width);
+  width: var(--image-width);
+  --image-width: 50%;
+  left: 25%;
+  @media (--small){
+    --image-width: 100%;
+    left: auto;
+  }
+  @media (--medium){
+    --image-width: 75%;
+  }
+  @media (--large){
+    --image-width: 100%;
+  }
+}
+
+.speaker-picture img {
   display: block;
   margin: 0 auto;
-  height: 10rem;
-  width: 10rem;
+  position: absolute;
+  top: 0;
+}
+
+
+.speaker-picture:after{
+  content: "";
+  background-color: var(--promiselinen);
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode:  color;
+}
+
+.grid-item-speaker:nth-child(3n+1) .speaker-picture:after{
+  background-color: var(--returnrose);
+}
+.grid-item-speaker:nth-child(3n+2) .speaker-picture:after{
+  background-color: var(--getdaycloud);
 }
 
 .speaker-talk {
@@ -36,3 +83,15 @@
     padding-bottom: 0.45rem;
   }
 }
+
+
+/* Typography special rules for speaker page:( */
+
+.page--speakers h2, .page--speakers p, .page--speakers ul, .page--speakers ol, .page--speakers blockquote{
+    @media (--xsmall) {
+    font-size: 1rem;
+    } @media (--medium) {
+    font-size: 1.375rem;
+  }
+  }
+
