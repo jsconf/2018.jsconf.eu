@@ -8,8 +8,9 @@ const {promisify} = require('util');
 const {getSheetData} = require('./spreadsheet-api');
 const {processSheet, simplifySpreadsheetData} = require('./spreadsheet-utils');
 const rimraf = promisify(require('rimraf'));
-const download = promisify(require('file-download'));
-const getTempName = require('temp-file').getTempName
+const fetch = require('node-fetch');
+const imageType = require('image-type');
+const imageSize = require('image-size');
 
 const timeout = promisify(setTimeout);
 
@@ -51,6 +52,7 @@ program
     '-p --production',
     "run in production-mode (don't import unpublished items)"
   )
+  .option('-i --image-path <imagePath>', 'alternative path to look for images')
   .option('-C --no-cleanup', "don't run cleanup before import")
   .parse(process.argv);
 
@@ -115,15 +117,24 @@ const filterUnpublished =
         );
 
         const {content, ...frontmatterData} = record;
-        templateGlobals.title = `${frontmatterData.firstname} ${frontmatterData.lastname}: ${frontmatterData.talkTitle}`
-        frontmatterData.image = (await downloadImage(frontmatterData, !record.published)) || {};
+        templateGlobals.title =
+          `${frontmatterData.firstname} ${frontmatterData.lastname}:` +
+          ` ${frontmatterData.talkTitle}`;
+
+        frontmatterData.image = getLocalImage(frontmatterData);
+        if (!frontmatterData.image) {
+          frontmatterData.image = await downloadImage(frontmatterData);
+        }
+
+        delete frontmatterData.potraitImageUrl;
+
         const frontmatter = yaml.safeDump({
           ...templateGlobals,
           [dataFieldName]: frontmatterData
         });
 
         console.log(
-          ' --> writing %s',
+          ' --> write markdown %s',
           chalk.green(path.relative(process.cwd(), filename))
         );
 
@@ -140,45 +151,83 @@ const filterUnpublished =
   });
 })().catch(err => console.error(err));
 
-function downloadImage(speaker, preview) {
-  const temp = 'contents/images/speaker/temp/' + getTempName(speaker.id);
-  const url = speaker.potraitImageUrl;
-  delete speaker.potraitImageUrl;
-  function cleanup() {
-    if (fs.existsSync(temp)) {
-      fs.unlinkSync(temp);
-    }
+function getLocalImage(speaker) {
+  if (!program.imagePath) {
+    return null;
   }
-  return download(url, {
-    directory: path.dirname(temp),
-    filename: path.basename(temp),
-  }).then(_ => {
-    const buffer = require('read-chunk').sync(temp, 0, 12);
-    const info = require('image-type')(buffer);
-    if (!info) {
-      console.error(chalk.red.bold('Cannot identify image', url));
-      cleanup();
-      return;
-    }
-    const size = require('image-size')(temp);
-    let filename = speaker.firstname + '-' + speaker.lastname;
-    filename = filename.replace(/[^\w]/g, '-');
-    filename = filename.replace(/--/g, '-').toLowerCase();
-    if (preview) {
-      filename += '-PREVIEW'
-    }
-    const fullPath = 'contents/images/speaker/' + filename + '.' + info.ext;
-    console.info('Downloaded ', fullPath);
-    fs.renameSync(temp, fullPath);
-    cleanup();
+
+  const filename = getImageFilename(speaker, 'jpg');
+  const srcFilename = path.join(
+    program.imagePath,
+    filename.replace('-PREVIEW', '')
+  );
+  const destFilename = path.join('contents/images/speaker', filename);
+
+  if (fs.existsSync(srcFilename)) {
+    console.log(
+      ` --> image found in image-path:`,
+      filename.replace('-PREVIEW', '')
+    );
+    const buffer = fs.readFileSync(srcFilename);
+    const size = imageSize(buffer);
+    fs.writeFileSync(destFilename, buffer);
+
     return {
-      filename: filename + '.' + info.ext,
+      filename,
       width: size.width,
-      height: size.height,
+      height: size.height
     };
-  }).catch(err => {
-    console.error(chalk.red.bold('Failed to download', url));
-    cleanup();
-    return;
-  })
+  }
+
+  return null;
+}
+
+async function downloadImage(speaker) {
+  const url = speaker.potraitImageUrl;
+
+  try {
+    const res = await fetch(url);
+
+    if (!res.headers.get('content-type').startsWith('image')) {
+      console.error(chalk.red.bold(' !!! url is not an image', url));
+      return {};
+    }
+
+    const buffer = await res.buffer();
+
+    const info = imageType(buffer);
+    if (!info) {
+      console.error(chalk.red.bold(' !!! no type-imformation for image', url));
+      return {};
+    }
+
+    const size = imageSize(buffer);
+    const filename = getImageFilename(speaker, info.ext);
+    const fullPath = 'contents/images/speaker/' + filename;
+
+    console.info(' --> image downloaded ', chalk.green(fullPath));
+    fs.writeFileSync(fullPath, buffer);
+
+    return {
+      filename,
+      width: size.width,
+      height: size.height
+    };
+  } catch (err) {
+    console.error(chalk.red.bold(' !!! failed to download', url));
+
+    return {};
+  }
+}
+
+function getImageFilename(speaker, ext) {
+  let filename = speaker.firstname + '-' + speaker.lastname;
+  filename = filename.replace(/[^\w]/g, '-');
+  filename = filename.replace(/--/g, '-').toLowerCase();
+
+  if (!speaker.published) {
+    filename += '-PREVIEW';
+  }
+
+  return filename + '.' + ext;
 }
