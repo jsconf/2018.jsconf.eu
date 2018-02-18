@@ -54,6 +54,7 @@ h1, .heading--massive {
   border-bottom: none;
   text-transform: none;
   letter-spacing: normal;
+  text-align: center;
   @media (--xsmall) {
     font-size: 3.5rem;
     margin-bottom: 3rem;
@@ -63,6 +64,7 @@ h1, .heading--massive {
     font-size: 4.5rem;
     margin-bottom: 3rem;
     padding-bottom: 0;
+    text-align: left  ;
   }
   @media (--xlarge) {
     font-size: 6rem;
