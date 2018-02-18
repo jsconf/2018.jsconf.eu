@@ -52,7 +52,7 @@
 /* Grid Items Placement */
 
 .grid-item-center {
-  grid-column: 2 / span 12;
+  grid-column: 3 / span 10;
   @media (--small) {
     grid-column: 4 / span 8;
   }
