@@ -11,8 +11,8 @@
     "cssnano": "^3.10.0",
     "csso": "^3.5.0",
     "es-abstract": "^1.10.0",
-    "file-download": "^0.1.2",
     "get-port": "^3.2.0",
+    "gm": "^1.23.1",
     "googleapis": "^24.0.0",
     "image-size": "^0.6.2",
     "image-type": "^3.0.0",
@@ -32,12 +32,10 @@
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.3.0",
     "prettier": "^1.10.2",
-    "read-chunk": "^2.1.0",
     "rimraf": "^2.6.2",
     "svgo": "^1.0.3",
     "svgstore": "^2.0.2",
     "tachyons": "^4.9.1",
-    "temp-file": "^3.1.1",
     "typogr": "^0.6.7",
     "underscore": "^1.8.3",
     "unquote": "^1.1.1",
@@ -51,5 +49,8 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "devDependencies": {
+    "node-fetch": "^2.0.0"
+  }
 }
