@@ -4,7 +4,7 @@
 # CHANGES MADE HERE WILL BE OVERWRITTEN.
 
 template: pages/speaker.html.njk
-title: 'Ashi Krishnan: Deep Learning  in JS'
+title: 'Shelley Vohr: Asynchrony: Under the Hood'
 speaker:
   published: true
   reviewed: true
@@ -21,7 +21,7 @@ speaker:
   country: USA
   city: 'San Francisco, CA'
   image:
-    filename: shelley-vohr.png
+    filename: shelley-vohr.jpg
     width: 460
     height: 460
 

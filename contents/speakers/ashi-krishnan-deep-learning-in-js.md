@@ -4,14 +4,14 @@
 # CHANGES MADE HERE WILL BE OVERWRITTEN.
 
 template: pages/speaker.html.njk
-title: 'Ashi Krishnan: Deep Learning  in JS'
+title: 'Ashi Krishnan: Deep Learning in JS'
 speaker:
   published: true
   reviewed: true
   id: ashi-krishnan-deep-learning-in-js
   firstname: Ashi
   lastname: Krishnan
-  talkTitle: Deep Learning  in JS
+  talkTitle: Deep Learning in JS
   twitterHandle: '@queerviolet'
   githubHandle: '@queerviolet'
   links:
@@ -23,7 +23,7 @@ speaker:
   image:
     filename: ashi-krishnan.jpg
     width: 1000
-    height: 1500
+    height: 1000
 
 ----
 
