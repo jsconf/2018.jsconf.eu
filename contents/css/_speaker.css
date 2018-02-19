@@ -30,7 +30,7 @@
   margin: auto;
 }
 
-.speaker-picture{
+.speaker-picture {
   position: relative;
   border-radius: 50%;
   overflow: hidden;
@@ -39,16 +39,19 @@
   width: var(--image-width);
   --image-width: 50%;
   left: 25%;
-  /*@media (--small){
+
+  @media (--small) {
     --image-width: 100%;
     left: auto;
   }
-  @media (--medium){
+
+  @media (--medium) {
     --image-width: 75%;
   }
-  @media (--large){
+
+  @media (--large) {
     --image-width: 100%;
-  }*/
+  }
 }
 
 .speaker-picture img {
