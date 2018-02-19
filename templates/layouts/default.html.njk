@@ -36,7 +36,13 @@
           {% if page.metadata.title  %}
             <section class="grid">
               <div class="grid-item-center">
-                <h1>{{ page.metadata.title }}</h1>
+                <h1>
+                  {% if page.metadata.bodyTitle %}
+                    {{ page.metadata.bodyTitle }}
+                  {% else %}
+                    {{ page.metadata.title }}
+                  {% endif %}
+                </h1>
               </div>
             </section>
           {% endif %}
