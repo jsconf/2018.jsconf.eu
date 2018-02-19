@@ -35,7 +35,7 @@
   width: var(--image-width);
   --image-width: 50%;
   left: 25%;
-  @media (--small){
+  /*@media (--small){
     --image-width: 100%;
     left: auto;
   }
@@ -44,7 +44,7 @@
   }
   @media (--large){
     --image-width: 100%;
-  }
+  }*/
 }
 
 .speaker-picture img {
