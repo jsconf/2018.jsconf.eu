@@ -230,6 +230,7 @@
 .page-speakers{
   @media (--xsmall) {
     background-image: url('contents:svg/form-speakers.svg');
-    background-size:contain;
+    background-size: 100%;
+    background-position: top center;
   }
 }
