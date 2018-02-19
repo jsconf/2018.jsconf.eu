@@ -4,7 +4,7 @@
 # CHANGES MADE HERE WILL BE OVERWRITTEN.
 
 template: pages/speaker.html.njk
-title: 'Ashi Krishnan: Deep Learning  in JS'
+title: 'Emil Bay: Hand-crafting WebAssembly'
 speaker:
   published: true
   reviewed: true
