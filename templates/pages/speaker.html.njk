@@ -13,3 +13,19 @@
 {% block content %}
   {% include "../partials/talk.html.njk" %}
 {% endblock %}
+
+{% block extraMetaData %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@jsconfeu">
+  {% if speaker.twitterHandle %}
+    <meta name="twitter:creator" content="{{ speaker.twitterHandle }}">
+  {% endif %}
+  <meta name="twitter:title" content="{{ speaker.talkTitle }}">
+  <meta property="og:title" content={{ speaker.talkTitle }}">
+  <meta name="twitter:description" content="{{ speaker.firstname }} {{ speaker.lastname }} is speaking at JSConf EU 2018">
+  <meta name="description" content="{{ page.html | striptags | truncate(255) }}">
+  {% if speaker.image %}
+    <meta name="twitter:image" content="https://2018.jsconf.eu{{ contents.images.speaker[speaker.image.filename].url }}">
+    <meta property="og:image" content="https://2018.jsconf.eu{{ contents.images.speaker[speaker.image.filename].url }}" />
+  {% endif %}
+{% endblock %}
