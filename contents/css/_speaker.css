@@ -8,10 +8,6 @@
 .speaker {
   display: block;
   text-align: center;
-
-  @media (--small) {
-    text-align: left;
-  }
 }
 
 .speaker h2 {
@@ -31,27 +27,20 @@
 }
 
 .speaker-picture {
+  --image-width: 50%;
+
   position: relative;
   border-radius: 50%;
   overflow: hidden;
   height: 0;
   padding-top: var(--image-width);
   width: var(--image-width);
-  --image-width: 50%;
-  left: 25%;
 
-  @media (--small) {
-    --image-width: 100%;
-    left: auto;
-  }
+  left: calc((100% - var(--image-width)) / 2);
 
-  @media (--medium) {
-    --image-width: 75%;
-  }
-
-  @media (--large) {
-    --image-width: 100%;
-  }
+  @media (--small) { --image-width: 100%; }
+  @media (--medium) { --image-width: 75%; }
+  @media (--large) { --image-width: 100%; }
 }
 
 .speaker-picture img {
