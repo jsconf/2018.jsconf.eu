@@ -1,22 +1,43 @@
-<div class="grid mt3">
+{% from "../_macros.njk" import svgIcon %}
+
+<div class="grid mt3 speaker-detail">
   <div class="grid-item-center">
     {% include './speaker-picture.html.njk' %}
 
+    <h1>{{ speaker.firstname }} {{ speaker.lastname }}</h1>
+
     <header class="speaker-talk">
-      <h2 class="heading--spaced heading--no-border">{{ speaker.talkTitle }}</h2>
+      <h2 class="heading--no-border">{{ speaker.talkTitle }}</h2>
     </header>
 
     {{ page.html }}
 
-    <ul>
+    <ul class="speaker-links">
       {% if speaker.links.twitter %}
-        <li class="twitter"><a href="{{ speaker.links.twitter }}">Twitter: {{ speaker.twitterHandle }}</a></li>
+        <li class="speaker-link speaker-link--twitter">
+          <a href="{{ speaker.links.twitter }}">
+            {{ svgIcon('icon-twitter-dark')}}
+            <span>{{ speaker.twitterHandle }}</span>
+          </a>
+        </li>
       {% endif %}
+
       {% if speaker.links.github %}
-        <li class="github"><a href="{{ speaker.links.github }}">GitHub: {{ speaker.githubHandle }}</a></li>
+        <li class="speaker-link speaker-link--github">
+          <a href="{{ speaker.links.github }}">
+            {{ svgIcon('icon-github')}}
+            <span>{{ speaker.githubHandle }}</span>
+          </a>
+        </li>
       {% endif %}
+
       {% if speaker.links.homepage %}
-        <li class="github"><a href="{{ speaker.links.homepage }}">Website</a></li>
+        <li class="speaker-link speaker-link--website">
+          <a href="{{ speaker.links.homepage }}">
+            {{ svgIcon('icon-website') }}
+            <span>{{ speaker.links.homepage | replace( r/^https?:\/\//, '') }}</span>
+          </a>
+        </li>
       {% endif %}
     </ul>
   </div>
