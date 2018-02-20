@@ -57,12 +57,16 @@ if (!program.spreadsheetId) {
   process.exit(1);
 }
 
-const filterUnpublished =
-  program.production || process.env.NODE_ENV === 'production';
+const params = {
+  spreadsheetId: program.spreadsheetId,
+  imagePath: program.imagePath,
+  doCleanup: program.cleanup,
+  publishedOnly: program.production || process.env.NODE_ENV === 'production'
+};
 
 (async function main() {
   // ---- cleanup...
-  if (program.cleanup) {
+  if (params.doCleanup) {
     console.log(chalk.gray('cleaning up...'));
 
     await Promise.all([rimraf(path.join(contentRoot, '{speakers,talks}/*md'))]);
@@ -71,7 +75,7 @@ const filterUnpublished =
   // ---- fetch spreadsheet-data...
   console.log(chalk.gray('loading spreadsheet data...'));
   const sheets = simplifySpreadsheetData(
-    await getSheetData(program.spreadsheetId, {
+    await getSheetData(params.spreadsheetId, {
       readonly: true,
 
       async beforeOpenCallback(url) {
@@ -99,7 +103,7 @@ const filterUnpublished =
     console.log(chalk.white('processing sheet %s'), chalk.yellow(sheetId));
     records
       // filter unpublished records when not in dev-mode.
-      .filter(r => r.published || !filterUnpublished)
+      .filter(r => r.published || !params.publishedOnly)
 
       // render md-files
       .forEach(async function(record) {
@@ -145,13 +149,13 @@ const filterUnpublished =
 })().catch(err => console.error(err));
 
 function getLocalImage(speaker) {
-  if (!program.imagePath) {
+  if (!params.imagePath) {
     return null;
   }
 
   const filename = getImageFilename(speaker, 'jpg');
   const srcFilename = path.join(
-    program.imagePath,
+    params.imagePath,
     filename.replace('-PREVIEW', '')
   );
   const destFilename = path.join('contents/images/speaker', filename);
