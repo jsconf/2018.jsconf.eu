@@ -20,6 +20,7 @@ speaker:
     homepage: 'http://bayes.dk'
   country: Denmark
   city: Denmark
+  name: Emil Bay
   image:
     filename: emil-bay.jpg
     width: 440

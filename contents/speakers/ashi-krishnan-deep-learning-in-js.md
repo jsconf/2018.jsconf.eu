@@ -20,6 +20,7 @@ speaker:
     homepage: 'http://ashi.io'
   country: United States
   city: 'New York, NY'
+  name: Ashi Krishnan
   image:
     filename: ashi-krishnan.jpg
     width: 440

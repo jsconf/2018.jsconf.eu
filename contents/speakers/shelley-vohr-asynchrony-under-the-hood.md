@@ -20,6 +20,7 @@ speaker:
     homepage: 'http://codebyte.re'
   country: USA
   city: 'San Francisco, CA'
+  name: Shelley Vohr
   image:
     filename: shelley-vohr.jpg
     width: 440
