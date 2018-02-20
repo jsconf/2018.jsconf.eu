@@ -22,13 +22,6 @@ const sheetParams = {
     },
     dataFieldName: 'speaker',
     contentPath: 'speakers'
-  },
-  talks: {
-    templateGlobals: {
-      template: 'pages/talk.html.njk'
-    },
-    dataFieldName: 'talk',
-    contentPath: 'talks'
   }
 };
 
@@ -116,21 +109,21 @@ const filterUnpublished =
           `${record.id}${record.published ? '' : '-PREVIEW'}.md`
         );
 
-        const {content, ...frontmatterData} = record;
-        templateGlobals.title =
-          `${frontmatterData.firstname} ${frontmatterData.lastname}:` +
-          ` ${frontmatterData.talkTitle}`;
+        const {content, ...speakerData} = record;
 
-        frontmatterData.image = getLocalImage(frontmatterData);
-        if (!frontmatterData.image) {
-          frontmatterData.image = await downloadImage(frontmatterData);
+        speakerData.name = speakerData.firstname + ' ' + speakerData.lastname;
+
+        speakerData.image = getLocalImage(speakerData);
+        if (!speakerData.image) {
+          speakerData.image = await downloadImage(speakerData);
         }
 
-        delete frontmatterData.potraitImageUrl;
+        delete speakerData.potraitImageUrl;
 
         const frontmatter = yaml.safeDump({
           ...templateGlobals,
-          [dataFieldName]: frontmatterData
+          title: `${speakerData.name}: ${speakerData.talkTitle}`,
+          [dataFieldName]: speakerData
         });
 
         console.log(
