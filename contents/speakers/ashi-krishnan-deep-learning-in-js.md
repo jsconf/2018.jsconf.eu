@@ -22,8 +22,8 @@ speaker:
   city: 'New York, NY'
   image:
     filename: ashi-krishnan.jpg
-    width: 1000
-    height: 1000
+    width: 440
+    height: 440
 
 ----
 

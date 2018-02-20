@@ -22,8 +22,8 @@ speaker:
   city: Denmark
   image:
     filename: emil-bay.jpg
-    width: 460
-    height: 460
+    width: 440
+    height: 440
 
 ----
 
