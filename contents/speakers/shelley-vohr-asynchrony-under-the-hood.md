@@ -22,8 +22,8 @@ speaker:
   city: 'San Francisco, CA'
   image:
     filename: shelley-vohr.jpg
-    width: 460
-    height: 460
+    width: 440
+    height: 440
 
 ----
 
