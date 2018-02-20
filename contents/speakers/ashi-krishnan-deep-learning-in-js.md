@@ -12,7 +12,7 @@ speaker:
   firstname: Ashi
   lastname: Krishnan
   talkTitle: Deep Learning in JS
-  twitterHandle: '@queerviolet'
+  twitterHandle: '@rakshesha'
   githubHandle: '@queerviolet'
   links:
     twitter: 'https://twitter.com/queerviolet'
