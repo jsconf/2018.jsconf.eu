@@ -1,6 +1,9 @@
 {% extends "../layouts/default.html.njk" %}
 
-{% set speakerPages = contents.speakers._.pages %}
+{% set speakerPages = contents.speakers._.pages |
+    sortObjects('metadata.speaker.order', 100, 'number') |
+    reverse %}
+
 {% block bodyclass %}page--speakers{% endblock %}
 {% block header %}
   {% if page.metadata.title  %}

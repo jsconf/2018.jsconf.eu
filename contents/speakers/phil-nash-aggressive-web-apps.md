@@ -9,6 +9,7 @@ speaker:
   published: true
   reviewed: false
   id: phil-nash-aggressive-web-apps
+  order: 4
   firstname: Phil
   lastname: Nash
   talkTitle: Aggressive Web Apps

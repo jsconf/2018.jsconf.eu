@@ -21,7 +21,7 @@
   },
   "nunjucks": {
     "filterdir": "./templates/filters",
-    "filters": ["log", "dumpsafe"]
+    "filters": ["log", "dumpsafe", "sortObjects"]
   },
   "svgo": {
     "plugins": ["removeDoctype", "removeComments", "removeTitle", "removeDesc"]

@@ -9,6 +9,7 @@ speaker:
   published: true
   reviewed: true
   id: shelley-vohr-asynchrony-under-the-hood
+  order: 3
   firstname: Shelley
   lastname: Vohr
   talkTitle: 'Asynchrony: Under the Hood'
