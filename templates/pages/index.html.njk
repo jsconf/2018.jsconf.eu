@@ -38,7 +38,7 @@
     </div>
   </section>
 
-  {% set latest = contents.news._.pages | notDraft | first %}
+  {% set latest = contents.news._.pages | notDraft | last %}
   <section class="tc tl-l grid grid-4-5 mb6 mb7-l">
     <div class="grid-form-home-coc">
       {{ svgIcon('form-home-coc', viewBox='0 0 658 725', svgClass="svg-scale") }}
@@ -51,8 +51,8 @@
         {{ latest.title }}
       </h3>
       <article>
-        {{ latest.html | truncate('300') }}
-        <a href="{{ latest.url }}">Read more</a>
+        {{ latest.html | striptags | truncate('300') }}
+        <a href="{{ latest.url }}"  class="link--underline">Read more</a>
       </article>
     </div>
   </section>
