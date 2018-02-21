@@ -14,6 +14,9 @@ const imageSize = require('image-size');
 
 const timeout = promisify(setTimeout);
 
+// spreadsheet-format is illustrated here:
+//   https://docs.google.com/spreadsheets/d/14TQHTYePS0SAaXGRNF3zYXvvk8xz25CXW-uekQy4HAs/edit
+
 program
   .description(
     'import speaker- and talk-data from the specified spreadheet and ' +
@@ -21,8 +24,6 @@ program
   )
   .arguments('<spreadsheet>')
   .action(spreadsheet => {
-    // example URL:
-    //   https://docs.google.com/spreadsheets/d/1qgPWxuEohNuTUafleeiMbrJPecyho6GtPJBCbj-IrfM/edit
     const rxSpreadsheetIdFromUrl = /^https:\/\/docs\.google\.com\/.*\/d\/([^/]+).*$/;
 
     program.spreadsheetId = spreadsheet;
