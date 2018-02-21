@@ -14,19 +14,8 @@ const imageSize = require('image-size');
 
 const timeout = promisify(setTimeout);
 
-const contentRoot = path.resolve(__dirname, '../../contents');
-const sheetParams = {
-  speakers: {
-    templateGlobals: {
-      template: 'pages/speaker.html.njk'
-    },
-    dataFieldName: 'speaker',
-    contentPath: 'speakers'
-  }
-};
-
-// example https://docs.google.com/spreadsheets/d/1qgPWxuEohNuTUafleeiMbrJPecyho6GtPJBCbj-IrfM/edit
-const rxSpreadsheetIdFromUrl = /^https:\/\/docs.google.com\/.*\/d\/([^/]+).*$/;
+// spreadsheet-format is illustrated here:
+//   https://docs.google.com/spreadsheets/d/14TQHTYePS0SAaXGRNF3zYXvvk8xz25CXW-uekQy4HAs/edit
 
 program
   .description(
@@ -35,6 +24,8 @@ program
   )
   .arguments('<spreadsheet>')
   .action(spreadsheet => {
+    const rxSpreadsheetIdFromUrl = /^https:\/\/docs\.google\.com\/.*\/d\/([^/]+).*$/;
+
     program.spreadsheetId = spreadsheet;
 
     if (rxSpreadsheetIdFromUrl.test(spreadsheet)) {
@@ -49,7 +40,36 @@ program
   .option('-C --no-cleanup', "don't run cleanup before import")
   .parse(process.argv);
 
-if (!program.spreadsheetId) {
+const contentRoot = path.resolve(__dirname, '../../contents');
+const sheetParams = {
+  speakers: {
+    templateGlobals: {
+      template: 'pages/speaker.html.njk'
+    },
+    dataFieldName: 'speaker',
+    contentPath: 'speakers'
+  }
+};
+
+const wwwtfrcFile = __dirname + '/../../.wwwtfrc';
+const hasRcFile = fs.existsSync(wwwtfrcFile);
+
+let rcFileParams = {};
+if (hasRcFile) {
+  rcFileParams = JSON.parse(fs.readFileSync(wwwtfrcFile));
+}
+
+const params = {
+  ...rcFileParams,
+  imagePath: program.imagePath,
+  doCleanup: program.cleanup,
+  publishedOnly: program.production || process.env.NODE_ENV === 'production'
+};
+if (program.spreadsheetId) {
+  params.spreadsheetId = program.spreadsheetId;
+}
+
+if (!params.spreadsheetId) {
   console.log(
     chalk.red.bold('A spreadsheet-id (or spreadsheet-url) is required.')
   );
@@ -57,12 +77,19 @@ if (!program.spreadsheetId) {
   process.exit(1);
 }
 
-const filterUnpublished =
-  program.production || process.env.NODE_ENV === 'production';
+if (!hasRcFile) {
+  console.log('saving settings to', chalk.green('.wwwtfrc'));
+  fs.writeFileSync(
+    wwwtfrcFile,
+    JSON.stringify({spreadsheetId: params.spreadsheetId}, null, 2)
+  );
+}
 
-(async function main() {
+main(params).catch(err => console.error(err));
+
+async function main(params) {
   // ---- cleanup...
-  if (program.cleanup) {
+  if (params.doCleanup) {
     console.log(chalk.gray('cleaning up...'));
 
     await Promise.all([rimraf(path.join(contentRoot, '{speakers,talks}/*md'))]);
@@ -71,7 +98,7 @@ const filterUnpublished =
   // ---- fetch spreadsheet-data...
   console.log(chalk.gray('loading spreadsheet data...'));
   const sheets = simplifySpreadsheetData(
-    await getSheetData(program.spreadsheetId, {
+    await getSheetData(params.spreadsheetId, {
       readonly: true,
 
       async beforeOpenCallback(url) {
@@ -99,7 +126,7 @@ const filterUnpublished =
     console.log(chalk.white('processing sheet %s'), chalk.yellow(sheetId));
     records
       // filter unpublished records when not in dev-mode.
-      .filter(r => r.published || !filterUnpublished)
+      .filter(r => r.published || !params.publishedOnly)
 
       // render md-files
       .forEach(async function(record) {
@@ -142,16 +169,16 @@ const filterUnpublished =
         fs.writeFileSync(filename, markdownContent);
       });
   });
-})().catch(err => console.error(err));
+}
 
 function getLocalImage(speaker) {
-  if (!program.imagePath) {
+  if (!params.imagePath) {
     return null;
   }
 
   const filename = getImageFilename(speaker, 'jpg');
   const srcFilename = path.join(
-    program.imagePath,
+    params.imagePath,
     filename.replace('-PREVIEW', '')
   );
   const destFilename = path.join('contents/images/speaker', filename);
