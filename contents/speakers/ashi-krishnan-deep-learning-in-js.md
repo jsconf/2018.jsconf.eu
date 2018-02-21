@@ -15,7 +15,7 @@ speaker:
   twitterHandle: '@rakshesha'
   githubHandle: '@queerviolet'
   links:
-    twitter: 'https://twitter.com/queerviolet'
+    twitter: 'https://twitter.com/rakshesha'
     github: 'https://github.com/queerviolet'
     homepage: 'http://ashi.io'
   country: United States
