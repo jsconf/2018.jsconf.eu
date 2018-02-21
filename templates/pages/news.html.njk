@@ -1,6 +1,6 @@
 {% extends "../layouts/default.html.njk" %}
 
-{% set newsList = contents.news._.pages | notDraft %}
+{% set newsList = contents.news._.pages | notDraft | reverse %}
 
 {% block content %}
 
@@ -9,7 +9,7 @@
       {% for news in newsList %}
         <article>
           <h2>{{ news.title }}</h2>
-          {{ news.html | truncate('150') }}
+          {{ news.html | striptags | truncate('150') }}
           <a href="{{ news.url }}">Read more</a>
         </article>
       {% endfor %}
