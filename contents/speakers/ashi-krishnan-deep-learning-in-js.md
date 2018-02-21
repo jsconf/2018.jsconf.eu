@@ -9,6 +9,7 @@ speaker:
   published: true
   reviewed: true
   id: ashi-krishnan-deep-learning-in-js
+  order: 1
   firstname: Ashi
   lastname: Krishnan
   talkTitle: Deep Learning in JS

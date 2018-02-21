@@ -9,6 +9,7 @@ speaker:
   published: true
   reviewed: true
   id: emil-bay-hand-crafting-webassembly
+  order: 2
   firstname: Emil
   lastname: Bay
   talkTitle: Hand-crafting WebAssembly

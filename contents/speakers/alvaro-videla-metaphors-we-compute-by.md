@@ -9,6 +9,7 @@ speaker:
   published: true
   reviewed: false
   id: alvaro-videla-metaphors-we-compute-by
+  order: 6
   firstname: Alvaro
   lastname: Videla
   talkTitle: Metaphors We Compute By

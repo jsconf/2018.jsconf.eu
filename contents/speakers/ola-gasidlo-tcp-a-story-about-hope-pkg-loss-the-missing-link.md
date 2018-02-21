@@ -9,6 +9,7 @@ speaker:
   published: true
   reviewed: true
   id: ola-gasidlo-tcp-a-story-about-hope-pkg-loss-the-missing-link
+  order: 5
   firstname: Ola
   lastname: Gasidlo
   talkTitle: 'TCP - A story about hope, (pkg) loss && the missing link'
