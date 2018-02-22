@@ -3,5 +3,6 @@
   "template": "pages/about.html.njk",
   "filename": ":file/index.html",
   "title": "About JSConf EU 2018",
-  "bodyTitle": "About"
+  "bodyTitle": "About",
+  "image": "jsconfeu-group-2014.jpg"
 }
