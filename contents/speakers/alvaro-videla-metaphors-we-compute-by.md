@@ -7,7 +7,7 @@ template: pages/speaker.html.njk
 title: 'Alvaro Videla: Metaphors We Compute By'
 speaker:
   published: true
-  reviewed: false
+  reviewed: true
   id: alvaro-videla-metaphors-we-compute-by
   order: 6
   firstname: Alvaro
