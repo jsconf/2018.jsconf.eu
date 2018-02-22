@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% if page.title %}{{ page.title }}{% endif %}</title>
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}">
-    {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel=stylesheet href="{{ contents.css["main.css"].url }}">
     <link rel=preload href="{{ contents.images["pattern.svg"].url }}" as=image>
@@ -24,6 +21,19 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
     {% block extraMetaData %}
+      {% set description = page.description or page.html | striptags | truncate(255) %}
+      {% set image = contents.images[page.image].url if page.image else '/android-chrome-512x512.png' %}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@jsconfeu">
+      <meta name="twitter:creator" content="@jsconfeu">
+      <meta name="twitter:title" content="{{ page.title }}">
+      <meta property="og:title" content={{ page.title }}">
+      {% if description %}
+        <meta name="description" content="{{ description }}">
+        <meta name="twitter:description" content="{{ description }}">
+      {% endif %}
+      <meta name="twitter:image" content="{{ image }}">
+      <meta property="og:image" content="{{ image }}" />
     {% endblock %}
   </head>
   <body class="{% block bodyclass %}{% endblock %}">
