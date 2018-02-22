@@ -1,6 +1,9 @@
 {% extends "../layouts/default.html.njk" %}
 
-{% set newsList = contents.news._.pages | notDraft | reverse %}
+{% set newsList = contents.news._.pages |
+      notDraft |
+      sortObjects('metadata.date', '2017-01-01', 'date') |
+      reverse %}
 
 {% block content %}
 

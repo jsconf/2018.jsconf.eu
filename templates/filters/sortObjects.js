@@ -7,8 +7,8 @@ module.exports = function(
   compareAs = 'number'
 ) {
   return arr.slice(0).sort((objA, objB) => {
-    const a = objectPath.get(objA, keyPath, defaultValue);
-    const b = objectPath.get(objB, keyPath, defaultValue);
+    let a = objectPath.get(objA, keyPath, defaultValue);
+    let b = objectPath.get(objB, keyPath, defaultValue);
 
     switch (compareAs) {
       case 'number':
@@ -16,7 +16,9 @@ module.exports = function(
       case 'string':
         return a.localeCompare(b);
       case 'date':
-        throw new Error('sort-object: compareAs=date not yet implemented.');
+        if (typeof a == 'string') a = new Date(a);
+        if (typeof b == 'string') b = new Date(b);
+        return a.getTime() - b.getTime();
     }
   });
 };
