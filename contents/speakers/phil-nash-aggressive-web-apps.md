@@ -7,7 +7,7 @@ template: pages/speaker.html.njk
 title: 'Phil Nash: Aggressive Web Apps'
 speaker:
   published: true
-  reviewed: false
+  reviewed: true
   id: phil-nash-aggressive-web-apps
   order: 4
   firstname: Phil
