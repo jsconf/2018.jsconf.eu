@@ -6,5 +6,6 @@ node_modules
 /build
 .\#*
 .DS_Store
-.wwwtfrc
+/.wwwtfrc
 /service-account-credentials.json
+/secrets.tar

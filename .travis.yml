@@ -13,7 +13,5 @@ cache:
   directories:
   - node_modules
 before_install:
-- openssl aes-256-cbc -K $encrypted_92a5b1b18fab_key -iv $encrypted_92a5b1b18fab_iv
-  -in service-account-credentials.json.enc -out service-account-credentials.json -d
-- openssl aes-256-cbc -K $encrypted_92a5b1b18fab_key -iv $encrypted_92a5b1b18fab_iv
-  -in .wwwtfrc.enc -out .wwwtfrc -d
+- openssl aes-256-cbc -K $encrypted_92a5b1b18fab_key -iv $encrypted_92a5b1b18fab_iv -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
