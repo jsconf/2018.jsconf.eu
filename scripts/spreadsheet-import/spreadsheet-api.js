@@ -1,6 +1,7 @@
 const google = require('googleapis');
 
 const {initOAuth2Client} = require('./init-oauth2-client');
+const {initJWTAuthClient} = require('./init-jwt-auth-client');
 const {hasCredentials, getCredentialsPath} = require('./credentials');
 
 const sheets = google.sheets('v4');
