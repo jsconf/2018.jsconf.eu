@@ -7,3 +7,4 @@ node_modules
 .\#*
 .DS_Store
 .wwwtfrc
+/service-account-credentials.json
