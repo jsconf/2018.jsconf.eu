@@ -8,12 +8,14 @@
 {% block content %}
 
   <section class="grid">
-    <div class="grid-item-center md-content">
+    <div class="grid-item-center">
       {% for news in newsList %}
         <article>
-          <h2>{{ news.title }}</h2>
-          {{ news.html | striptags | truncate('150') }}
-          <a href="{{ news.url }}">Read more</a>
+          <a href="{{ news.url }}">
+            <h2>{{ news.title }}</h2>
+            {{ news.html | striptags | truncate('150') }}
+            <a href="{{ news.url }}" class="link--underline">Read more</a>
+          </a>
         </article>
       {% endfor %}
     </div>
