@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const postcss = require('postcss');
+const packageJson = require('../package.json');
 
 function loadPlugin(pluginSpec) {
   if (typeof pluginSpec === 'string') {
@@ -37,6 +38,13 @@ module.exports = (wintersmith, callback) => {
       files.forEach(name => {
         hash.update(fs.readFileSync(path + name), 'utf8');
       });
+      // Mix code involved in CSS generation into hash since we cannot hash
+      // the output.
+      hash.update(fs.readFileSync('plugins/postcss.js'), 'utf8');
+      Object.keys(packageJson.dependencies).filter(name => /css/.test(name))
+          .forEach(name => {
+            hash.update(name + '-' + packageJson.dependencies[name], 'utf8');
+          });
       return 'immutable/' + hash.digest('hex') + '/' + this._filepath.relative;
     }
 

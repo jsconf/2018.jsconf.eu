@@ -11,6 +11,7 @@
     "cssnano": "^3.10.0",
     "csso": "^3.5.0",
     "es-abstract": "^1.10.0",
+    "find": "^0.2.9",
     "get-port": "^3.2.0",
     "gm": "^1.23.1",
     "googleapis": "^24.0.0",
@@ -32,6 +33,7 @@
     "postcss-import": "^11.0.0",
     "postcss-url": "^7.3.0",
     "prettier": "^1.10.2",
+    "purify-css": "^1.2.5",
     "rimraf": "^2.6.2",
     "svgo": "^1.0.3",
     "svgstore": "^2.0.2",
@@ -46,8 +48,9 @@
   "scripts": {
     "start": "wintersmith --verbose preview",
     "build": "wintersmith build",
+    "purify-css": "node scripts/purify-css.js",
     "ci:import": "WWWTF_CREDENTIALS_PATH=. node scripts/spreadsheet-import -p",
-    "ci:build": "npm run-script ci:import && npm run-script build"
+    "ci:build": "npm run-script ci:import && npm run-script build && npm run-script purify-css"
   },
   "browserslist": [
     "last 2 versions"
