@@ -5,7 +5,10 @@ cache:
   directories:
   - node_modules
 
-script: npm run-script build
+script:
+  - npm run-script build
+  # Because we build again, move the non-deploy build out of the way.
+  - mv build test-build
 
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_92a5b1b18fab_key -iv $encrypted_92a5b1b18fab_iv -in secrets.tar.enc -out secrets.tar -d
