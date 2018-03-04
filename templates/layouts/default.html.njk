@@ -5,8 +5,25 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% if page.title %}{{ page.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      fetch('{{ contents.svg['sprite.svg'].url }}').then(response => {
+        if (!response.ok) {
+          console.error('Failed fetching sprite', response);
+          return;_
+        }
+        response.text().then(function(text) {
+          var sprite = document.getElementById('sprite')
+          if (sprite) {
+            sprite.innerHTML = text;
+          } else {
+            window.spriteHTML = text;
+          }
+        });
+      })
+    </script>
     <link rel=stylesheet href="{{ contents.css["main.css"].url }}">
     <link rel=preload href="{{ contents.images["pattern.svg"].url }}" as=image>
+    <link rel=preload href="{{ contents.svg["sprite.svg"].url }}" as=fetch>
     <link rel=preload href="https://use.typekit.net/af/6c9c65/00000000000000003b9adf44/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3"
         as=font crossorigin>
     <link rel=preload href="https://use.typekit.net/af/16a56f/00000000000000003b9adf46/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3"
@@ -37,6 +54,13 @@
     {% endblock %}
   </head>
   <body class="{% block bodyclass %}{% endblock %}">
+    <div id=sprite style="display:none">
+      <script>
+       if (window.spriteHTML) {
+         document.getElementById('sprite').innerHTML = window.spriteHTML;
+       }
+      </script>
+    </div>
     <div class="layout-wrapper">
 
       {% block topbar %}
@@ -69,10 +93,6 @@
         {% include "../partials/footer.html.njk" %}
       {% endblock %}
 
-    </div>
-
-    <div style="height: 0; width: 0; position: absolute; visibility: hidden; overflow: hidden;">
-      {{ contents.svg['sprite.svg'].sprite }}
     </div>
   </body>
 </html>
