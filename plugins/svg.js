@@ -21,7 +21,22 @@ module.exports = (env, cb) => {
     }
 
     getFilename() {
-      return this._filename;
+      const hash = require('crypto').createHash('sha1');
+      const fs = require('fs');
+      const path = 'contents/svg/';
+      const files = fs.readdirSync(path);
+      files.forEach(name => {
+        hash.update(fs.readFileSync(path + name), 'utf8');
+      });
+      // Mix code involved in SVG generation into hash since we cannot hash
+      // the output.
+      hash.update(fs.readFileSync('plugins/svg.js'), 'utf8');
+      const packageJson = require('../package.json');
+      Object.keys(packageJson.dependencies).filter(name => /svg/.test(name))
+          .forEach(name => {
+            hash.update(name + '-' + packageJson.dependencies[name], 'utf8');
+          });
+      return 'immutable/' + hash.digest('hex') + '/' + this._filename;
     }
 
     get sprite() {
