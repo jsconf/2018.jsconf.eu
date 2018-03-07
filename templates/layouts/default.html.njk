@@ -32,8 +32,8 @@
         <meta name="description" content="{{ description }}">
         <meta name="twitter:description" content="{{ description }}">
       {% endif %}
-      <meta name="twitter:image" content="{{ image }}">
-      <meta property="og:image" content="{{ image }}">
+      <meta name="twitter:image" content="{{ url }}{{ image }}">
+      <meta property="og:image" content="{{ url }}{{ image }}">
     {% endblock %}
   </head>
   <body class="{% block bodyclass %}{% endblock %}">
