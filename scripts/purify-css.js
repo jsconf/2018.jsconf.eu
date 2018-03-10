@@ -15,6 +15,7 @@ find.file(/main\.css$/, 'build/', files => {
   purifycss(content, files, {
     // Comment in for debugging.
     // rejected: true,
+    minify: true,
   }, css => {
     // Change in-place
     console.log('Done purifying');
