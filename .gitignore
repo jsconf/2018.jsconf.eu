@@ -1,6 +1,8 @@
 node_modules
-/contents/speakers/*-PREVIEW.md
-/contents/images/speaker/*-PREVIEW.*
+/contents/speakers/*
+/contents/team/*
+/contents/mcs/*
+/contents/images/speaker/*
 /contents/images/speaker/temp/*
 /contents/talks/*-PREVIEW.md
 /build

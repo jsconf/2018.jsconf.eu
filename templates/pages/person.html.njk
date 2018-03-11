@@ -14,10 +14,10 @@
   {% if speaker.twitterHandle %}
     <meta name="twitter:creator" content="{{ speaker.twitterHandle }}">
   {% endif %}
-  <meta name="twitter:title" content="{{ speaker.talkTitle }}">
-  <meta property="og:title" content="{{ speaker.talkTitle }}">
-  <meta name="twitter:description" content="{{ speaker.firstname }} {{ speaker.lastname }} is speaking at JSConf EU 2018">
-  <meta name="description" content="{{ page.html | striptags | truncate(255) }}">
+  <meta name="twitter:title" content="{{ speaker.firstname }} {{ speaker.lastname }}">
+  <meta property="og:title" content="{{ speaker.firstname }} {{ speaker.lastname }}">
+  <meta name="twitter:description" content="{{ speaker.talkTitle }}">
+  <meta name="description" content="{{ speaker.talkTitle }}">
   {% if speaker.image %}
     <meta name="twitter:image" content="https://2018.jsconf.eu{{ contents.images.speaker[speaker.image.filename].url }}">
     <meta property="og:image" content="https://2018.jsconf.eu{{ contents.images.speaker[speaker.image.filename].url }}" />
