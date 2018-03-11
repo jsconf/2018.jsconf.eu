@@ -5,7 +5,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.0.0-beta.0/
 
 workbox.routing.registerRoute(
   // Cache typekit bootstrap and font files
-  /^https:\/\/use.typekit\.net\/.+$/,
+  /^https:\/\/(use|p)\.typekit\.net\/.+$/,
   workbox.strategies.staleWhileRevalidate({
     // Use a custom cache name
     cacheName: 'typekit-cache',
