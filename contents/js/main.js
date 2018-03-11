@@ -10,7 +10,11 @@
   });
 
   Array.from(document.querySelectorAll('.buy-ticket')).forEach(function(buy) {
-    buy.ontouchstart = buy.onmouseover = preconnectTito;
+    buy.addEventListener('touchstart', preconnectTito, {
+      passive: true,
+      capture: true,
+    });
+    buy.onmouseover = preconnectTito;
   });
 })();
 
