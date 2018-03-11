@@ -48,7 +48,21 @@ const sheetParams = {
     },
     dataFieldName: 'speaker',
     contentPath: 'speakers'
-  }
+  },
+  mcs: {
+    templateGlobals: {
+      template: 'pages/person.html.njk'
+    },
+    dataFieldName: 'speaker',
+    contentPath: 'mcs'
+  },
+  team: {
+    templateGlobals: {
+      template: 'pages/person.html.njk'
+    },
+    dataFieldName: 'speaker',
+    contentPath: 'team'
+  },
 };
 
 const wwwtfrcFile = __dirname + '/../../.wwwtfrc';
