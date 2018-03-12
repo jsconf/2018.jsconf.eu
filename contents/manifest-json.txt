@@ -1,5 +1,7 @@
 {
     "name": "JSConf EU 2018",
+    "short_name": "JSConf EU 2018",
+    "start_url": "https://2018.jsconf.eu/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -12,7 +14,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#303f62",
     "background_color": "#ffffff",
     "display": "standalone"
 }
