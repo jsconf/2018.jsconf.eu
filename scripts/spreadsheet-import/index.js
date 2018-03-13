@@ -150,7 +150,10 @@ async function main(params) {
           `${record.id}${record.published ? '' : '-PREVIEW'}.md`
         );
 
-        const {content, ...speakerData} = record;
+        let {content, ...speakerData} = record;
+        if (!content) {
+          content = ' ';
+        }
 
         speakerData.name = speakerData.firstname + ' ' + speakerData.lastname;
 
