@@ -37,7 +37,7 @@ Everybody is welcome at JSConf EU and to make sure everybody feels at home, weâ€
 - We can arrange for sign language interpreters on request. Again, please let us know, so we can plan accordingly.
 - While this is a social event and meeting people is a strong focus, we are equally welcoming to the more introverted type of person who prefers to quietly see the talks. You can take a breather by the riverside or in the grassy spaces nearby during the breaks.
 
-If you have any questions, please get in touch: [curators@jsconf.eu](mailto:&#x63;&#x75;&#x72;&#x61;&#x74;&#x6F;&#x72;&#x73;&#x40;&#x6A;&#x73;&#x63;&#x6F;&#x6E;&#x66;&#x2E;&#x65;&#x75;) or, if you prefer individually: [jan@jsconf.eu](mailto:&#x63;&#x75;&#x72;&#x61;&#x74;&#x6F;&#x72;&#x73;&#x40;&#x6A;&#x73;&#x63;&#x6F;&#x6E;&#x66;&#x2E;&#x65;&#x75;), [holger@jsconf.eu](mailto:&#x63;&#x75;&#x72;&#x61;&#x74;&#x6F;&#x72;&#x73;&#x40;&#x6A;&#x73;&#x63;&#x6F;&#x6E;&#x66;&#x2E;&#x65;&#x75;), [malte@jsconf.eu](mailto:&#x63;&#x75;&#x72;&#x61;&#x74;&#x6F;&#x72;&#x73;&#x40;&#x6A;&#x73;&#x63;&#x6F;&#x6E;&#x66;&#x2E;&#x65;&#x75;).
+If you have any questions, please get in touch: [curators@jsconf.eu](mailto:&#x63;&#x75;&#x72;&#x61;&#x74;&#x6F;&#x72;&#x73;&#x40;&#x6A;&#x73;&#x63;&#x6F;&#x6E;&#x66;&#x2E;&#x65;&#x75;).
 
 ## Previous experiences
 
