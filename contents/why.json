@@ -1,0 +1,8 @@
+{
+  "pageId": "why",
+  "template": "pages/why.html.njk",
+  "filename": ":file/index.html",
+  "title": "Why you should attend JSConf EU 2018",
+  "bodyTitle": "Why JSConf EU",
+  "image": "jsconfeu-group-2014.jpg"
+}
