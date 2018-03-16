@@ -1,5 +1,6 @@
 const nunjucks = require('nunjucks');
 const path = require('path');
+const minify = require('html-minifier').minify;
 
 module.exports = function(env, callback) {
   const optionDefaults = {
@@ -48,7 +49,15 @@ module.exports = function(env, callback) {
 
     render(locals, callback) {
       try {
-        callback(null, new Buffer(this.template.render(locals)));
+        let html = this.template.render(locals);
+        html = minify(html, {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true,
+          sortClassName: true,
+          sortAttributes: true,
+        });
+        callback(null, new Buffer(html));
       } catch (error) {
         callback(error);
       }
