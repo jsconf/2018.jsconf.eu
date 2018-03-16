@@ -2,5 +2,5 @@
   "pageId": "index",
   "template": "pages/index.html.njk",
   "title": "JSConf EU 2018",
-  "description": "June 2nd & 3rd 2018 — Berlin, Germany. JSConf EU is the labour-of-love conference for the JavaScript community in Europe.",
+  "description": "June 2nd & 3rd 2018 — Berlin, Germany. JSConf EU is the labour-of-love conference for the JavaScript community in Europe."
 }
