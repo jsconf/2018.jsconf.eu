@@ -43,6 +43,9 @@ function prefetchTito() {
   addLink('prefetch', 'https://ti.to/jsconfeu/jsconf-eu-2018');
   addLink('prefetch', 'https://js.stripe.com/v2/');
   addLink('prefetch', 'https://use.typekit.com/zjo8qhc.js');
+  addLink('prefetch', 'https://d2z6c3c3r6k4bx.cloudfront.net/uploads/event/banner/1054103/a33a41ce71c1fe41b39a88c1e37ad6e1.png');
+  addLink('prefetch', 'https://d2z6c3c3r6k4bx.cloudfront.net/uploads/event/logo/1054103/46794018cff5e643871986714e1f1676.png');
+  preconnectTito();
 }
 
 function addLink(rel, href) {
