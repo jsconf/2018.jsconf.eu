@@ -51,6 +51,7 @@
     "start": "wintersmith --verbose preview",
     "build": "wintersmith build && npm run-script purify-css",
     "purify-css": "node scripts/purify-css.js",
+    "generate-locals": "node scripts/generate-locals.js",
     "ci:import": "WWWTF_CREDENTIALS_PATH=. node scripts/spreadsheet-import -p",
     "ci:build": "npm run-script ci:import && npm run-script build"
   },

@@ -10,6 +10,7 @@ module.exports = function(env, callback) {
     filtermodules: [],
     extensions: {}
   };
+  Object.assign(env.config.locals, require('../locals-generated.json'));
 
   // Load the new nunjucks environment.
   const loaderOpts = {
