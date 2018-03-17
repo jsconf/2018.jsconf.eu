@@ -6,6 +6,7 @@ cache:
   - node_modules
 
 script:
+  - npm run-script generate-locals
   - npm run-script build
   # Because we build again, move the non-deploy build out of the way.
   - mv build test-build
