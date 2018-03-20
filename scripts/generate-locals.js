@@ -16,6 +16,7 @@ async function work() {
   });
   const locals = {
     "typekitPreload": preloadMatches,
+    "typekitCss": text,
   };
   console.log(locals);
   fs.writeFileSync('./locals-generated.json', JSON.stringify(locals, null, '  '));

@@ -6,13 +6,15 @@
     <title>{% if page.title %}{{ page.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel=stylesheet href="{{ contents.css["main.css"].url }}">
-    <link rel=stylesheet href="https://use.typekit.net/gug4wmv.css" crossorigin>
     <link rel=preload href="{{ contents.images["pattern.svg"].url }}" as=image>
+    <script src="{{ contents.js['main.js'].url }}" defer></script>
     {% for font in typekitPreload %}
        <link rel=preload href="{{ font }}"
           as=font crossorigin type="font/woff2">
     {% endfor %}
-    <script src="{{ contents.js['main.js'].url }}" defer></script>
+    <style>
+      {{ typekitCss }}
+    </style>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
