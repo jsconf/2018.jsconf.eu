@@ -1,6 +1,6 @@
 {
     "name": "JSConf EU 2018",
-    "short_name": "JSConf EU 2018",
+    "short_name": "JSConf EU",
     "start_url": "https://2018.jsconf.eu/",
     "icons": [
         {
