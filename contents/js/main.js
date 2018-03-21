@@ -1,23 +1,12 @@
 'use strict';
 
-;(function () {
-
-  const topbarNav = document.getElementById('topbar-nav');
-  const topbarToggle = document.getElementById('topbar-toggle');
-
-  topbarToggle.addEventListener('click', function () {
-    topbarNav.classList.toggle('topbar-nav--is-visible');
+Array.from(document.querySelectorAll('.buy-ticket')).forEach(function(buy) {
+  buy.addEventListener('touchstart', preconnectTito, {
+    passive: true,
+    capture: true,
   });
-
-  Array.from(document.querySelectorAll('.buy-ticket')).forEach(function(buy) {
-    buy.addEventListener('touchstart', preconnectTito, {
-      passive: true,
-      capture: true,
-    });
-    buy.onmouseover = preconnectTito;
-  });
-})();
-
+  buy.onmouseover = preconnectTito;
+});
 
 window.addEventListener('load', () => {
   if ('serviceWorker' in navigator) {
