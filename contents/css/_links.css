@@ -11,6 +11,7 @@ a {
 
 /* Default links on main content area */
 .md-content a,
+.speaker-detail p a,
 .link--underline {
   border-bottom: 4px solid var(--returnrose);
 
