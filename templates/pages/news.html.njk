@@ -1,6 +1,7 @@
 {% extends "../layouts/default.html.njk" %}
 
 {% set newsList = contents.news._.pages |
+      notRedirect |
       notDraft |
       sortObjects('metadata.date', '2017-01-01', 'date') |
       reverse %}

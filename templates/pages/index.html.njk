@@ -39,6 +39,7 @@
   </section>
 
   {% set latest = contents.news._.pages |
+         notRedirect |
          notDraft |
          sortObjects('metadata.date', '2017-01-01', 'date') |
          last %}

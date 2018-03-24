@@ -61,6 +61,7 @@
   {% endmacro %}
 
   {% set team = contents.team._.pages |
+      notRedirect |
       sortObjects('metadata.speaker.firstname', 'aaa', 'string') %}
 
   <section class="grid">
