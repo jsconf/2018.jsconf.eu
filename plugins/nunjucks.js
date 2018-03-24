@@ -75,6 +75,12 @@ module.exports = function(env, callback) {
     })
   });
 
+  nenv.addFilter('notRedirect', function(array) {
+    return array.filter(function(item) {
+      return !item.metadata.redirectUrl;
+    })
+  });
+
   env.registerTemplatePlugin('**/*.*(html|nunjucks|njk)', NunjucksTemplate);
   // Transform static URLs into the form:
   // /immutable/$fileHash/filename
