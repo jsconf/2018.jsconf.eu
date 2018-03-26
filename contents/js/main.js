@@ -14,6 +14,7 @@ window.addEventListener('load', () => {
   }
   track();
   prefetchTito();
+  pingTypekit();
 });
 
 function preconnectTito() {
@@ -42,6 +43,11 @@ function addLink(rel, href) {
   link.rel = rel;
   link.href = href;
   document.head.appendChild(link);
+}
+
+function pingTypekit() {
+  new Image().src = document.getElementById('typekit')
+      .getAttribute('data-tracking-url');
 }
 
 var _gauges = _gauges || [];

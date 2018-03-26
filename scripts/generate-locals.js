@@ -3,7 +3,7 @@ const fs = require('fs');
 
 async function work() {
   const response = await fetch('https://use.typekit.net/gug4wmv.css');
-  const text = await response.text();
+  let text = await response.text();
   if (!response.ok) {
     throw new Error('Request failed: ' + text);
   }
@@ -14,9 +14,16 @@ async function work() {
   text.replace(/src:url\("([^"]+)"/g, (ignore, url) => {
     preloadMatches.push(url);
   });
+  let trackingUrl;
+  // Remove tracking URL from CSS
+  text = text.replace(/@import url\("([^"]+)"\);/g, (ignore, url) => {
+    trackingUrl = url;
+    return '';
+  });
   const locals = {
     "typekitPreload": preloadMatches,
     "typekitCss": text,
+    "typekitTracking": trackingUrl,
   };
   console.log(locals);
   fs.writeFileSync('./locals-generated.json', JSON.stringify(locals, null, '  '));
