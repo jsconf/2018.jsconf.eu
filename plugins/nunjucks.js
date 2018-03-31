@@ -98,7 +98,11 @@ module.exports = function(env, callback) {
   // actually changed (in that case the URL changes and hence there is no cache hit).
   const writeHead = require('http').ServerResponse.prototype.writeHead;
   require('http').ServerResponse.prototype.writeHead = function(status, headers) {
-    headers['cache-control'] = 'public, max-age=8640000';
+    let maxAge = '8640000';
+    if (headers['Content-Type'].startsWith('text/html')) {
+      maxAge = '0'
+    }
+    headers['cache-control'] = 'public, max-age=' + maxAge;
     writeHead.call(this, status, headers);
   };
   callback();
