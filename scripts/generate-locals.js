@@ -20,6 +20,10 @@ async function work() {
     trackingUrl = url;
     return '';
   });
+  // Make all fonts font-display optional.
+  text = text.replace(/@font-face {/g, (fontFace) => {
+    return fontFace + '\nfont-display:optional;\n';
+  });
   const locals = {
     "typekitPreload": preloadMatches,
     "typekitCss": text,
