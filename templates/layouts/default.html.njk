@@ -8,10 +8,6 @@
     <link rel=stylesheet href="{{ contents.css["main.css"].url }}">
     <link rel=preload href="{{ contents.images["pattern.svg"].url }}" as=image>
     <script src="{{ contents.js['main.js'].url }}" defer></script>
-    {% for font in typekitPreload %}
-       <link rel=preload href="{{ font }}"
-          as=font crossorigin type="font/woff2">
-    {% endfor %}
     <style id="typekit" data-tracking-url="{{ typekitTracking }}">
       {{ typekitCss }}
     </style>
