@@ -1,3 +1,5 @@
+**Note: Applications for our scholarship program closed March 31st, 2018.**
+
 We strive to bring together the most diverse group of people possible — **we firmly believe in equality**, which is why we invite anyone and everyone to participate.
 
 For the third time at JSConf EU and CSSconf EU we are offering our scholarship program which supports **individuals from underrepresented groups** to attend [JSConf EU](http://2018.jsconf.eu/) and/or [CSSconf EU](http://2018.cssconf.eu/).
@@ -11,15 +13,7 @@ Granting these scholarships is made possible thanks to our [Diversity Support Ti
 
 ## Application
 
-You are invited to apply for a [single conference ticket for JSConf EU](https://docs.google.com/forms/d/1MDrrmr825HRmZ3UKJRkr5kZvZMM-uG21yNkseC0keoI/viewform) or for a [Combo ticket for JSConf EU and CSSconf EU](https://docs.google.com/forms/d/e/1FAIpQLScXcDNJZ1uK5VwdnHzqqrRqfQ-sQk_8mewCzPMn2ln2NbmQUQ/viewform). On the application form you will be asked if you need financial help with travel and accommodation.  
-
-**Please note that we will have two different application deadlines in 2018.**
-
-If you are applying for ticket plus travel grant from **outside Europe** application closes on *January 14, 2018.*
-
-If you are applying for a ticket without travel grant or for tickets with travel grants **within Europe** applications close on *March 31, 2018*.
-
-All applicants will be notified of the outcome of their application a few weeks after each application closes.
+Applications for our scholarship program closed March 31st, 2018.
 
 ## Contact
 
