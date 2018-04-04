@@ -8,14 +8,24 @@ Array.from(document.querySelectorAll('.buy-ticket')).forEach(function(buy) {
   buy.onmouseover = preconnectTito;
 });
 
-window.addEventListener('load', () => {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
+var ranOnce = false;
+function executeEarlyish() {
+  if (ranOnce) {
+    return;
   }
+  ranOnce = true;
   track();
   prefetchTito();
   pingTypekit();
+}
+
+window.addEventListener('load', () => {
+  executeEarlyish();
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
 });
+setTimeout(executeEarlyish, 500);
 
 function preconnectTito() {
   addLink('preconnect', 'https://ti.to');
