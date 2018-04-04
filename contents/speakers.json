@@ -2,5 +2,6 @@
   "pageId": "speakers",
   "template": "pages/speakers.html.njk",
   "filename": ":file/index.html",
-  "title": "Speakers and MCs of JSConf EU 2018"
+  "title": "Speakers and MCs of JSConf EU 2018",
+  "image": "speaker-sample.png"
 }
