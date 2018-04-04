@@ -2,6 +2,7 @@ node_modules
 /contents/speakers/*
 /contents/team/*
 /contents/mcs/*
+/contents/sponsors/*
 /contents/images/speaker/*
 /contents/images/speaker/temp/*
 /contents/talks/*-PREVIEW.md

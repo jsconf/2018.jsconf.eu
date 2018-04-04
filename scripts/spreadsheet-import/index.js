@@ -63,6 +63,13 @@ const sheetParams = {
     dataFieldName: 'speaker',
     contentPath: 'team'
   },
+  sponsors: {
+    templateGlobals: {
+      template: 'pages/sponsors.html.njk'
+    },
+    dataFieldName: 'sponsor',
+    contentPath: 'sponsors'
+  },
 };
 
 const wwwtfrcFile = __dirname + '/../../.wwwtfrc';
@@ -140,7 +147,7 @@ async function main(params) {
     console.log(chalk.white('processing sheet %s'), chalk.yellow(sheetId));
     records
       // filter unpublished records when not in dev-mode.
-      .filter(r => r.published || !params.publishedOnly)
+      .filter(r => r.id && (r.published || !params.publishedOnly))
 
       // render md-files
       .forEach(async function(record) {
@@ -155,7 +162,9 @@ async function main(params) {
           content = ' ';
         }
 
-        speakerData.name = speakerData.firstname + ' ' + speakerData.lastname;
+        if (!speakerData.name) {
+          speakerData.name = speakerData.firstname + ' ' + speakerData.lastname;
+        }
 
         speakerData.image = getLocalImage(speakerData);
         if (!speakerData.image) {
@@ -232,9 +241,12 @@ async function downloadImage(speaker) {
 
     const buffer = await res.buffer();
 
-    const info = imageType(buffer);
+    let info = imageType(buffer);
+    if (!info && url.endsWith('.svg')) {
+      info = {ext: 'svg'};
+    }
     if (!info) {
-      console.error(chalk.red.bold(' !!! no type-imformation for image', url));
+      console.error(chalk.red.bold(' !!! no type-information for image', url));
       return {};
     }
 
@@ -251,14 +263,14 @@ async function downloadImage(speaker) {
       height: size.height
     };
   } catch (err) {
-    console.error(chalk.red.bold(' !!! failed to download', url));
+    console.error(chalk.red.bold(' !!! failed to download', url, err.message));
 
     return {};
   }
 }
 
 function getImageFilename(speaker, ext) {
-  let filename = speaker.firstname + '-' + speaker.lastname;
+  let filename = speaker.name;
   filename = filename.replace(/[^\w]/g, '-');
   filename = filename.replace(/--/g, '-').toLowerCase();
 
