@@ -3,7 +3,7 @@ template: pages/speaker-tweet-stream.html.njk
 filename: :file/index.html
 
 title: We announced all the speakers
-date: 2018-04-03
+date: 2018-04-05
 image: speaker-sample.png
 ----
 
