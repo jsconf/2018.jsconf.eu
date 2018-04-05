@@ -1,0 +1,6 @@
+{
+  "pageId": "sponsors-list",
+  "template": "pages/sponsors-list.html.njk",
+  "filename": ":file/index.html",
+  "title": "Sponsors"
+}

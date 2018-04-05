@@ -1,0 +1,37 @@
+{% extends "../layouts/default.html.njk" %}
+
+{% set sponsors = contents.sponsors._.pages |
+    notRedirect |
+    sortObjects('metadata.sponsor.order', 100, 'number') %}
+
+{% block content %}
+
+  <section class="grid">
+    <div class="grid-item-center">
+      {% set title = '' %}
+      {% set first = true %}
+      {% for page in sponsors %}
+        {% set sponsor = page.metadata.sponsor %}
+
+        {% if title != sponsor.title %}
+          {% set title = sponsor.title %}
+          {% if not first %}
+            </ul>
+          {% endif %}
+          <h2 class="sponsor--{{ sponsor.type }}">{{ title }}</h2>
+          <ul>
+        {% endif %}
+        {% set first = false %}
+
+        <li class="sponsor sponsor--{{ sponsor.type }}" id="{{ sponsor.id }}">
+          <a href="{{ sponsor.link }}" rel="nofollow">
+            <img src="{{ contents.images.speaker[sponsor.image.filename].url }}"
+                width="150"
+                alt="{{ sponsor.name }}">
+          </a>
+        </li>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}
