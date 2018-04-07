@@ -1,11 +1,11 @@
 node_modules
-/contents/speakers/*
-/contents/team/*
-/contents/mcs/*
-/contents/sponsors/*
 /contents/images/speaker/*
-/contents/images/speaker/temp/*
-/contents/talks/*-PREVIEW.md
+/contents/images/sponsor/*
+/contents/mcs/*
+/contents/talks/*
+/contents/team/*
+/contents/speakers/*
+/contents/sponsors/*
 /build
 .\#*
 .DS_Store
