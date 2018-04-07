@@ -4,14 +4,13 @@ const yaml = require('js-yaml');
 const wordwrap = require('wordwrap')(80);
 const chalk = require('chalk');
 const program = require('commander');
+const mkdirp = require('mkdirp');
 const {promisify} = require('util');
 const {getSheetData} = require('./spreadsheet-api');
 const {processSheet, simplifySpreadsheetData} = require('./spreadsheet-utils');
+const {downloadSpeakerImage, getLocalSpeakerImage} = require('./image-utils/speaker-image');
+const {downloadSponsorImage, getLocalSponsorImage} = require('./image-utils/sponsor-image');
 const rimraf = promisify(require('rimraf'));
-const fetch = require('node-fetch');
-const imageType = require('image-type');
-const imageSize = require('image-size');
-
 const timeout = promisify(setTimeout);
 
 // spreadsheet-format is illustrated here:
@@ -107,11 +106,28 @@ if (!hasRcFile) {
 main(params).catch(err => console.error(err));
 
 async function main(params) {
+  // ---- ensure the directories exist...
+  const requiredDirectories = ['speakers', 'talks', 'sponsors', 'images/speaker', 'images/sponsor'];
+  const requiredDirectoryPaths = requiredDirectories.map(
+    dir => `${__dirname}/../../contents/${dir}`
+  );
+  const missingDirectories = requiredDirectoryPaths.filter(
+    dir => !fs.existsSync(dir)
+  );
+
+  if (!!missingDirectories.length) {
+    console.log(chalk.gray('creating missing directories...'));
+    missingDirectories.forEach(dir => mkdirp(dir));
+  }
+
   // ---- cleanup...
   if (params.doCleanup) {
     console.log(chalk.gray('cleaning up...'));
 
-    await Promise.all([rimraf(path.join(contentRoot, '{speakers,talks}/*md'))]);
+    await Promise.all([
+      rimraf(path.join(contentRoot, 'images/{speaker,sponsor}/*')),
+      rimraf(path.join(contentRoot, '{speakers,sponsors,talks}/*md')),
+    ]);
   }
 
   // ---- fetch spreadsheet-data...
@@ -145,36 +161,49 @@ async function main(params) {
     console.log(chalk.white('processing sheet %s'), chalk.yellow(sheetId));
     records
       // filter unpublished records when not in dev-mode.
-      .filter(r => r.id && (r.published || !params.publishedOnly))
+      .filter(r => r.published || !params.publishedOnly)
 
       // render md-files
       .forEach(async function(record) {
-        const filename = path.join(
-          contentRoot,
-          contentPath,
-          `${record.id}${record.published ? '' : '-PREVIEW'}.md`
-        );
+        const filename = path.join(contentRoot, contentPath, `${record.id}.md`);
 
-        let {content, ...speakerData} = record;
+        let {content, ...data} = record;
+        let title = '';
+
         if (!content) {
           content = ' ';
         }
 
-        if (!speakerData.name) {
-          speakerData.name = speakerData.firstname + ' ' + speakerData.lastname;
+        if (!data.name) {
+          data.name = data.firstname + ' ' + data.lastname;
         }
 
-        speakerData.image = getLocalImage(speakerData);
-        if (!speakerData.image) {
-          speakerData.image = await downloadImage(speakerData);
+        if (sheetId === 'speakers') {
+          data.image = getLocalSpeakerImage(params.imagePath, data);
+          title = `${data.name}: ${data.talkTitle}`;
+          if (!data.image) {
+            data.image = await downloadSpeakerImage(data);
+          }
+
+          delete data.potraitImageUrl;
         }
 
-        delete speakerData.potraitImageUrl;
+        if (sheetId === 'sponsors') {
+          data.image = getLocalSponsorImage(params.imagePath, data);
+          if (!data.image) {
+            try {
+              data.image = await downloadSponsorImage(data);
+            } catch (err) {
+              console.error('this is bad: ', err);
+            }
+          }
+          delete data.logoUrl;
+        }
 
         const frontmatter = yaml.safeDump({
           ...templateGlobals,
-          title: `${speakerData.name}: ${speakerData.talkTitle}`,
-          [dataFieldName]: speakerData
+          title,
+          [dataFieldName]: data
         });
 
         console.log(
@@ -193,88 +222,4 @@ async function main(params) {
         fs.writeFileSync(filename, markdownContent);
       });
   });
-}
-
-function getLocalImage(speaker) {
-  if (!params.imagePath) {
-    return null;
-  }
-
-  const filename = getImageFilename(speaker, 'jpg');
-  const srcFilename = path.join(
-    params.imagePath,
-    filename.replace('-PREVIEW', '')
-  );
-  const destFilename = path.join('contents/images/speaker', filename);
-
-  if (fs.existsSync(srcFilename)) {
-    console.log(
-      ` --> image found in image-path:`,
-      filename.replace('-PREVIEW', '')
-    );
-    const buffer = fs.readFileSync(srcFilename);
-    const size = imageSize(buffer);
-    fs.writeFileSync(destFilename, buffer);
-
-    return {
-      filename,
-      width: size.width,
-      height: size.height
-    };
-  }
-
-  return null;
-}
-
-async function downloadImage(speaker) {
-  const url = speaker.potraitImageUrl;
-
-  try {
-    const res = await fetch(url);
-
-    if (!res.headers.get('content-type').startsWith('image')) {
-      console.error(chalk.red.bold(' !!! url is not an image', url));
-      return {};
-    }
-
-    const buffer = await res.buffer();
-
-    let info = imageType(buffer);
-    if (!info && url.endsWith('.svg')) {
-      info = {ext: 'svg'};
-    }
-    if (!info) {
-      console.error(chalk.red.bold(' !!! no type-information for image', url));
-      return {};
-    }
-
-    const size = imageSize(buffer);
-    const filename = getImageFilename(speaker, info.ext);
-    const fullPath = 'contents/images/speaker/' + filename;
-
-    console.info(' --> image downloaded ', chalk.green(fullPath));
-    fs.writeFileSync(fullPath, buffer);
-
-    return {
-      filename,
-      width: size.width,
-      height: size.height
-    };
-  } catch (err) {
-    console.error(chalk.red.bold(' !!! failed to download', url, err.message));
-
-    return {};
-  }
-}
-
-function getImageFilename(speaker, ext) {
-  let filename = speaker.name;
-  filename = filename.replace(/[^\w]/g, '-');
-  filename = filename.replace(/--/g, '-').toLowerCase();
-
-  if (!speaker.published) {
-    filename += '-PREVIEW';
-  }
-
-  return filename + '.' + ext;
 }
