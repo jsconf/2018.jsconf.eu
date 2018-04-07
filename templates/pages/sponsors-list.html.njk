@@ -1,37 +1,30 @@
 {% extends "../layouts/default.html.njk" %}
 
-{% set sponsors = contents.sponsors._.pages |
-    notRedirect |
-    sortObjects('metadata.sponsor.order', 100, 'number') %}
-
 {% block content %}
+  {% set sponsorTypes = ['double down', 'main', 'supporting', 'community'] %}
 
-  <section class="grid">
-    <div class="grid-item-center">
-      {% set title = '' %}
-      {% set first = true %}
-      {% for page in sponsors %}
-        {% set sponsor = page.metadata.sponsor %}
+  {% for sponsorType in sponsorTypes %}
+    {% set sponsors = contents.sponsors._.pages |
+      filterObjects('metadata.sponsor.type', sponsorType) |
+      sortObjects('metadata.sponsor.order', 100, 'number') %}
 
-        {% if title != sponsor.title %}
-          {% set title = sponsor.title %}
-          {% if not first %}
-            </ul>
-          {% endif %}
-          <h2 class="sponsor--{{ sponsor.type }}">{{ title }}</h2>
-          <ul>
-        {% endif %}
-        {% set first = false %}
+    <section class="grid">
+      <div class="grid-item-center">
+        <h2>Our {{ sponsorType }} sponsors</h2>
+        {% for page in sponsors %}
+          {% set sponsor = page.metadata.sponsor %}
 
-        <li class="sponsor sponsor--{{ sponsor.type }}" id="{{ sponsor.id }}">
-          <a href="{{ sponsor.link }}" rel="nofollow">
-            <img src="{{ contents.images.speaker[sponsor.image.filename].url }}"
-                width="150"
-                alt="{{ sponsor.name }}">
-          </a>
-        </li>
-      {% endfor %}
-    </div>
-  </section>
+          <div class="sponsor sponsor--{{ sponsorType | replace(' ', '-') }}" id="{{ sponsor.id }}">
+            <a href="{{ sponsor.link }}"
+               rel="nofollow"
+               target="_blank">
+              <img src="{{ contents.images.sponsor[sponsor.image.filename].url }}"
+                   alt="{{ sponsor.name }}">
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
 
 {% endblock %}
