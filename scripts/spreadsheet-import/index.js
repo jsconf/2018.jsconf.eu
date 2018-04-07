@@ -64,9 +64,7 @@ const sheetParams = {
     contentPath: 'team'
   },
   sponsors: {
-    templateGlobals: {
-      template: 'pages/sponsors.html.njk'
-    },
+    templateGlobals: {},
     dataFieldName: 'sponsor',
     contentPath: 'sponsors'
   },
