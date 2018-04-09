@@ -96,6 +96,10 @@ h2, .heading--spaced {
   }
 }
 
+.page--newslist h2 {
+  display: block;
+}
+
 .heading--no-border {
   border-bottom: none;
   padding-bottom: 0;
