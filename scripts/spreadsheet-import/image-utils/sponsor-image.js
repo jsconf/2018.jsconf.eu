@@ -2,14 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
 const chalk = require('chalk');
-const {getImageFilename} = require('./image-filename');
 
 function getLocalSponsorImage(imagePath, sponsor) {
   if (!imagePath) {
     return null;
   }
 
-  const filename = getImageFilename(sponsor, 'svg');
+  const filename = sponsor.id + '.svg';
   const srcFilename = path.join(imagePath, filename);
   const destFilename = path.join('contents/images/sponsor', filename);
 
@@ -43,9 +42,8 @@ async function downloadSponsorImage(sponsor) {
     }
 
     const buffer = await res.buffer();
-
-    const filename = getImageFilename(sponsor, 'svg');
-    const fullPath = 'contents/images/sponsor/' + filename;
+    const filename = sponsor.id + '.svg';
+    const fullPath = `contents/images/sponsor/${filename}`;
 
     console.info(' --> image downloaded ', chalk.green(fullPath));
     fs.writeFileSync(fullPath, buffer);

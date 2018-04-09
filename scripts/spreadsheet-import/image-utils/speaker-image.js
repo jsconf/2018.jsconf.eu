@@ -4,7 +4,14 @@ const fetch = require('node-fetch');
 const chalk = require('chalk');
 const imageType = require('image-type');
 const imageSize = require('image-size');
-const {getImageFilename} = require('./image-filename');
+
+function getImageFilename(speaker, ext) {
+  let filename = speaker.firstname + '-' + speaker.lastname;
+  filename = filename.replace(/[^\w]/g, '-');
+  filename = filename.replace(/--/g, '-').toLowerCase();
+
+  return filename + '.' + ext;
+}
 
 function getLocalSpeakerImage(imagePath, speaker) {
   if (!imagePath) {
