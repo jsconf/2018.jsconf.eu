@@ -178,16 +178,6 @@ async function main(params) {
           data.name = data.firstname + ' ' + data.lastname;
         }
 
-        if (sheetId === 'speakers') {
-          data.image = getLocalSpeakerImage(params.imagePath, data);
-          title = `${data.name}: ${data.talkTitle}`;
-          if (!data.image) {
-            data.image = await downloadSpeakerImage(data);
-          }
-
-          delete data.potraitImageUrl;
-        }
-
         if (sheetId === 'sponsors') {
           data.image = getLocalSponsorImage(params.imagePath, data);
           if (!data.image) {
@@ -198,6 +188,14 @@ async function main(params) {
             }
           }
           delete data.logoUrl;
+        } else {
+          data.image = getLocalSpeakerImage(params.imagePath, data);
+          title = `${data.name}: ${data.talkTitle}`;
+          if (!data.image) {
+            data.image = await downloadSpeakerImage(data);
+          }
+
+          delete data.potraitImageUrl;
         }
 
         const frontmatter = yaml.safeDump({
