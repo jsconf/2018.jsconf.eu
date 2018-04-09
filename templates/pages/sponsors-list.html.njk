@@ -7,10 +7,11 @@
     {% set sponsors = contents.sponsors._.pages |
       filterObjects('metadata.sponsor.type', sponsorType) |
       sortObjects('metadata.sponsor.order', 100, 'number') %}
+    {% set firstSponsor = sponsors | first %}
 
     <section class="grid">
       <div class="grid-item-center">
-        <h2>Our {{ sponsorType }} sponsors</h2>
+        <h2>{{ firstSponsor.metadata.sponsor.title }}</h2>
         {% for page in sponsors %}
           {% set sponsor = page.metadata.sponsor %}
 
