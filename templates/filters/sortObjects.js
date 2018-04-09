@@ -6,6 +6,10 @@ module.exports = function(
   defaultValue = 0,
   compareAs = 'number'
 ) {
+  if (!arr || arr.length < 1) {
+    return [];
+  }
+
   return arr.slice(0).sort((objA, objB) => {
     let a = objectPath.get(objA, keyPath, defaultValue);
     let b = objectPath.get(objB, keyPath, defaultValue);
