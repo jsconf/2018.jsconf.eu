@@ -32,7 +32,7 @@ A JSConf EU ticket includes the following:
 Everybody is welcome at JSConf EU and to make sure everybody feels at home, we’d like to point out that:
 - We provide a friendly, welcoming atmosphere for you to have engaging conversations with people who share your interests.
 - We aim to make the venue fully accessible. Fine print: Let us know if you have any specific needs. We will refund your ticket if we cannot meet your needs.
-- We offer **on-site childcare**.
+- We offer [**on-site childcare**](/news/childcare/).
 - We  have real-time captioning of talks to aid the hearing impaired. Let us know if this is relevant to you to guide our descision making.
 - We can arrange for sign language interpreters on request. Again, please let us know, so we can plan accordingly.
 - While this is a social event and meeting people is a strong focus, we are equally welcoming to the more introverted type of person who prefers to quietly see the talks. You can take a breather by the riverside or in the grassy spaces nearby during the breaks.
