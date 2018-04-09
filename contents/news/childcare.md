@@ -1,11 +1,9 @@
 ----
-template: pages/news-item-with-image.html.njk
+template: pages/news-item.html.njk
 filename: :file/index.html
 
 title: Childcare at JSConf EU
 date: 2018-04-09
-image: childcare.jpg
-imageAspectRatioPercent: 66
 ----
 
 We’re happy to be able to offer free, all-day childcare at the venue for children aged 3 and above.
