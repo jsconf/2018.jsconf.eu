@@ -1,0 +1,20 @@
+.sponsor {
+  align-items: center;
+  background-color: var(--clearwhite);
+  border-radius: 2px;
+  box-shadow: 0 0 10px 0 rgba(123, 136, 157, .15);
+  display: flex;
+}
+
+.sponsor a {
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.sponsor-community a {
+  padding: .25rem;
+}
+
+.sponsor img {
+  display: block;
+}

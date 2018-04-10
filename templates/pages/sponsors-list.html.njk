@@ -1,5 +1,17 @@
 {% extends "../layouts/default.html.njk" %}
 
+{% block header %}
+  {% if page.metadata.title  %}
+    <section class="grid">
+      <div class="grid-item-sponsor">
+        <h1 class="tl">
+          {{ page.metadata.title }}
+        </h1>
+      </div>
+    </section>
+  {% endif %}
+{% endblock %}
+
 {% block content %}
   {% set sponsorTypes = ['double down', 'main', 'supporting', 'community'] %}
 
@@ -7,23 +19,29 @@
     {% set sponsors = contents.sponsors._.pages |
       filterObjects('metadata.sponsor.type', sponsorType) |
       sortObjects('metadata.sponsor.order', 100, 'number') %}
+      {# filterObjects('metadata.sponsor.reviewed', true) | #}
     {% set firstSponsor = sponsors | first %}
+    {% set sponsorsTitle = firstSponsor.metadata.sponsor.title %}
+    {% set sponsorsType = sponsorType | replace(' ', '-') %}
 
     <section class="grid">
-      <div class="grid-item-center">
-        <h2>{{ firstSponsor.metadata.sponsor.title }}</h2>
-        {% for page in sponsors %}
-          {% set sponsor = page.metadata.sponsor %}
+      <div class="grid-item-sponsor">
+        <h2>{{ sponsorsTitle }}</h2>
+        <div class="sponsors sponsors-{{ sponsorsType }}">
+          {% for page in sponsors %}
+            {% set sponsor = page.metadata.sponsor %}
 
-          <div class="sponsor sponsor--{{ sponsorType | replace(' ', '-') }}" id="{{ sponsor.id }}">
-            <a href="{{ sponsor.link }}"
-               rel="nofollow"
-               target="_blank">
-              <img src="{{ contents.images.sponsor[sponsor.image.filename].url }}"
-                   alt="{{ sponsor.name }}">
-            </a>
-          </div>
-        {% endfor %}
+            <div class="sponsor sponsor-{{ sponsorsType }}"
+                 id="{{ sponsor.id }}">
+              <a href="{{ sponsor.link }}"
+                 rel="nofollow"
+                 target="_blank">
+                <img src="{{ contents.images.sponsor[sponsor.image.filename].url }}"
+                     alt="{{ sponsor.name }}">
+              </a>
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </section>
   {% endfor %}
