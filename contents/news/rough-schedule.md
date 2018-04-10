@@ -16,14 +16,14 @@ date: 2018-04-10
 
 - Breakfast from 8:30.
 - Grand opening at 09:30 (Seriously, do not miss this).
-- Detailed timetable will be published in May.
+- Detailed timetable will be published in May. [Full list of talks.](/speakers/)
 - Dinner at around 19:30.
 - Evening program from 21:00.
 
 ## June 3, Sunday: **JSConf EU Day 2**, Arena Berlin
 
 - Breakfast from 9:00.
-- Detailed timetable will be published in May.
+- Detailed timetable will be published in May. [Full list of talks.](/speakers/)
 - Closing remarks and family photo from 19:00.
 - After party (Location TBA) from 19:30.
 
