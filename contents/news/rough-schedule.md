@@ -29,5 +29,5 @@ date: 2018-04-10
 
 ## After the conference
 
-- June 4, Monday: **Relax.js Brunch** (**included in conference ticket**, location TBA) from 10:00.
+- June 4, Monday: **Relax.js Brunch** (**included in conference ticket**, [Datscha Xberg](https://goo.gl/maps/a3CMequ9cXn)) from 10:00.
 - See [WhatTheFest Berlin](http://wwwtf.berlin/) for additional events.
