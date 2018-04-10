@@ -13,7 +13,9 @@ module.exports = function(
   return arr.slice(0).sort((objA, objB) => {
     let a = objectPath.get(objA, keyPath, defaultValue);
     let b = objectPath.get(objB, keyPath, defaultValue);
-
+    if (a == null) {
+      return 1;
+    }
     switch (compareAs) {
       case 'number':
         return a - b;
