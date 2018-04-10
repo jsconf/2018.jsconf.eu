@@ -243,6 +243,7 @@
   }
 }
 
+.page-sponsors,
 .page-sponsors-list {
   @media (--xsmall) {
     background-image: url('contents:svg/form-sponsors.svg');

@@ -1,6 +1,6 @@
 {
-  "pageId": "sponsors-list",
-  "template": "pages/sponsors-list.html.njk",
+  "pageId": "sponsors",
+  "template": "pages/sponsors-work-in-progress.html.njk",
   "filename": ":file/index.html",
-  "title": "Sponsors"
+  "title": "Sponsors (WIP)"
 }
