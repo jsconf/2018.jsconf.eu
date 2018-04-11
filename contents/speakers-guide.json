@@ -1,0 +1,6 @@
+{
+  "filename": ":file/index.html",
+  "pageId": "speakers-guide",
+  "template": "pages/speakers-guide.html.njk",
+  "title": "Speakers & MCs Guide"
+}
