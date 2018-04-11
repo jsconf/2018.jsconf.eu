@@ -1,0 +1,6 @@
+{
+  "filename": ":file/index.html",
+  "template": "pages/scholarships-guide.html.njk",
+  "title": "Scholarships Guide",
+  "pageId": "scholarships-guide"
+}
