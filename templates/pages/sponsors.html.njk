@@ -16,9 +16,13 @@
   {% set sponsorTypes = ['double down', 'main', 'supporting', 'community'] %}
 
   {% for sponsorType in sponsorTypes %}
-    {% set sponsors = contents.sponsors._.pages |
+    {% set sponsors = contents.sponsors._.pages %}
+    {% if page.metadata.showOnlyReviewedSponsors %}
+      {% set sponsors = sponsors |
+        filterObjects('metadata.sponsor.reviewed', true) %}
+    {% endif %}
+    {% set sponsors = sponsors |
       filterObjects('metadata.sponsor.type', sponsorType) |
-      filterObjects('metadata.sponsor.reviewed', true) |
       sortObjects('metadata.sponsor.order', 100, 'number') %}
     {% set firstSponsor = sponsors | first %}
     {% set sponsorsTitle = firstSponsor.metadata.sponsor.title %}
@@ -49,7 +53,7 @@
   {% endfor %}
 
   <section class="grid">
-    <div class="grid-item-center md-content">
+    <div class="grid-item-sponsor md-content">
       {{ contents.copy.sponsors['sponsors.md'].html }}
     </div>
   </section>
