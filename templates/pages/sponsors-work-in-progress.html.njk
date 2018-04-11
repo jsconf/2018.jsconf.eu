@@ -18,7 +18,6 @@
   {% for sponsorType in sponsorTypes %}
     {% set sponsors = contents.sponsors._.pages |
       filterObjects('metadata.sponsor.type', sponsorType) |
-      filterObjects('metadata.sponsor.reviewed', true) |
       sortObjects('metadata.sponsor.order', 100, 'number') %}
     {% set firstSponsor = sponsors | first %}
     {% set sponsorsTitle = firstSponsor.metadata.sponsor.title %}
