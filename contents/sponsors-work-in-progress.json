@@ -1,6 +1,7 @@
 {
   "pageId": "sponsors",
-  "template": "pages/sponsors-work-in-progress.html.njk",
+  "template": "pages/sponsors.html.njk",
   "filename": ":file/index.html",
-  "title": "Sponsors (WIP)"
+  "title": "Sponsors (WIP)",
+  "showOnlyReviewedSponsors": false
 }
