@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-  {% set sponsorTypes = ['double down', 'main', 'supporting', 'community'] %}
+  {% set sponsorTypes = ['organizing', 'main', 'supporting', 'community'] %}
 
   {% for sponsorType in sponsorTypes %}
     {% set sponsors = contents.sponsors._.pages %}
@@ -30,8 +30,8 @@
 
     {% if sponsors.length > 0 %}
       <section class="grid">
-        <div class="grid-item-sponsor">
-          <h2>{{ sponsorsTitle }}</h2>
+        <div class="grid-item-sponsor" id="sponsors-{{ sponsorsType }}">
+          {% if sponsorsTitle %}<h2>{{ sponsorsTitle }}</h2>{% endif %}
           <div class="sponsors sponsors-{{ sponsorsType }}">
             {% for page in sponsors %}
               {% set sponsor = page.metadata.sponsor %}
