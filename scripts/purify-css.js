@@ -1,4 +1,4 @@
-const purifycss = require('purify-css');
+const purifycss = require('../third_party/purify-css/purify-css');
 const find = require('find');
 const path = require('path');
 const fs = require('fs');
