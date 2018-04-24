@@ -9,6 +9,7 @@ tweets:
   - "988007723546574848"
   - "988421675531284482"
   - "988187156081295360"
+  - "988904923495587840"
 ----
 
 We are pleased to announce that we have notified the awardees of the JSConf EU and [CSSconf EU 2018](https://2018.cssconf.eu/) [scholarship program](/scholarships/) which supports individuals from underrepresented groups to attend the conferences with ticket and travel grants. This includes, but is not limited to: women, people of color, LGBTQIA+ people, disabled people, and people facing economic or social hardships.
