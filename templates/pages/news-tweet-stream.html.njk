@@ -1,0 +1,45 @@
+{% extends "../layouts/default.html.njk" %}
+
+{% block content %}
+  <article class="grid">
+    <div class="grid-item-center md-content">
+      {{ page.html }}
+
+      <section id="tweets" style="min-height:{{ page.metadata.tweets.length * 300 }}px">
+      </section>
+      <script>
+      (function() {
+        var ids = {{ page.metadata.tweets | dumpsafe }};
+        var container = document.getElementById('tweets');
+        window.renderTweets = function() {
+          var id = ids.shift();
+          if (!id) {
+            return;
+          }
+          var element = document.createElement('div');
+          element.style.contain = 'content';
+          container.appendChild(element);
+          twttr.widgets.createTweet(
+            id,
+            element,
+            {
+              conversation: 'none'
+            }
+          ).then(function() {
+            requestAnimationFrame(renderTweets);
+          });
+        }
+      })();
+      </script>
+      <script src="https://platform.twitter.com/widgets.js" onload="renderTweets()"></script>
+      <link rel="preconnect" href="https://syndication.twitter.com">
+      <link rel="preconnect" href="https://cdn.syndication.twimg.com">
+      <link rel="preconnect" href="https://pbs.twimg.com">
+
+    </div>
+
+    <div class="grid-item-center">
+      <a href="https://ti.to/jsconfeu/jsconf-eu-2018" class="btn buy-ticket">Buy Ticket</a></p>
+    </div>
+  </article>
+{% endblock %}
