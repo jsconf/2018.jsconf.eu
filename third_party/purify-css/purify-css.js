@@ -975,7 +975,7 @@ var OPTIONS = {
     info: false,
     rejected: false,
     whitelist: [],
-    s: {}
+    cleanCssOptions: {}
 };
 
 var getOptions = function getOptions() {
