@@ -1,4 +1,4 @@
-**Note: Applications for our scholarship program closed March 31st, 2018.**
+**Note: Applications for our scholarship program closed March 31st, 2018. [Read a summary of the 2018 scholarship program.](/news/scholarships-awarded/)**
 
 We strive to bring together the most diverse group of people possible — **we firmly believe in equality**, which is why we invite anyone and everyone to participate.
 
