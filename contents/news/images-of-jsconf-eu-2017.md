@@ -4,6 +4,7 @@ filename: :file/index.html
 
 title: Images of JSConf EU 2017
 date: 2018-04-25
+image: halle.jpg
 imageGallery:
   directory: 2017
   files:
