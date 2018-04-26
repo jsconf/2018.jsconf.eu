@@ -4,6 +4,19 @@
   <article class="grid">
     <div class="grid-item-center md-content">
       {{ page.html }}
+
+      {% if page.metadata.imageGallery %}
+        {% for file in page.metadata.imageGallery.files %}
+          {% set url = contents.images[page.metadata.imageGallery.directory][file].url %}
+          <p>
+            <a href="{{ url }}" target="_blank" class="link--nounderline">
+              <img width="100%"
+                  id="{{ file }}"
+                  src="{{ url }}">
+            </a>
+          </p>
+        {% endfor %}
+      {% endif %}
     </div>
 
     <div class="grid-item-center">

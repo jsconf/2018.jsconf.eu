@@ -10,8 +10,8 @@ a {
 }
 
 /* Default links on main content area */
-.md-content a,
-.speaker-detail p a,
+.md-content a:not(.link--nounderline),
+.speaker-detail p a:not(.link--nounderline),
 .link--underline {
   border-bottom: 4px solid var(--returnrose);
 
