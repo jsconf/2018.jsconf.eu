@@ -7,12 +7,11 @@
 
       {% if page.metadata.imageGallery %}
         {% for file in page.metadata.imageGallery.files %}
-          {% set url = contents.images[page.metadata.imageGallery.directory][file].url %}
+          {% set image = contents.images[page.metadata.imageGallery.directory][file] %}
           <p>
-            <a href="{{ url }}" target="_blank" class="link--nounderline">
-              <img width="100%"
-                  id="{{ file }}"
-                  src="{{ url }}">
+            <a href="{{ image.url }}" target="_blank" class="link--nounderline responsive-image-wrapper"
+                style="padding-top:{{ image.getImageInfo().aspectPercentage }}%">
+              <img id="{{ file }}" src="{{ image.url }}">
             </a>
           </p>
         {% endfor %}
