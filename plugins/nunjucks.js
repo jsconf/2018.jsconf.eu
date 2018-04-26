@@ -1,6 +1,8 @@
 const nunjucks = require('nunjucks');
 const path = require('path');
 const minify = require('html-minifier').minify;
+const fs = require('fs');
+const imageSize = require('image-size');
 
 module.exports = function(env, callback) {
   const optionDefaults = {
@@ -92,6 +94,18 @@ module.exports = function(env, callback) {
     const hash = require('crypto').createHash('sha1');
     hash.update(require('fs').readFileSync(this.filepath.full), 'utf8');
     return 'immutable/' + hash.digest('hex') + '/' + this.filepath.relative;
+  }
+  env.plugins.StaticFile.prototype.getImageInfo = function() {
+    if (this.imageInfo_) {
+      return this.imageInfo_;
+    }
+    this.imageInfo_ = {};
+    const buffer = fs.readFileSync(this.filepath.full);
+    const size = imageSize(buffer);
+    this.imageInfo_.width = size.width;
+    this.imageInfo_.height = size.height;
+    this.imageInfo_.aspectPercentage = Math.round((size.height / size.width) * 100);
+    return this.imageInfo_;
   }
   // OMG, super hacky way to make local server emit a long max-age. This dramatically
   // speeds up the dev server responses since all resources are cached unless they
