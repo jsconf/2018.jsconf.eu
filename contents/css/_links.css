@@ -11,7 +11,7 @@ a {
 
 /* Default links on main content area */
 .md-content a:not(.link--nounderline),
-.speaker-detail p a:not(.link--nounderline),
+.speaker-detail .talk-description a:not(.link--nounderline),
 .link--underline {
   border-bottom: 4px solid var(--returnrose);
 
