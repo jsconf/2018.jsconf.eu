@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js');
   }
 });
-setTimeout(executeEarlyish, 500);
+// setTimeout(executeEarlyish, 500);
 
 function preconnectTito() {
   addLink('preconnect', 'https://ti.to');
