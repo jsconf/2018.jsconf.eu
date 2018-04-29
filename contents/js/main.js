@@ -56,6 +56,9 @@ function addLink(rel, href) {
 }
 
 function pingTypekit() {
-  new Image().src = document.getElementById('typekit')
+  var url = document.getElementById('typekit')
       .getAttribute('data-tracking-url');
+  if (url) {
+    new Image().src = url
+  }
 }
