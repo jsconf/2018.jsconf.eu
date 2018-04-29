@@ -10,7 +10,9 @@
       <h2 class="heading--no-border">{{ speaker.talkTitle }}</h2>
     </header>
 
-    {{ page.html }}
+    <section class="talk-description">
+      {{ page.html }}
+    </section>
 
     <ul class="speaker-links">
       {% if speaker.links.twitter %}
