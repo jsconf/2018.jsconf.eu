@@ -21,7 +21,14 @@
     <meta name="theme-color" content="#303f62">
     {% block extraMetaData %}
       {% set description = page.metadata.description or page.description or page.html | striptags | truncate(255) %}
-      {% set image = contents.images[page.metadata.image].url if page.metadata.image else '/android-chrome-512x512.png' %}
+      {% set image = '/android-chrome-512x512.png' %}
+      {% if page.metadata.image %}
+        {% set image = page.metadata.image | contentUrls(contents) %}
+      {% endif %}
+      {% if page.metadata.image and contents.images[page.metadata.image] and contents.images[page.metadata.image].url %}
+        {% set image = contents.images[page.metadata.image].url %}
+      {% endif %}
+
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:site" content="@jsconfeu">
       <meta name="twitter:creator" content="@jsconfeu">
