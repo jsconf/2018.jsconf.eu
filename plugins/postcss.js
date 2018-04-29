@@ -66,10 +66,11 @@ module.exports = (wintersmith, callback) => {
                 if (asset.url.startsWith('contents:')) {
                   const path = asset.url.split(':')[1];
                   const parts = path.split('/');
-                  if (parts.length != 2) {
-                    throw new Error('Expected format contents:directory/filename');
-                  }
-                  return contents[parts[0]][parts[1]].url;
+                  let image = contents;
+                  parts.forEach(part => {
+                    image = image[part];
+                  });
+                  return image.url;
                 }
                 if (!asset.url.startsWith('data:')) {
                   throw new Error('Use contents: or data: URLs: ' + asset.url);
