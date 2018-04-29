@@ -14,15 +14,15 @@ async function work() {
   text.replace(/src:url\("([^"]+)"/g, (ignore, url) => {
     preloadMatches.push(url);
   });
-  let trackingUrl;
+  let trackingUrl = '';
   // Remove tracking URL from CSS
   text = text.replace(/@import url\("([^"]+)"\);/g, (ignore, url) => {
     trackingUrl = url;
     return '';
   });
-  // Make all fonts font-display optional.
+  // Make all fonts font-display fallback.
   text = text.replace(/@font-face {/g, (fontFace) => {
-    return fontFace + '\nfont-display:optional;\n';
+    return fontFace + '\nfont-display:fallback;';
   });
   const locals = {
     "typekitPreload": preloadMatches,
