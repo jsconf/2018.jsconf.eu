@@ -6,8 +6,6 @@
     <title>{% if page.title %}{{ page.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel=stylesheet href="{{ contents.css["main.css"].url }}">
-    <link rel=preload href="{{ contents.images["pattern.svg"].url }}" as=image>
-    <script src="{{ contents.js['main.js'].url }}" defer></script>
     <link rel=preconnect href="https://use.typekit.net">
     <style id="typekit" data-tracking-url="{{ typekitTracking }}">
       {{ typekitCss }}
@@ -76,5 +74,7 @@
       {% endblock %}
 
     </div>
+  <script src="{{ contents.js['main.js'].url }}" async></script>
+  <link rel=preload href="{{ contents.images["pattern.svg"].url }}" as=image>
   </body>
 </html>
