@@ -63,7 +63,9 @@ const sheetParams = {
     contentPath: 'team'
   },
   sponsors: {
-    templateGlobals: {},
+    templateGlobals: {
+      template: 'pages/sponsor.html.njk'
+    },
     dataFieldName: 'sponsor',
     contentPath: 'sponsors'
   },
@@ -180,6 +182,7 @@ async function main(params) {
 
         if (sheetId === 'sponsors') {
           data.image = getLocalSponsorImage(params.imagePath, data);
+          title = data.name;
           if (!data.image) {
             try {
               data.image = await downloadSponsorImage(data);
