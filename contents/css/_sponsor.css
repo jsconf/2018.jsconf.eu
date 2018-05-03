@@ -18,3 +18,38 @@
 .sponsor img {
   display: block;
 }
+
+.sponsor-details-back-link {
+  color: var(--evalblacklight);
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor-details-logo {
+  align-items: flex-end;
+  border-bottom: 4px solid var(--evalblack);
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2.5rem;
+  width: 100%;
+
+  @media (--small) {
+    height: 18.75rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.sponsor-details-logo img {
+  width: 18.75rem;
+}
+
+.sponsor-details-link {
+  align-items: center;
+  display: flex;
+}
+
+.sponsor-details-link svg {
+  height: 2rem;
+  margin-right: .5rem;
+  width: 2rem;
+}
