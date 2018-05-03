@@ -14,14 +14,19 @@
         &lt; back
       </a>
       <figure class="sponsor-details-logo">
-        <img src="{{ contents.images.sponsor[sponsor.image.filename].url }}"
-             alt="{{ sponsor.name }}">
+        <a href="{{ sponsor.link }}"
+           target="_blank"
+           rel="nofollow">
+          <img src="{{ contents.images.sponsor[sponsor.image.filename].url }}"
+              alt="{{ sponsor.name }}">
+        </a>
       </figure>
       <div class="sponsor-details-content">
         {{ page.html }}
       </div>
       <a href="{{ sponsor.link }}"
          target="_blank"
+         rel="nofollow"
          class="sponsor-details-link">
          {{ svgIcon(contents, 'icon-website') }}
          {{ sponsor.link | simplifiedUrl }}
