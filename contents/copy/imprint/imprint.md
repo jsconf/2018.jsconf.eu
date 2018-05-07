@@ -1,6 +1,8 @@
 Holger Blank, Hamburg [@hblank](https://twitter.com/hblank)<br/>
 Jan Lehnardt, Berlin [@janl](https://twitter.com/janl)<br/>
-Malte Ubl, San Francisco [@cramforce](https://twitter.com/cramforce)
+Malte Ubl, San Francisco [@cramforce](https://twitter.com/cramforce)<br/>
+Simone Haas, Berlin [@haas_simone](https://twitter.com/haas_simone)<br/>
+Felicitas Kugland, Hamburg [@kotzendekrabbe](https://twitter.com/kotzendekrabbe)<br/>
 
 [contact@jsconf.eu](mailto://contact@jsconf.eu)
 
@@ -12,7 +14,7 @@ Voelckersstrasse 38<br/>
 
 
 ## Management
-Matthias Schrader (CEO), Jürgen Alker, Dr. Axel Averdung, Holger Blank, Thomas Dyckhoff, Dr. Lars Finke, Martin Gassner
+Matthias Schrader (CEO), Jürgen Alker, Dr. Axel Averdung, Holger Blank, Thomas Dyckhoff, Dr. Lars Finke, Martin Gassner, Peggy Hutchinson
 
 
 ## Court of Registry
