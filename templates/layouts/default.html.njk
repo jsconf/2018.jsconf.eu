@@ -47,7 +47,7 @@
         {% include "../partials/topbar.html.njk" %}
       {% endblock %}
 
-      <main class="main-wrapper bg-white page-{{ page.metadata.pageId }}">
+      <main class="main-wrapper main-wrapper-padded main-wrapper-shadowed bg-white page-{{ page.metadata.pageId }}">
         {% block header %}
           {% if page.metadata.title  %}
             <section class="grid">
