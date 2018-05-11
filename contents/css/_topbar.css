@@ -95,7 +95,7 @@
   @media (--xsmall) {
     font-size: 2.5rem; /*40px*/
   }
-  &:after {
+  &::after {
     content: '';
     width: 100%;
     height: 1rem;
@@ -103,7 +103,6 @@
     bottom: calc(-1rem + 1px);
     display: block;
     background: transparent repeat-x url(contents:svg/zigzag-border.svg);
-    background-size: cover;
   }
 }
 
