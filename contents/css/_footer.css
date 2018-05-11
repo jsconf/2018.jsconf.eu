@@ -21,6 +21,12 @@
   padding: 2rem 0;
 }
 
+.footer-copy .svg-jsconf-heart {
+  height: 1.666rem;
+  float: right;
+  width: 1.666rem;
+}
+
 .footer-short {
   padding-bottom: 1rem;
 }

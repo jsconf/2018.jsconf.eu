@@ -1,3 +1,5 @@
+{% from "../_macros.njk" import svgIcon %}
+
 <footer>
   <div class="footer-short footer-zigzag bg--evalblack">
     <div class="footer-links tc">
@@ -13,6 +15,7 @@
   <div class="footer-copy footer-copy-zigzag">
     <div class="main-wrapper main-wrapper-compact">
       JSConf 2018
+      {{ svgIcon(contents, 'jsconf-heart', width = 40, height = 40, alt = 'JSConf EU') }}
     </div>
   </div>
 </footer>
