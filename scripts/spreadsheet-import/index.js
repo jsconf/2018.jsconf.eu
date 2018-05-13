@@ -10,6 +10,7 @@ const {getSheetData} = require('./spreadsheet-api');
 const {processSheet, simplifySpreadsheetData} = require('./spreadsheet-utils');
 const {downloadSpeakerImage, getLocalSpeakerImage} = require('./image-utils/speaker-image');
 const {downloadSponsorImage, getLocalSponsorImage} = require('./image-utils/sponsor-image');
+const {processSchedule} = require('./process-schedule');
 const rimraf = promisify(require('rimraf'));
 const timeout = promisify(setTimeout);
 
@@ -68,6 +69,9 @@ const sheetParams = {
     },
     dataFieldName: 'sponsor',
     contentPath: 'sponsors'
+  },
+  schedule: {
+    parseSchedule: true,
   },
 };
 
@@ -157,7 +161,11 @@ async function main(params) {
   // ---- parse and generate markdown-files
   console.log(chalk.gray('awesome, that worked.'));
   Object.keys(sheets).forEach(sheetId => {
-    const {templateGlobals, dataFieldName, contentPath} = sheetParams[sheetId];
+    const {templateGlobals, dataFieldName, contentPath, parseSchedule} = sheetParams[sheetId];
+    if (parseSchedule) {
+      processSchedule(sheets[sheetId]);
+      return;
+    }
     const records = processSheet(sheets[sheetId]);
 
     console.log(chalk.white('processing sheet %s'), chalk.yellow(sheetId));
