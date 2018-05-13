@@ -13,6 +13,7 @@ module.exports = function(env, callback) {
     extensions: {}
   };
   Object.assign(env.config.locals, require('../locals-generated.json'));
+  env.config.locals.schedule = require('../schedule.json');
 
   // Load the new nunjucks environment.
   const loaderOpts = {
