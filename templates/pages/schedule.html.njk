@@ -330,12 +330,12 @@ function checkCurrent() {
     } else {
       console.error('Check failed', response);
     }
-  })
+  });
 }
 
-
-document.addEventListener('DOMContentLoaded', checkCurrent)
-document.addEventListener('visibilitychange', checkCurrent)
+document.addEventListener('DOMContentLoaded', checkCurrent);
+document.addEventListener('visibilitychange', checkCurrent);
+setInterval(checkCurrent, 1000 * 60 * 30);  // Check every 15 minutes
 
 </script>
 
