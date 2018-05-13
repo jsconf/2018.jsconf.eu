@@ -44,8 +44,9 @@ For most of you, everything is already booked. If you do need reimbursement, ple
 
 ## Contacts
 
-If you have any questions or need help, feel free to talk to us! We're all on the "wwwtf.berlin" Slack instance that you've been invited to.
-
+If you have any questions or need help, feel free to talk to us!.
+We're all on the "wwwtf.berlin" Slack instance that you've been invited to.
+- **Team,** [contact@jsconf.eu](mailto:contact@jsconf.eu)
 - **Feli,** [feli@jsconf.eu](mailto:feli@jsconf.eu), [@kotzendekrabbe](http://twitter.com/kotzendekrabbe)
 - **Holger,** [holger@jsconf.eu](mailto:holger@jsconf.eu), [@hblank](http://twitter.com/hblank)
 - **Jan,** [jan@jsconf.eu](mailto:jan@jsconf.eu), [@janl](http://twitter.com/janl)
