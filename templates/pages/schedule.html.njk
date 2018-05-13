@@ -4,7 +4,7 @@
     Created by philnash supported by Twilio
 -->
 
-<html lang="en">
+<html lang="en" generated="{{ schedule.info.generationTime }}">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -41,7 +41,6 @@ html {
 body {
   font-family: Verdana, sans-serif;
   line-height: 1.5;
-  padding-top: 93px;
   color: #bbbbbb;
   background-color: #0C1222;
 }
@@ -102,17 +101,10 @@ nav a.active {
   list-style: none;
 }
 .day {
+  padding-top: 93px;
   padding-bottom: 46px;
 }
-.js .day {
-  display: none;
-}
-.js .day.active {
-  display: block;
-}
-.js .day h2 {
-  display: none;
-}
+
 .day h2 {
   margin: 0;
   padding: 4px 20px;
@@ -177,7 +169,6 @@ nav a.active {
 }
 .day .session a h3::after {
   display: block;
-  content: '» Details';
   font-size: 12px;
   padding: 5px 0;
 }
@@ -241,113 +232,7 @@ nav a.active {
 }
 
   </style>
-  <script>
-document.body.className = 'js';
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch(function(err) {
-    console.log(err);
-  });
-
-  navigator.serviceWorker.addEventListener('message', function(event) {
-    var message = JSON.parse(event.data);
-    var isRefresh = message.type === 'refresh';
-    var lastETag = localStorage.getItem('currentETag');
-
-    var isNew = lastETag !== message.eTag;
-
-    if (isRefresh && isNew) {
-      if (lastETag) {
-        document.querySelector('.notice').removeAttribute('hidden');
-      }
-      localStorage.setItem('currentETag', message.eTag);
-    }
-  });
-}
-
-window.addEventListener('DOMContentLoaded', function(evt) {
-  var dayLinks = document.querySelectorAll('nav a'),
-    dayLists = document.querySelectorAll('.day'),
-    sessions = document.querySelectorAll('.session > a, .session > div > a'),
-    today = new Date(),
-    days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
-    i,
-    j,
-    len,
-    day,
-    hour,
-    todayList,
-    hourToView,
-    tab;
-
-  function addClass(element, klass) {
-    element.className += ' ' + klass;
-  }
-  function removeClass(element, klass) {
-    element.className = element.className.replace(klass, '');
-  }
-  function hasClass(element, klass) {
-    return element.className.match(new RegExp(klass));
-  }
-
-  for ((i = 0), (len = dayLinks.length); i < len; i++) {
-    dayLinks[i].addEventListener(
-      'click',
-      function(e) {
-        var day = document.getElementById(e.target.href.split('#')[1]);
-        e.preventDefault();
-        for (j = 0; j < dayLists.length; j++) {
-          removeClass(dayLists[j], 'active');
-          removeClass(dayLinks[j], 'active');
-        }
-        e.target.className = 'active';
-        day.className = day.className + ' active';
-        window.scroll(0, 0);
-      },
-      false
-    );
-  }
-
-  for ((i = 0), (len = sessions.length); i < len; i++) {
-    sessions[i].addEventListener(
-      'click',
-      function(e) {
-        var session = e.currentTarget;
-        e.preventDefault();
-        if (hasClass(session, 'active')) {
-          removeClass(session, 'active');
-        } else {
-          addClass(session, 'active');
-        }
-      },
-      false
-    );
-  }
-
-  day = today.getHours() < 6
-    ? days[(today.getDay() + 6) % 7]
-    : days[today.getDay()];
-  hour = today.getHours();
-  tab = document.getElementById('nav_' + day);
-  if (tab !== null) {
-    removeClass(document.querySelector('nav .active'), 'active');
-    addClass(tab, 'active');
-  }
-  todayList = document.getElementById(day);
-  if (todayList !== null) {
-    removeClass(document.querySelector('.day.active'), 'active');
-    addClass(todayList, 'active');
-    hourToView = todayList.querySelector('.hour_' + hour);
-    if (hourToView !== null) {
-      setTimeout(function() {
-        hourToView.scrollIntoView();
-        window.scrollBy(0, -150);
-      }, 100);
-    }
-  }
-});
-
-  </script>
 </head>
 
 <body>
@@ -363,11 +248,13 @@ window.addEventListener('DOMContentLoaded', function(evt) {
     <h2>Day {{ day }}</h2>
     <ul class="events">
       {% for session, talks in sessions %}
-        <li class="time hour_8">
+        <li class="time">
           <h3>{{ session }}</h3>
         </li>
         {% for talk in talks %}
-          <li class="session {% if talk.track == 'Side Track' %}side{% endif %}">
+          <li
+              datetime="{{ talk.date }} {{ talk.startTime | replace('.', ':') }} GMT+0200"
+              class="session {% if talk.track == 'Side Track' %}side{% endif %}">
             <a href="TODO">
               <h3>
                 {% if talk.who %}
@@ -380,9 +267,6 @@ window.addEventListener('DOMContentLoaded', function(evt) {
                 <time>{{ session }}</time> {{ talk.track }}
               </p>
               {% endif %}
-              <div class="description">
-                TODO
-              </div>
             </a>
           </li>
         {% endfor %}
@@ -391,8 +275,68 @@ window.addEventListener('DOMContentLoaded', function(evt) {
     </div>
   {% endfor %}
   <div class="notice" hidden>
-    <p><a href="/">The schedule has updated, click here to refresh.</a></p>
+    <p><a href="/schedule/">The schedule has updated, click here to refresh.</a></p>
   </div>
 </body>
+
+<script>
+document.body.className = 'js';
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function(err) {
+    console.log(err);
+  });
+}
+
+Array.from(document.querySelector('nav').children).forEach(function(btn) {
+  btn.onclick = function(e) {
+    console.log('click')
+    setTimeout(function() {
+      history.replaceState(null, null, '/schedule/')
+    }, 100)
+  };
+});
+
+function scrollTimeIntoView() {
+  var now = new Date('2018-06-02 14:20 GMT+0200');
+  Array.from(document.querySelectorAll('[datetime]')).forEach(function(talk) {
+    var time = new Date(Date.parse(talk.getAttribute('datetime')));
+    if (time < now) {
+      talk.classList.add('in-the-past')
+    }
+  });
+
+  var firstFuture = document.querySelector('.session:not(.in-the-past)');
+  setTimeout(function() {
+    firstFuture.scrollIntoView();
+    document.documentElement.scrollTop -= 93;
+  }, 100)
+}
+
+document.addEventListener('DOMContentLoaded', scrollTimeIntoView)
+document.addEventListener('visibilitychange', scrollTimeIntoView)
+
+function checkCurrent() {
+  fetch('/schedule/').then(function(response) {
+    if (response.ok) {
+      response.text().then(function(text) {
+        var generationTime = text.match(/ generated="([^"]+)"/)[1];
+        if (generationTime != document.documentElement.getAttribute('generated')) {
+          document.querySelector('.notice').removeAttribute('hidden')
+        } else {
+          console.info('Schedule current', generationTime);
+        }
+      });
+    } else {
+      console.error('Check failed', response);
+    }
+  })
+}
+
+
+document.addEventListener('DOMContentLoaded', checkCurrent)
+document.addEventListener('visibilitychange', checkCurrent)
+
+</script>
 
 </html>

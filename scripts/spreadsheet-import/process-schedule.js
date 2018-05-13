@@ -41,7 +41,7 @@ function structureData(lessCrappyData) {
       if (!tracks[track]) {
         tracks[track] = {
           day: day + 1,
-          date: day == 0 ? '2018-06-02' : '2018-06-03',
+          date: day == 1 ? '2018-06-02' : '2018-06-03',
           track: track == 'backtrack' ? 'Back Track' : 'Side Track',
         };
       }
