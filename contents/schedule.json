@@ -1,0 +1,6 @@
+{
+  "pageId": "schedule",
+  "template": "pages/schedule.html.njk",
+  "filename": ":file/index.html",
+  "title": "Schedule"
+}

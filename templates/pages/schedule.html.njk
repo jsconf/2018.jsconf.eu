@@ -1,0 +1,398 @@
+<!doctype html>
+
+<!--
+    Created by philnash supported by Twilio
+-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JSConf EU Schedule 2018</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="JSConf EU schedule">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest-json.txt">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#303f62">
+
+  <style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+body,
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: Verdana, sans-serif;
+  line-height: 1.5;
+  padding-top: 93px;
+  color: #bbbbbb;
+  background-color: #0C1222;
+}
+a {
+  -webkit-transition: color 0.3s, background-color 0.5s;
+  -moz-transition: color 0.3s, background-color 0.5s;
+  -o-transition: color 0.3s, background-color 0.5s;
+  transition: color 0.3s, background-color 0.5s;
+  color: #ff0079;
+}
+header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: #FCFFFF;
+  background: #0C1222 url({{ contents.svg['schedule-header.svg'].url }}) no-repeat 0 -442px;
+  z-index: 10;
+}
+header h1 {
+  margin: 10px 0;
+  font-size: 16px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px;
+  background: #0C1222;
+}
+footer a {
+  color:#91a1bc;
+}
+nav {
+  display: flex;
+  font-size: 14px;
+  border-bottom: 5px solid #0C1222;
+}
+nav a {
+  display: inline-block;
+  flex-grow: 1;
+  justify-content: space-around;
+  margin:0 5px;
+  padding: 5px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s;
+}
+nav a.active {
+  border-color: #051ADD;
+}
+.events {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.day {
+  padding-bottom: 46px;
+}
+.js .day {
+  display: none;
+}
+.js .day.active {
+  display: block;
+}
+.js .day h2 {
+  display: none;
+}
+.day h2 {
+  margin: 0;
+  padding: 4px 20px;
+  color: #fff;
+  background: #333;
+}
+.day li {
+  padding: 0 10px;
+}
+.day .time {
+  margin-top: 0;
+  text-align: center;
+  font-size: 12px;
+  /*visibility: hidden;*/
+  height: 0;
+}
+.day .time * {
+  display: none;
+}
+.day .session {
+  margin: 20px;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+.day .session::before{
+  content: '';
+  background-color: #ff0079;
+  flex: 0 0 8px;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 35px;
+}
+.day .session.side::before {
+  background-color: #051ADD;
+}
+.day .session time {
+  position: absolute;
+  top: 12px;
+  left:0;
+  font-size: 12px;
+}
+.day .session div time {
+  top: 14px;
+}
+.day .session h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #91a1bc;
+}
+.day .session h3 .speaker {
+  display: block;
+  font-size: 14px;
+  color:#FCFFFF;
+}
+.day .session a,
+.day .session > div {
+  text-decoration: none;
+  color: #FCFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.day .session a h3::after {
+  display: block;
+  content: '» Details';
+  font-size: 12px;
+  padding: 5px 0;
+}
+.day .session a > p,
+.day .session div > p {
+  margin:0;
+}
+.day .session .description {
+  display: none;
+  padding-top: .5em;
+  padding-bottom: 0;
+}
+.day .session .active .description,
+.day .session .active + .description {
+  display: block;
+}
+.day .session .description p {
+  line-height: 1.5;
+  margin-bottom: .5em;
+}
+.day .session .description p:last-child{
+  margin-bottom: 0;
+}
+.day .session .description ul {
+  margin: 0;
+  padding: 0;
+}
+.day .session .description ul li {
+  line-height: 1.2;
+  margin: 0 0 .5em 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+.day .session .description a {
+  text-decoration: underline;
+}
+.message {
+  padding: 6px 20px;
+  text-align: center;
+}
+
+.notice {
+  position:fixed;
+  bottom:55px;
+  width:100%;
+  color: #fff;
+  padding:0 20px;
+  background-color: #ff0079;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+.notice[hidden] {
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+}
+.notice a{
+  color: #fff;
+}
+
+  </style>
+  <script>
+document.body.className = 'js';
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function(err) {
+    console.log(err);
+  });
+
+  navigator.serviceWorker.addEventListener('message', function(event) {
+    var message = JSON.parse(event.data);
+    var isRefresh = message.type === 'refresh';
+    var lastETag = localStorage.getItem('currentETag');
+
+    var isNew = lastETag !== message.eTag;
+
+    if (isRefresh && isNew) {
+      if (lastETag) {
+        document.querySelector('.notice').removeAttribute('hidden');
+      }
+      localStorage.setItem('currentETag', message.eTag);
+    }
+  });
+}
+
+window.addEventListener('DOMContentLoaded', function(evt) {
+  var dayLinks = document.querySelectorAll('nav a'),
+    dayLists = document.querySelectorAll('.day'),
+    sessions = document.querySelectorAll('.session > a, .session > div > a'),
+    today = new Date(),
+    days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
+    i,
+    j,
+    len,
+    day,
+    hour,
+    todayList,
+    hourToView,
+    tab;
+
+  function addClass(element, klass) {
+    element.className += ' ' + klass;
+  }
+  function removeClass(element, klass) {
+    element.className = element.className.replace(klass, '');
+  }
+  function hasClass(element, klass) {
+    return element.className.match(new RegExp(klass));
+  }
+
+  for ((i = 0), (len = dayLinks.length); i < len; i++) {
+    dayLinks[i].addEventListener(
+      'click',
+      function(e) {
+        var day = document.getElementById(e.target.href.split('#')[1]);
+        e.preventDefault();
+        for (j = 0; j < dayLists.length; j++) {
+          removeClass(dayLists[j], 'active');
+          removeClass(dayLinks[j], 'active');
+        }
+        e.target.className = 'active';
+        day.className = day.className + ' active';
+        window.scroll(0, 0);
+      },
+      false
+    );
+  }
+
+  for ((i = 0), (len = sessions.length); i < len; i++) {
+    sessions[i].addEventListener(
+      'click',
+      function(e) {
+        var session = e.currentTarget;
+        e.preventDefault();
+        if (hasClass(session, 'active')) {
+          removeClass(session, 'active');
+        } else {
+          addClass(session, 'active');
+        }
+      },
+      false
+    );
+  }
+
+  day = today.getHours() < 6
+    ? days[(today.getDay() + 6) % 7]
+    : days[today.getDay()];
+  hour = today.getHours();
+  tab = document.getElementById('nav_' + day);
+  if (tab !== null) {
+    removeClass(document.querySelector('nav .active'), 'active');
+    addClass(tab, 'active');
+  }
+  todayList = document.getElementById(day);
+  if (todayList !== null) {
+    removeClass(document.querySelector('.day.active'), 'active');
+    addClass(todayList, 'active');
+    hourToView = todayList.querySelector('.hour_' + hour);
+    if (hourToView !== null) {
+      setTimeout(function() {
+        hourToView.scrollIntoView();
+        window.scrollBy(0, -150);
+      }, 100);
+    }
+  }
+});
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">JSConf EU 2018</a></h1>
+    <nav>
+      <a href="#day1" id="nav_day1">JSConf Day 1</a>
+      <a href="#day2" id="nav_day2">JSConf Day 2</a>
+    </nav>
+  </header>
+  {% for day, sessions in schedule.schedule %}
+    <div class="day {% if schedule.info.currentDay == day %}active{% endif %}" id="day{{ day }}">
+    <h2>Day {{ day }}</h2>
+    <ul class="events">
+      {% for session, talks in sessions %}
+        <li class="time hour_8">
+          <h3>{{ session }}</h3>
+        </li>
+        {% for talk in talks %}
+          <li class="session {% if talk.track == 'Side Track' %}side{% endif %}">
+            <a href="TODO">
+              <h3>
+                {% if talk.who %}
+                  <span class="speaker">{{ talk.who }}</span>
+                {% endif %}
+                {{ talk.what }}
+              </h3>
+              {% if talk.who != 'all' %}
+              <p>
+                <time>{{ session }}</time> {{ talk.track }}
+              </p>
+              {% endif %}
+              <div class="description">
+                TODO
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+    </div>
+  {% endfor %}
+  <div class="notice" hidden>
+    <p><a href="/">The schedule has updated, click here to refresh.</a></p>
+  </div>
+</body>
+
+</html>
