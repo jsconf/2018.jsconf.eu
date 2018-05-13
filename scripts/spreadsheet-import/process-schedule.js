@@ -2,7 +2,11 @@ const fs = require('fs');
 
 module.exports.processSchedule = function(sheet) {
   const data = structureData(sheet);
-  const json = JSON.stringify(data, null, '  ');
+  const schedule = {
+    info: info(),
+    schedule: data,
+  }
+  const json = JSON.stringify(schedule, null, '  ');
   console.info(json);
   fs.writeFileSync('./schedule.json', json);
   // Write with .txt filename, because wintersmith doesn't support serving
@@ -18,7 +22,7 @@ const columns = [
 ];
 
 function structureData(lessCrappyData) {
-  let day = 0;
+  let day = 1;
   const mergedRecords = {};
 
   for (let row = 2, nRows = lessCrappyData.length; row < nRows; row++) {
@@ -38,6 +42,7 @@ function structureData(lessCrappyData) {
         tracks[track] = {
           day: day + 1,
           date: day == 0 ? '2018-06-02' : '2018-06-03',
+          track: track == 'backtrack' ? 'Back Track' : 'Side Track',
         };
       }
       tracks[track][field] = lessCrappyData[row][col];
@@ -47,15 +52,24 @@ function structureData(lessCrappyData) {
       if (!tracks[track].startTime || !tracks[track].who) {
         return;
       }
-      if (!mergedRecords[track]) {
-        mergedRecords[track] = [];
+      if (!mergedRecords[day]) {
+        mergedRecords[day] = {};
       }
-      if (!mergedRecords[track][day]) {
-        mergedRecords[track][day] = [];
+      if (!mergedRecords[day][tracks[track].startTime]) {
+        mergedRecords[day][tracks[track].startTime] = [];
       }
-      mergedRecords[track][day].push(tracks[track]);
+      mergedRecords[day][tracks[track].startTime].push(tracks[track]);
     });
   }
 
   return mergedRecords;
+}
+
+function info() {
+  const now = new Date();
+  const conferenceDay = now < Date.parse('Sun Jun 02 2018 00:00:00 GMT+0200 (CEST)') ? 1 : 2;
+  return {
+    currentDay: conferenceDay,
+    generationTime: now.toString(),
+  };
 }
