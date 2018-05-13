@@ -14,6 +14,7 @@ module.exports = function(env, callback) {
   };
   Object.assign(env.config.locals, require('../locals-generated.json'));
   env.config.locals.schedule = require('../schedule.json');
+  env.config.locals.Date = Date;
 
   // Load the new nunjucks environment.
   const loaderOpts = {
