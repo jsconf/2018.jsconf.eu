@@ -1,7 +1,7 @@
 {
   "info": {
     "currentDay": 1,
-    "generationTime": "Sun May 13 2018 11:03:16 GMT+0200 (CEST)"
+    "generationTime": "Sun May 13 2018 11:45:32 GMT+0200 (CEST)"
   },
   "schedule": {
     "1": {
@@ -37,8 +37,8 @@
           "startTime": "10.00",
           "duration": 30,
           "number": 1,
-          "who": "Addy Osmani",
-          "what": "The Browser Hackers Guide To Instantly Loading Everything"
+          "who": "Erin Zimmer",
+          "what": "Further Adventures of the Event Loop"
         }
       ],
       "10.30": [

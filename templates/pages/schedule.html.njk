@@ -167,12 +167,16 @@ nav a.active {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.day .session a h3::after {
+article.with-description {
+  cursor: pointer
+}
+.day .session article.with-description:not(.active) h3::after {
   display: block;
   font-size: 12px;
+  content: '» Details';
   padding: 5px 0;
 }
-.day .session a > p,
+.day .session article > p,
 .day .session div > p {
   margin:0;
 }
@@ -237,7 +241,7 @@ nav a.active {
 
 <body>
   <header>
-    <h1><a href="/">JSConf EU 2018</a></h1>
+    <h1><a href="/">Home</a></h1>
     <nav>
       <a href="#day1" id="nav_day1">JSConf Day 1</a>
       <a href="#day2" id="nav_day2">JSConf Day 2</a>
@@ -255,7 +259,16 @@ nav a.active {
           <li
               datetime="{{ talk.date }} {{ talk.startTime | replace('.', ':') }} GMT+0200"
               class="session {% if talk.track == 'Side Track' %}side{% endif %}">
-            <a href="TODO">
+            {% set talkPage = '' %}
+            {% for page in contents.speakers._.pages %}
+              {% if page.metadata.speaker.name == talk.who %}
+                {% set talkPage = page %}
+              {% endif %}
+              {% if page.metadata.speaker.talkTitle == talk.what %}
+                {% set talkPage = page %}
+              {% endif %}
+            {% endfor %}
+            <article {% if talkPage %}class="with-description"{% endif %} onclick="this.classList.toggle('active')">
               <h3>
                 {% if talk.who %}
                   <span class="speaker">{{ talk.who }}</span>
@@ -267,7 +280,13 @@ nav a.active {
                 <time>{{ session }}</time> {{ talk.track }}
               </p>
               {% endif %}
-            </a>
+              {% if talkPage %}
+                <div class="description">
+                  {{ talkPage.html }}
+                  <p><a href="{{ talkPage.url }}">More info</a></p>
+                </div>
+              {% endif %}
+            </article>
           </li>
         {% endfor %}
       {% endfor %}
@@ -297,8 +316,9 @@ Array.from(document.querySelector('nav').children).forEach(function(btn) {
   };
 });
 
-function scrollTimeIntoView() {
-  var now = new Date('2018-06-02 14:20 GMT+0200');
+function scrollTimeIntoView(onload) {
+  // var now = new Date('2018-06-02 14:20 GMT+0200');
+  var now = new Date();
   Array.from(document.querySelectorAll('[datetime]')).forEach(function(talk) {
     var time = new Date(Date.parse(talk.getAttribute('datetime')));
     if (time < now) {
@@ -308,12 +328,15 @@ function scrollTimeIntoView() {
 
   var firstFuture = document.querySelector('.session:not(.in-the-past)');
   setTimeout(function() {
+    if (onload && document.documentElement.scrollTop != 0) {
+      return;
+    }
     firstFuture.scrollIntoView();
     document.documentElement.scrollTop -= 93;
   }, 100)
 }
 
-document.addEventListener('DOMContentLoaded', scrollTimeIntoView)
+document.addEventListener('DOMContentLoaded', scrollTimeIntoView.bind(null, true))
 document.addEventListener('visibilitychange', scrollTimeIntoView)
 
 function checkCurrent() {
