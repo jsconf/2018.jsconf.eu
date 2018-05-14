@@ -285,7 +285,9 @@ article.with-description {
                 {% endif %}
                 {{ talk.what }}
               </h3>
-              {% if talk.who != 'all' %}
+              {% if talk.who == 'all' %}
+                <time>{{ session }}</time>
+              {% else %}
               <p>
                 <time>{{ session }}</time> {{ talk.track }}
               </p>
@@ -344,7 +346,7 @@ function scrollTimeIntoView(onload) {
 }
 
 function checkCurrent() {
-  fetch('/schedule/').then(function(response) {
+  fetch('/schedule/', {cache: 'reload'}).then(function(response) {
     if (response.ok) {
       response.text().then(function(text) {
         var generationTime = text.match(/<html generated=(\d+)/)[1];

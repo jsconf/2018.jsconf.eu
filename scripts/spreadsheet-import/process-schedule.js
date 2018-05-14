@@ -26,11 +26,13 @@ function structureData(lessCrappyData) {
   const mergedRecords = {};
 
   for (let row = 2, nRows = lessCrappyData.length; row < nRows; row++) {
-    if (row === 29) {
-      day++;
-    }
+
 
     if (!lessCrappyData[row]) { continue; }
+
+    if (/Day 2:/.test(lessCrappyData[row][0])) {
+      day = 2;
+    }
 
     const tracks = {};
     for (let col = 0, nCols = lessCrappyData[row].length; col < nCols; col++) {
@@ -40,7 +42,7 @@ function structureData(lessCrappyData) {
 
       if (!tracks[track]) {
         tracks[track] = {
-          day: day + 1,
+          day: day,
           date: day == 1 ? '2018-06-02' : '2018-06-03',
           track: track == 'backtrack' ? 'Back Track' : 'Side Track',
         };
