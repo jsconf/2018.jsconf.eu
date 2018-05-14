@@ -89,11 +89,11 @@
 
     .session .info > * {
       transform: translateY(-1000px) translateZ(0);
-      transition: transform 2s ease-in-out;
+      transition: transform 2s;
+      transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
     }
     .session.active .info > * {
       transform: translateY(0) translateZ(0) !important;
-      transition: transform 2s ease-in-out;
     }
   </style>
 
