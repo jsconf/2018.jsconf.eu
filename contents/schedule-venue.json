@@ -1,0 +1,6 @@
+{
+  "pageId": "schedule",
+  "template": "pages/schedule-venue.html.njk",
+  "filename": "schedule/venue.html",
+  "title": "Schedule"
+}
