@@ -344,7 +344,7 @@ function scrollTimeIntoView(onload) {
 }
 
 function checkCurrent() {
-  fetch('/schedule/', {cache: 'reload'}).then(function(response) {
+  fetch('/schedule/').then(function(response) {
     if (response.ok) {
       response.text().then(function(text) {
         var generationTime = text.match(/<html generated=(\d+)/)[1];
