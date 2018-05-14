@@ -1,13 +1,13 @@
 {
   "info": {
     "currentDay": 1,
-    "generationTime": "Sun May 13 2018 11:45:32 GMT+0200 (CEST)"
+    "generationTime": "Mon May 14 2018 21:00:04 GMT+0200 (CEST)"
   },
   "schedule": {
     "1": {
       "8.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "8.30",
@@ -19,121 +19,121 @@
       ],
       "9.27": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "9.27",
           "duration": 30,
           "number": 0,
           "who": "Curators",
-          "what": "Opening JSConf EU 2017"
+          "what": "Opening JSConf EU 2018"
         }
       ],
       "10.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "10.00",
           "duration": 30,
           "number": 1,
-          "who": "Erin Zimmer",
-          "what": "Further Adventures of the Event Loop"
+          "who": "Sarah Groff Hennigh-Palermo",
+          "what": "Kablooie: A History of Errors & a Future of Solutions"
         }
       ],
       "10.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "10.30",
           "duration": 30,
           "number": 2,
-          "who": "Marcin Szczepanski",
-          "what": "What's new in Netscape Navigator 2.0"
+          "who": "Patricia Realini",
+          "what": "Existential Engineering or How Ethics Precedes Error Handling"
         }
       ],
       "11.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "11.00",
           "duration": 30,
           "number": null,
           "who": "all",
-          "what": "Coffee by Bloomberg, Service by Twilio"
+          "what": "Break"
         }
       ],
       "11.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "11.30",
           "duration": 30,
           "number": 3,
-          "who": "Anjana Vakil",
-          "what": "Immutable data structures for functional JS"
+          "who": "Daniel Ehrenberg",
+          "what": "Native BigInts in JavaScript: A Case Study in TC39"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "11.30",
           "duration": 30,
           "number": 16,
-          "who": "Zachary Johnson, Andrew Reitano",
-          "what": "NESpectre: The Massively Multi-Haunted NES"
+          "who": "Willian Martins",
+          "what": "Back to the future of JS: the next features and amazing proposals"
         }
       ],
       "12.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "12.00",
           "duration": 30,
           "number": 4,
-          "who": "Laura Carvajal",
-          "what": "YES, your site too can (and should) be accessible. Lessons learned from building FT.com"
+          "who": "Marcy Sutton",
+          "what": "Empathy-Driven Development"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "12.00",
           "duration": 30,
           "number": 17,
-          "who": "Henry Zhu",
-          "what": "Maintaining an OSS Project (Babel)"
+          "who": "Neha Sharma",
+          "what": "Journey of JS community from 2 to 2k members"
         }
       ],
       "12.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "12.30",
           "duration": 30,
           "number": 5,
-          "who": "Ruth John",
-          "what": "How To Be A Web A/V Artist"
+          "who": "Erin Zimmer",
+          "what": "Further Adventures of the Event Loop"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "12.30",
           "duration": 30,
           "number": 18,
-          "who": "Jessica Tran",
-          "what": "Pavlov’s Dog & Foucault’s Panopticon: Hacking My Anxiety With Open-Source Technology"
+          "who": "Igor Trindade Oliveira",
+          "what": "Tales From the Trenches: Fingerprints on the Web"
         }
       ],
       "13.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "13.00",
@@ -145,209 +145,199 @@
       ],
       "14.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "14.00",
           "duration": 30,
           "number": 6,
-          "who": "Chris Pojer",
-          "what": "Building High-Quality JavaScript Tools"
+          "who": "Shelley Vohr",
+          "what": "Asynchrony: Under the Hood"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "14.00",
           "duration": 30,
           "number": 19,
-          "who": "Irina Shestak",
-          "what": "knock-knock-who-there-file-compression-TALK-FINAL-4.tar.trz.bz2.gz"
+          "who": "Rich Harris",
+          "what": "Computer, build me an app"
         }
       ],
       "14.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "14.30",
           "duration": 30,
           "number": 7,
-          "who": "Matthew Shotton",
-          "what": "Dynamic video in the browser"
+          "who": "Patrick Hamann",
+          "what": "To push, or not to push?! - The future of HTTP/2 server push"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "14.30",
           "duration": 30,
           "number": 20,
-          "who": "Emil Bay",
-          "what": "Keeping passwords safe in 2017"
+          "who": "Hannes Schluchtmann",
+          "what": "Quirks and surprises of webdev in China"
         }
       ],
       "15.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "15.00",
           "duration": 30,
           "number": 8,
-          "who": "Chen Shay",
-          "what": "You don't need AMP for that"
+          "who": "Kim Crayton",
+          "what": "Unintended Consequences: How to Reduce Exclusionary Practices In Our Organizations and Communities"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "15.00",
           "duration": 30,
           "number": 21,
-          "who": "Meno Abels",
-          "what": "Weakest Link"
+          "who": "Georgios Kaleadis",
+          "what": "About Coding Kids and Screaming Carrots"
         }
       ],
       "15.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "15.30",
           "duration": 30,
           "number": null,
           "who": "all ",
-          "what": "Coffee by Bloomberg, Service by Twilio"
+          "what": "Break"
         }
       ],
       "16.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "16.00",
           "duration": 30,
           "number": 9,
-          "who": "Zahra Jabini",
-          "what": "Sequential Art, Comics & SVGs"
+          "who": "Florence Okoye",
+          "what": "Hey you, do you even design?"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "16.00",
           "duration": 30,
           "number": 22,
-          "who": "Harriet Lawrence",
-          "what": "Sociolinguistics and the Javascript community: a love story"
+          "who": "Tejas Kumar",
+          "what": "From You Can't to You Can: The Welcoming Nature of Javascript"
         }
       ],
       "16.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "16.30",
           "duration": 30,
           "number": 10,
-          "who": "Monica Dinculescu",
-          "what": "Emoji, Web Components, and Art"
+          "who": "Valerie Woolard Srinivasan",
+          "what": "Logging Off: Improving Low-Connectivity Experiences on the Web"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "16.30",
           "duration": 30,
           "number": 23,
-          "who": "Khalid",
-          "what": "Barriers to Entry in the JavaScript Community"
+          "who": "Myles Borins",
+          "what": "Please wait... loading: a tale of two loaders"
         }
       ],
       "17.00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "17.00",
           "duration": 30,
           "number": 11,
-          "who": "Mariko Kosaka & Suz Hinton",
-          "what": "Can You Read Me? Creative JavaScript to Make Computer Science Fun"
+          "who": "Stephanie Nemeth",
+          "what": "Haute Codeture: Clothing as a Canvas"
         },
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Side Track",
           "startTime": "17.00",
           "duration": 30,
           "number": 24,
-          "who": "Christian Kästner",
-          "what": "How to Break an API: How Community Values Influence Practices"
+          "who": "Alaina Kafkes",
+          "what": "When Chomsky Met JavaScript: Exploring the Linguistics Behind Regular Expressions"
         }
       ],
       "17.30": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "17.30",
           "duration": 15,
           "number": null,
           "who": "all",
-          "what": "Coffee by Bloomberg, Service by Twilio"
+          "what": "Break"
         }
       ],
       "17.45": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "17.45",
           "duration": 30,
           "number": 12,
-          "who": "Ashley Williams",
-          "what": "A Brief History of Modularity"
-        },
-        {
-          "day": 2,
-          "date": "2018-06-02",
-          "track": "Side Track",
-          "startTime": "17.45",
-          "duration": 30,
-          "number": 25,
-          "who": "Meara Charnetzki",
-          "what": "How Does Javascript Math?"
+          "who": "Tracy Hinds",
+          "what": "Merge Conflict: a case study and application of peer conflict management training in Node.js"
         }
       ],
       "18.15": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "18.15",
           "duration": 30,
           "number": 13,
-          "who": "Tom Dale",
-          "what": "Making the Jump: How Desktop-Era Frameworks Can Thrive on Mobile"
+          "who": "Alvaro Videla",
+          "what": "Metaphors We Compute By"
         }
       ],
       "18.45": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "18.45",
           "duration": 30,
           "number": 14,
-          "who": "Rachel White",
-          "what": "Keep the Internet Weird"
+          "who": "Ryan Dahl",
+          "what": "10 Things I Regret About Node.js"
         }
       ],
       "19.15": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "19.15",
@@ -359,7 +349,7 @@
       ],
       "19.16": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
           "track": "Back Track",
           "startTime": "19.16",
@@ -369,34 +359,24 @@
           "what": "Dinner and expo time in the festival and sponsors area"
         }
       ],
-      "21.00": [
+      "21:00": [
         {
-          "day": 2,
+          "day": 1,
           "date": "2018-06-02",
-          "track": "Side Track",
-          "startTime": "21.00",
-          "duration": null,
-          "number": 27,
-          "who": "Kahlil, Boris, Jan, Martin",
-          "what": "How It's Made: opening jsconf.eu"
+          "track": "Back Track",
+          "startTime": "21:00",
+          "duration": 30,
+          "number": 15,
+          "who": "Lin Clark",
+          "what": "Secret Talk"
         }
-      ],
-      "21.30": [
-        {
-          "day": 2,
-          "date": "2018-06-02",
-          "track": "Side Track",
-          "startTime": "21.30",
-          "duration": "o.e.",
-          "number": null,
-          "who": "all",
-          "what": "Main Party by Google"
-        }
-      ],
+      ]
+    },
+    "2": {
       "9.00": [
         {
           "day": 2,
-          "date": "2018-06-02",
+          "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "9.00",
           "duration": 60,
@@ -404,12 +384,10 @@
           "who": "all",
           "what": "Breakfast"
         }
-      ]
-    },
-    "2": {
+      ],
       "9.55": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "9.55",
@@ -421,151 +399,141 @@
       ],
       "10.00": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "10.00",
           "duration": 30,
           "number": 1,
-          "who": "Denis Radin",
-          "what": "Applying NASA coding standards to JavaScript"
-        },
-        {
-          "day": 3,
-          "date": "2018-06-03",
-          "track": "Side Track",
-          "startTime": "10.00",
-          "duration": 30,
-          "number": 14,
-          "who": "Amelia Abreu",
-          "what": "From Advocacy to Innovation: How JS Developers will shape the future of Internet Security, Privacy, and Trust"
+          "who": "Ivan Moreno",
+          "what": "Photorealistic Real Time Computer Graphics with Javascript"
         }
       ],
       "10.30": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "10.30",
           "duration": 30,
           "number": 2,
-          "who": "Franziska Hinkelmann",
-          "what": "JavaScript engines - how do they even?"
+          "who": "Charlie Gerard",
+          "what": "Look mum, no hands! — Brain controlled JavaScript"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "10.30",
           "duration": 30,
           "number": 15,
-          "who": "Matt Johnson",
-          "what": "The Past, Present, and Future of JavaScript Date and Time APIs"
+          "who": "Ali Tabibzadeh",
+          "what": "Essence of Community and Inclusiveness Profits from EU to Iran"
         }
       ],
       "11.00": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "11.00",
           "duration": 30,
           "number": 3,
-          "who": "Marja Hölttä",
-          "what": "Parsing JavaScript - better lazy than eager?"
+          "who": "Ashi Krishnan",
+          "what": "Deep Learning in JS"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "11.00",
           "duration": 30,
           "number": 16,
-          "who": "Ben Vinegar",
-          "what": "Source maps through the looking glass"
+          "who": "Gabrielle von Koss",
+          "what": "When you assume, you make an error out of you and me"
         }
       ],
       "11.30": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "11.30",
           "duration": 15,
           "number": null,
           "who": "all",
-          "what": "Coffee by Bloomberg, Service by Twilio"
+          "what": null
         }
       ],
       "11.45": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "11.45",
           "duration": 30,
           "number": 4,
-          "who": "Emily Gorcenski",
-          "what": "The Ethics of the Internet of Things"
+          "who": "Brittany Storoz",
+          "what": "The Etymology of Programming"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "11.45",
           "duration": 30,
           "number": 17,
-          "who": "Alexander Reardon",
-          "what": "Let's go big"
+          "who": "Brian Terlson & Benedikt Meurer",
+          "what": "What makes a JavaScript VM?"
         }
       ],
       "12.15": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "12.15",
           "duration": 30,
           "number": 5,
-          "who": "Lin Clark",
-          "what": "A Cartoon Intro to WebAssembly"
+          "who": "James Coglan",
+          "what": "Breaking Changes"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "12.15",
           "duration": 30,
           "number": 18,
-          "who": "Tilde Ann Thurium",
-          "what": "My gender is emoji pizza unicorn: shipping expanded gender options"
+          "who": "Ben Greenberg",
+          "what": "From Rabbi to Coder: How To Prepare for the Technical Interview"
         }
       ],
       "12.45": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "12.45",
           "duration": 30,
           "number": 6,
-          "who": "Claudia Hernández",
-          "what": "Down the Rabbit Hole: Javascript in Wonderland"
+          "who": "Phil Nash",
+          "what": "Aggressive Web Apps"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "12.45",
           "duration": 30,
           "number": 19,
-          "who": "Maggie Pint",
-          "what": "Sharing is Caring - Patterns for JavaScript Library Design"
+          "who": "Patima Tantiprasut",
+          "what": "Burn bright but don't burn out"
         }
       ],
       "13.15": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "13.15",
@@ -577,165 +545,145 @@
       ],
       "14.15": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "14.15",
           "duration": 30,
           "number": 7,
-          "who": "Jason Miller",
-          "what": "Preact: Into the void 0"
+          "who": "Emil Bay",
+          "what": "Hand-crafting WebAssembly"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "14.15",
           "duration": 30,
           "number": 20,
-          "who": "John Fawcett",
-          "what": "Invisible Code: Building JavaScript Libraries For Non-Technical People"
+          "who": "Mike Samuel",
+          "what": "A Node.js Security Roadmap"
         }
       ],
       "14.45": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": 14.45,
           "duration": 30,
           "number": 8,
-          "who": "Ben Schwarz",
-          "what": "Real world connectivity: Beyond the bubble"
+          "who": "Paul Frazee",
+          "what": "Formalizing user rights on the Web"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "14.45",
           "duration": 30,
           "number": 21,
-          "who": "Sarah Saltrick Meyer",
-          "what": "Two Problems: Regular Expressions for Revolutionaries"
+          "who": "Jordan Santell",
+          "what": "Exploring Augmented Reality on the Web"
         }
       ],
       "15.15": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "15.15",
           "duration": 30,
           "number": 9,
-          "who": "Maureen McElaney",
-          "what": "Go Offline First to Save The World"
-        },
-        {
-          "day": 3,
-          "date": "2018-06-03",
-          "track": "Side Track",
-          "startTime": "15.15",
-          "duration": 30,
-          "number": 22,
-          "who": "Jan Krutisch",
-          "what": "Æsthetics of code."
+          "who": "TC39",
+          "what": "Panel"
         }
       ],
       "15.45": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "15.45",
           "duration": 30,
           "number": null,
           "who": "all",
-          "what": "Coffee by Bloomberg, Service by Twilio"
+          "what": "Break"
         }
       ],
       "16.15": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "16.15",
           "duration": 30,
           "number": 10,
-          "who": "TC39",
-          "what": "Panel"
+          "who": "Katie Fenn",
+          "what": "Securing your site like it's 1999"
         },
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Side Track",
           "startTime": "16.15",
           "duration": 30,
           "number": 23,
-          "who": "Paul Verbeek-Mast",
-          "what": "Calendar / Kalender / تقويم (aka, the fun of locali[zs]ation)"
+          "who": "Ola Gasidlo",
+          "what": "TCP - A story about hope, (pkg) loss && the missing link"
         }
       ],
       "16.45": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "16.45",
           "duration": 30,
           "number": 11,
-          "who": "Nidin Vinayakan",
-          "what": "Shared Memory & Parallel Programming with JavaScript"
-        },
-        {
-          "day": 3,
-          "date": "2018-06-03",
-          "track": "Side Track",
-          "startTime": "16.45",
-          "duration": 30,
-          "number": 24,
-          "who": "Alexander Pope",
-          "what": "Outbreak: index-sw-9a4c43b4b4778e7d1ca619eaaf5ac1db.js"
+          "who": "Datadog",
+          "what": "Talk"
         }
       ],
       "17.15": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "17.15",
           "duration": 15,
           "number": null,
           "who": "all",
-          "what": "Coffee by Bloomberg, Service by Twilio"
+          "what": "Break"
         }
       ],
       "17.30": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "17.30",
           "duration": 30,
           "number": 12,
-          "who": "Steve Kinney",
-          "what": "Bringing Back the 1990s: The Revenge of JavaScript Style Sheets"
+          "who": "Tara Vancil",
+          "what": "Imagine This: A Web Without Servers"
         }
       ],
       "18.00": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "18.00",
           "duration": 30,
           "number": 13,
-          "who": "Whitney Williams:",
-          "what": "The Legacy of the JavaScript Community"
+          "who": "Remy Sharp",
+          "what": "Using a modern web to recreate 1980s horribly slow and loud loading screens"
         }
       ],
       "18.30": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "18.30",
@@ -747,7 +695,7 @@
       ],
       "18.35": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "18.35",
@@ -759,14 +707,14 @@
       ],
       "19.00": [
         {
-          "day": 3,
+          "day": 2,
           "date": "2018-06-03",
           "track": "Back Track",
           "startTime": "19.00",
           "duration": null,
           "number": null,
           "who": "all",
-          "what": "Party Day 2 - by TBD"
+          "what": "Party Day 2 — by TBD"
         }
       ]
     }
