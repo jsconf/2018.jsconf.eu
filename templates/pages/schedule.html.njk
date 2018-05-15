@@ -349,7 +349,7 @@ article.with-description {
             {% endif %}
           {% endfor %}
           <li
-              datetime="{{ talk.date }} {{ talk.startTime | replace('.', ':') }} GMT+0200"
+              datetime="{{ talk.dateTime }}"
               class="session {{ talk.trackId }}"
               {% if talkPage %}
                 id="talk-{{ talkPage.metadata.speaker.id }}"

@@ -64,6 +64,10 @@ function structureData(lessCrappyData) {
       if (!tracks[track].startTime || !tracks[track].what) {
         return;
       }
+      tracks[track].startTime = String(tracks[track].startTime);
+      tracks[track].dateTime = tracks[track].date + ' ' +
+          tracks[track].startTime.replace('.', ':') +
+          ' GMT+0200';
       if (!mergedRecords[day]) {
         mergedRecords[day] = {};
       }
