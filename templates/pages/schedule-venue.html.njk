@@ -123,7 +123,7 @@
               {% else %}
                 id="talk-{{ talk.date }}-{{ talk.startTime | replace('.', '-') }}-{{ talkIndex }}"
               {% endif %}
-              datetime="{{ talk.date }} {{ talk.startTime | replace('.', ':') }} GMT+0200"
+              datetime="{{ talk.dateTime }}"
               sessionlength="{{ talks.length }}"
               class="{{ talk.track | lower | replace(' ', '-') }}">
             <div class="info">
