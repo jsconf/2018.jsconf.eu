@@ -179,9 +179,7 @@ nav a.active {
   color: var(--text-color);
 }
 
-.day .session.side{
-  --primary-color: var(--getdaycloud);
-}
+
 
 .day .session.in-the-past{
   --text-color: var(--evalblacklight);
@@ -196,6 +194,15 @@ nav a.active {
   margin-left: 2.125rem;
 }
 
+.day .session.sidetrack {
+  --primary-color: var(--getdaycloud);
+}
+.day .session.sponsor {
+  --primary-color: red;
+}
+.day .session.community {
+  --primary-color: green;
+}
 .day .session time {
   color: var(--primary-color);
   position: absolute;
@@ -334,16 +341,16 @@ article.with-description {
           {% set talkIndex = talkIndex + 1 %}
           {% set talkPage = '' %}
           {% for page in contents.speakers._.pages %}
-            {% if page.metadata.speaker.name == talk.who %}
+            {% if talk.who and page.metadata.speaker.name == talk.who %}
               {% set talkPage = page %}
             {% endif %}
-            {% if page.metadata.speaker.talkTitle == talk.what %}
+            {% if talk.what and page.metadata.speaker.talkTitle == talk.what %}
               {% set talkPage = page %}
             {% endif %}
           {% endfor %}
           <li
               datetime="{{ talk.date }} {{ talk.startTime | replace('.', ':') }} GMT+0200"
-              class="session {% if talk.track == 'Side Track' %}side{% endif %}"
+              class="session {{ talk.trackId }}"
               {% if talkPage %}
                 id="talk-{{ talkPage.metadata.speaker.id }}"
               {% else %}
@@ -351,7 +358,7 @@ article.with-description {
               {% endif %}
               >
 
-            <article {% if talkPage %}class="with-description"{% endif %} onclick="this.classList.toggle('active')">
+            <article {% if talkPage or talk.detail %}class="with-description"{% endif %} onclick="this.classList.toggle('active')">
               <h3>
                 {% if talk.who %}
                   <span class="speaker">{{ talk.who }}</span>
@@ -369,6 +376,11 @@ article.with-description {
                 <div class="description">
                   {{ talkPage.html }}
                   <p><a href="{{ talkPage.url }}">More info</a></p>
+                </div>
+              {% endif %}
+              {% if talk.detail %}
+                <div class="description">
+                  {{ talk.detail | md }}
                 </div>
               {% endif %}
             </article>

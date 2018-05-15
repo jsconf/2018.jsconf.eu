@@ -18,8 +18,17 @@ const columns = [
   'backtrack:startTime', 'backtrack:duration', 'backtrack:number',
   '-', 'backtrack:who', 'backtrack:what', '-',
   'sidetrack:startTime', 'sidetrack:duration', 'sidetrack:number',
-  '-', 'sidetrack:who', 'sidetrack:what', '-'
+  '-', 'sidetrack:who', 'sidetrack:what', '-',
+  'community:startTime', 'community:what', 'community:detail', '-',
+  'sponsor:startTime', 'sponsor:what', 'sponsor:detail'
 ];
+
+const tracksMap = {
+  backtrack: 'Back Track',
+  sidetrack: 'Side Track',
+  community: 'Community Lounge',
+  sponsor: 'Sponsor Booth'
+}
 
 function structureData(lessCrappyData) {
   let day = 1;
@@ -44,14 +53,15 @@ function structureData(lessCrappyData) {
         tracks[track] = {
           day: day,
           date: day == 1 ? '2018-06-02' : '2018-06-03',
-          track: track == 'backtrack' ? 'Back Track' : 'Side Track',
+          track: tracksMap[track],
+          trackId: track
         };
       }
       tracks[track][field] = lessCrappyData[row][col];
     }
 
     Object.keys(tracks).forEach(track => {
-      if (!tracks[track].startTime || !tracks[track].who) {
+      if (!tracks[track].startTime || !tracks[track].what) {
         return;
       }
       if (!mergedRecords[day]) {
