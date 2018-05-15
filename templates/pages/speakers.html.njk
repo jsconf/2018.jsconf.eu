@@ -47,11 +47,43 @@
     {{ phantoms(contents, 44, speakerPages.length) }}
   </div>
 
+  {% set artists = contents.artists._.pages |
+      notRedirect |
+      sortObjects('metadata.speaker.firstname', 'aaa', 'string') %}
+
+<section class="grid">
+    <div class="grid-item-left">
+      <h1 id="artists">Artists</h1>
+    </div>
+  </section>
+
+  <div class="grid">
+    {% for page in artists %}
+      {% set speaker = page.metadata.speaker %}
+      <section class="grid-item-speaker">
+        <a class="speaker" href="{{ speaker.links.twitter }}">
+          {% include '../partials/speaker-picture.html.njk' %}
+          <h2 class="heading--spaced heading--no-border">
+            {{ speaker.firstname }} {{ speaker.lastname }}
+          </h2>
+          <p class="ma0">
+            {% if speaker.talkTitle %}{{ speaker.talkTitle }} – {% endif %}
+            {% if speaker.twitterHandle %}
+              {{ speaker.twitterHandle }}<br>
+            {% endif %}
+          </p>
+        </a>
+      </section>
+    {% endfor %}
+
+    {{ phantoms(contents, 6, mcs.length) }}
+  </div>
+
   {% set mcs = contents.mcs._.pages |
       notRedirect |
       sortObjects('metadata.speaker.firstname', 'aaa', 'string') %}
 
-  <section class="grid">
+<section class="grid">
     <div class="grid-item-left">
       <h1 id="mcs">MCs</h1>
     </div>
