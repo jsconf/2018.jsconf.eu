@@ -328,6 +328,11 @@ Array.from(document.querySelector('nav').children).forEach(function(btn) {
 function scrollTimeIntoView(onload) {
   // var now = new Date('2018-06-02 14:20 GMT+0200');
   var now = new Date();
+  if (now.getTime() < Date.parse('2018-06-02 0:00 GMT+0200') ||
+      now.getTime() > Date.parse('2018-06-04 0:00 GMT+0200')) {
+    // Only scroll into view on the day off.
+    return;
+  }
   Array.from(document.querySelectorAll('[datetime]')).forEach(function(talk) {
     var time = new Date(Date.parse(talk.getAttribute('datetime')));
     if (time < now) {
