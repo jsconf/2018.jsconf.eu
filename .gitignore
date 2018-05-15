@@ -1,6 +1,7 @@
 node_modules
 /contents/images/speaker/*
 /contents/images/sponsor/*
+/contents/artists/*
 /contents/mcs/*
 /contents/talks/*
 /contents/team/*

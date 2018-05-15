@@ -56,6 +56,13 @@ const sheetParams = {
     dataFieldName: 'speaker',
     contentPath: 'mcs'
   },
+  artists: {
+    templateGlobals: {
+      template: 'pages/person.html.njk'
+    },
+    dataFieldName: 'speaker',
+    contentPath: 'artists'
+  },
   team: {
     templateGlobals: {
       template: 'pages/person.html.njk'
