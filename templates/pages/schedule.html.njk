@@ -1,5 +1,7 @@
 <!doctype html>
 
+{% from "../_macros.njk" import svgIcon %}
+
 <!--
     Created by philnash supported by Twilio
     See https://github.com/philnash/jsconf-schedule
@@ -36,6 +38,8 @@
       --promiselinen: #F3ECDA;
       --evalblacklight: #7B889D;
       --clearwhite: #FFFFFF;
+
+      --text-color: var(--promiselinen);
     }
 
 h2,
@@ -62,6 +66,7 @@ body {
   line-height: 1.5;
   color: #bbbbbb;
   background-color: var(--evalblack);
+  margin: 0 2em;
 }
 a {
   -webkit-transition: color 0.3s, background-color 0.5s;
@@ -73,43 +78,66 @@ a {
 header {
   overflow: hidden;
   position: fixed;
+  display: flex;
+  align-items: center;
   top: 0;
   width: 100%;
+  height: 3rem;
   text-align: center;
-  color: #FCFFFF;
+  color: var(--clearwhite);
   z-index: 10;
   background: var(--evalblack)
 }
+
 header h1 {
-  margin: 10px 0;
+  display: none;
 }
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 0 20px;
-  background: #0C1222;
+
+@media (min-width: 767px) {
+  header h1 {
+    display: inline;
+    margin: 0;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-right: 2em;
+  }
+
 }
-footer a {
-  color:#91a1bc;
-}
-nav {
+
+header a {
   display: flex;
+  align-items: center;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+header .svg {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-right: .5em;
+}
+
+nav {
+  display: inline-block;
+
+  font-feature-settings: "lnum";
+  font-variant: lining-nums;
+  letter-spacing: .25em;
 }
 nav a {
   display: inline-block;
-  flex-grow: 1;
-  justify-content: space-around;
+  box-sizing: border-box;
   margin:0 5px;
-  padding: 5px 0;
+  padding: 0.3em 1em;
+  height: 1.875rem;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
   transition: border-color 0.3s;
 }
 nav a.active {
-  border-color: #051ADD;
+  background-color: var(--evalblacklight);
 }
 .events {
   padding: 0;
@@ -123,7 +151,7 @@ nav a.active {
 
 .day h2 {
   margin: 0;
-  padding: 4px 20px;
+  padding: 4px 0;
   font-size: 3em;
   color: var(--promiselinen);
 }
@@ -142,7 +170,9 @@ nav a.active {
 .day .session {
   --primary-color: var(--returnrose);
   --text-color: var(--promiselinen);
-  margin: 24px 20px;
+  --invert-text-color: var(--evalblack);
+
+  margin: 24px 0;
   display: flex;
   position: relative;
   overflow-x: hidden;
@@ -162,7 +192,7 @@ nav a.active {
   content: '';
   background-color: var(--primary-color);
   flex: 0 0 4px;
-  margin-right: 20px;
+  margin-right: 12px;
   margin-left: 35px;
 }
 
@@ -190,9 +220,9 @@ nav a.active {
 .day .session a,
 .day .session > div {
   text-decoration: none;
-  color: #FCFFFF;
   padding-top: 10px;
   padding-bottom: 10px;
+  color: inherit;
 }
 article.with-description {
   cursor: pointer
@@ -234,8 +264,18 @@ article.with-description {
   list-style-type: disc;
 }
 .day .session .description a {
-  text-decoration: underline;
+  display: inline-block;
+  border-bottom: 4px solid var(--primary-color);
+  background: linear-gradient(var(--primary-color), var(--primary-color) 100%) bottom no-repeat;
+  background-size: 100% 0;
+  transition: background-size .1s;
+  padding-bottom: 0;
 }
+.day .session .description a:hover {
+  color: var(--invert-text-color);
+  background-size: 100% 100%;
+}
+
 .message {
   padding: 6px 20px;
   text-align: center;
@@ -271,12 +311,20 @@ article.with-description {
 
 <body>
   <header>
-    <h1><a href="/">Home</a></h1>
+    <a href="/" title="Back to Homepage">
+      {{ svgIcon(contents, 'jsconf-heart', svgClass='w2 h2') }}
+      <h1>
+        <span class="logo-text">JSConf EU</span>
+        <span class="logo-date">June 2nd &amp; 3rd 2018</span>
+      </h1>
+    </a>
+
     <nav>
-      <a href="#day1" id="nav_day1">JSConf Day 1</a>
-      <a href="#day2" id="nav_day2">JSConf Day 2</a>
+      <a href="#day1" class="active" id="nav_day1">Day 1</a>
+      <a href="#day2" id="nav_day2">Day 2</a>
     </nav>
   </header>
+
   {% for day, sessions in schedule.schedule %}
     <div class="day {% if schedule.info.currentDay == day %}active{% endif %}" id="day{{ day }}">
     <h2>Day {{ day }}</h2>
