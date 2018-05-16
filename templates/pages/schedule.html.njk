@@ -317,6 +317,22 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js');
 }
 
+var overriddenTime = null;
+function dateNow() {
+  if (overriddenTime) {
+    return overriddenTime;
+  }
+  return Date.now();
+}
+
+if (location.href.includes('cycle')) {
+  overriddenTime = Date.parse('2018-06-02 1:00 GMT+0200');
+  setInterval(function() {
+    var cur = document.querySelector('.session:not(.in-the-past)');
+    overriddenTime = Date.parse(cur.getAttribute('datetime')) + 1;
+  }, 5000);
+}
+
 Array.from(document.querySelector('nav').children).forEach(function(btn) {
   btn.onclick = function(e) {
     setTimeout(function() {
@@ -325,20 +341,29 @@ Array.from(document.querySelector('nav').children).forEach(function(btn) {
   };
 });
 
+function markItemsAsInThePast(doc) {
+  var now = dateNow();
+  Array.from(doc.querySelectorAll('[datetime]')).forEach(function(talk) {
+    var time = Date.parse(talk.getAttribute('datetime'));
+    if (time < now) {
+      if (!talk.classList.contains('in-the-past')) {
+        talk.classList.add('in-the-past')
+      }
+    }
+  });
+}
+setInterval(function() {
+  markItemsAsInThePast(document)
+}, 10000);
+
 function scrollTimeIntoView(onload) {
   // var now = new Date('2018-06-02 14:20 GMT+0200');
-  var now = new Date();
-  if (now.getTime() < Date.parse('2018-06-02 0:00 GMT+0200') ||
-      now.getTime() > Date.parse('2018-06-04 0:00 GMT+0200')) {
+  var now = dateNow();
+  if (now < Date.parse('2018-06-02 0:00 GMT+0200') ||
+      now > Date.parse('2018-06-04 0:00 GMT+0200')) {
     // Only scroll into view on the day off.
     return;
   }
-  Array.from(document.querySelectorAll('[datetime]')).forEach(function(talk) {
-    var time = new Date(Date.parse(talk.getAttribute('datetime')));
-    if (time < now) {
-      talk.classList.add('in-the-past')
-    }
-  });
 
   var firstFuture = document.querySelector('.session:not(.in-the-past)');
   setTimeout(function() {
@@ -361,7 +386,10 @@ function checkCurrent() {
         }
         if (generationTime != document.documentElement.getAttribute('generated')) {
           console.info('Updating schedule', generationTime);
-          setDOM(document, text);
+          var d = new DOMParser()
+          var doc = d.parseFromString(text, 'text/html')
+          markItemsAsInThePast(doc);
+          setDOM(doc, doc.documentElement);
           document.querySelector('.notice').removeAttribute('hidden');
           setTimeout(function() {
              document.querySelector('.notice').setAttribute('hidden', '');
