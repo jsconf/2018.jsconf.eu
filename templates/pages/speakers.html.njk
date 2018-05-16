@@ -49,7 +49,7 @@
 
   {% set artists = contents.artists._.pages |
       notRedirect |
-      sortObjects('metadata.speaker.firstname', 'aaa', 'string') %}
+      sortObjects('metadata.speaker.order', 100, 'number') %}
 
 <section class="grid">
     <div class="grid-item-left">
