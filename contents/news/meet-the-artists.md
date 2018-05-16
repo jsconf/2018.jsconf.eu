@@ -4,6 +4,7 @@ filename: :file/index.html
 
 title: Meet the Artists
 date: 2018-05-16
+image: contents:images/artist-sample.png
 ----
 
 We’re excited to introduce you to [some of the artists](/speakers/#artists) that will make JSConf 2018 even more special. Some joined us through the [Call for Artists](https://twitter.com/jsconfeu/status/920317478177087488) and others are familiar faces–but we can't tell you about everyone yet, because that would give too much away 🤣
