@@ -11,6 +11,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>JSConf EU Schedule 2018</title>
   <meta name="viewport" content="width=device-width">
+  <link rel=preconnect href="https://use.typekit.net">
+  <style id="typekit" data-tracking-url="{{ typekitTracking }}">
+    {{ typekitCss }}
+  </style>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="JSConf EU schedule">
@@ -22,13 +26,26 @@
   <meta name="theme-color" content="#303f62">
 
   <style id="style">
-h1,
+    :root {
+      --callbackpink: #E10079;
+      --timeoutblue: #051ADD;
+      --undefinedpurple: #6058C5;
+      --evalblack: #303F62;
+      --returnrose: #FFC4BC;
+      --getdaycloud: #DDE4F2;
+      --promiselinen: #F3ECDA;
+      --evalblacklight: #7B889D;
+      --clearwhite: #FFFFFF;
+    }
+
 h2,
+h1,
 h3,
 h4,
 h5,
 h6 {
   font-weight: normal;
+  font-size: 1em;
 }
 body,
 html {
@@ -38,12 +55,13 @@ html {
 }
 html {
   font-size: 16px;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 body {
-  font-family: Verdana, sans-serif;
+  font-family: "jaf-domus", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: #bbbbbb;
-  background-color: #0C1222;
+  background-color: var(--evalblack);
 }
 a {
   -webkit-transition: color 0.3s, background-color 0.5s;
@@ -59,12 +77,11 @@ header {
   width: 100%;
   text-align: center;
   color: #FCFFFF;
-  background: #0C1222 url({{ contents.svg['schedule-header.svg'].url }}) no-repeat 0 -442px;
   z-index: 10;
+  background: var(--evalblack)
 }
 header h1 {
   margin: 10px 0;
-  font-size: 16px;
 }
 footer {
   position: fixed;
@@ -78,8 +95,6 @@ footer a {
 }
 nav {
   display: flex;
-  font-size: 14px;
-  border-bottom: 5px solid #0C1222;
 }
 nav a {
   display: inline-block;
@@ -109,8 +124,8 @@ nav a.active {
 .day h2 {
   margin: 0;
   padding: 4px 20px;
-  color: #fff;
-  background: #333;
+  font-size: 3em;
+  color: var(--promiselinen);
 }
 .day li {
   padding: 0 10px;
@@ -118,7 +133,6 @@ nav a.active {
 .day .time {
   margin-top: 0;
   text-align: center;
-  font-size: 12px;
   /*visibility: hidden;*/
   height: 0;
 }
@@ -126,27 +140,40 @@ nav a.active {
   display: none;
 }
 .day .session {
-  margin: 20px;
+  --primary-color: var(--returnrose);
+  --text-color: var(--promiselinen);
+  margin: 24px 20px;
   display: flex;
   position: relative;
   overflow-x: hidden;
+  color: var(--text-color);
 }
+
+.day .session.side{
+  --primary-color: var(--getdaycloud);
+}
+
+.day .session.in-the-past{
+  --text-color: var(--evalblacklight);
+  --primary-color: var(--evalblacklight);
+}
+
 .day .session::before{
   content: '';
-  background-color: #ff0079;
-  flex: 0 0 8px;
-  border-radius: 5px;
+  background-color: var(--primary-color);
+  flex: 0 0 4px;
   margin-right: 20px;
   margin-left: 35px;
 }
-.day .session.side::before {
-  background-color: #051ADD;
-}
+
 .day .session time {
+  color: var(--primary-color);
   position: absolute;
-  top: 12px;
+  top: 0;
   left:0;
-  font-size: 12px;
+}
+.day .session .track {
+  color: var(--primary-color);
 }
 .day .session div time {
   top: 14px;
@@ -154,12 +181,11 @@ nav a.active {
 .day .session h3 {
   margin-top: 0;
   margin-bottom: 0;
-  color: #91a1bc;
+  color: var(--text-color);
 }
 .day .session h3 .speaker {
+  color: var(--primary-color);
   display: block;
-  font-size: 14px;
-  color:#FCFFFF;
 }
 .day .session a,
 .day .session > div {
@@ -172,9 +198,8 @@ article.with-description {
   cursor: pointer
 }
 .day .session article.with-description:not(.active) h3::after {
-  display: block;
-  font-size: 12px;
-  content: '» Details';
+  font-family: "jaf-domus";
+  content: ' →';
   padding: 5px 0;
 }
 .day .session article > p,
@@ -214,6 +239,10 @@ article.with-description {
 .message {
   padding: 6px 20px;
   text-align: center;
+}
+
+.in-the-past{
+  color: hotpink;
 }
 
 .notice {
@@ -289,7 +318,7 @@ article.with-description {
                 <time>{{ session }}</time>
               {% else %}
               <p>
-                <time>{{ session }}</time> {{ talk.track }}
+                <time>{{ session }}</time> <span class="track">{{ talk.track }}</span>
               </p>
               {% endif %}
               {% if talkPage %}
@@ -333,6 +362,11 @@ if (location.href.includes('cycle')) {
   }, 5000);
 }
 
+const t = new URLSearchParams(location.search).get("t");
+if (t) {
+  overriddenTime = Date.parse(t);
+}
+
 Array.from(document.querySelector('nav').children).forEach(function(btn) {
   btn.onclick = function(e) {
     setTimeout(function() {
@@ -352,6 +386,7 @@ function markItemsAsInThePast(doc) {
     }
   });
 }
+markItemsAsInThePast(document)
 setInterval(function() {
   markItemsAsInThePast(document)
 }, 10000);
@@ -376,6 +411,7 @@ function scrollTimeIntoView(onload) {
 }
 
 function checkCurrent() {
+  return
   fetch('/schedule/', {cache: 'reload'}).then(function(response) {
     if (response.ok) {
       response.text().then(function(text) {
