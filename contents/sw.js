@@ -27,22 +27,26 @@ workbox.routing.registerRoute(
   })
 );
 
-workbox.routing.registerRoute(
-  // Prefer the network but if it doesn't respond within 1 seconds,
-  // fallback to a doc if we have a cached version that is max
-  // 3 days old.
-  // Basically that means that the schedule should load offline for the
-  // duration of the conference.
-  /(\/|\.html)$/,
-  // Use the network unless things are slow
-  workbox.strategies.networkFirst({
-    cacheName: 'doc-cache',
-    networkTimeoutSeconds: 1,
-    plugins: [
-      new workbox.expiration.Plugin({
-        // Cache for a maximum of three days
-        maxAgeSeconds: 3 * 24 * 60 * 60,
-      })
-    ],
-  })
-);
+// Avoid the doc cache during local dev, because the file
+// generation never wins against the 1 second deadline.
+if (!(/localhost/.test(origin))) {
+  workbox.routing.registerRoute(
+    // Prefer the network but if it doesn't respond within 1 seconds,
+    // fallback to a doc if we have a cached version that is max
+    // 3 days old.
+    // Basically that means that the schedule should load offline for the
+    // duration of the conference.
+    /(\/|\.html)$/,
+    // Use the network unless things are slow
+    workbox.strategies.networkFirst({
+      cacheName: 'doc-cache',
+      networkTimeoutSeconds: 1,
+      plugins: [
+        new workbox.expiration.Plugin({
+          // Cache for a maximum of three days
+          maxAgeSeconds: 3 * 24 * 60 * 60,
+        })
+      ],
+    })
+  );
+}
