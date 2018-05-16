@@ -53,6 +53,10 @@ We're all on the "wwwtf.berlin" Slack instance that you've been invited to.
 - **Malte,** [malte@jsconf.eu](mailto:malte@jsconf.eu), [@cramforce](http://twitter.com/cramforce)
 - **Simone,** [simone@jsconf.eu](mailto:simone@jsconf.eu), [@haas_simone](http://twitter.com/haas_simone)
 
+## A Note on Language
+
+JSConf EU aims to be an inclusive event and to that end we have incorporated [a section on inclusive language in our Code of Conduct](/code-of-conduct). Please make sure you read [the section “Inclusive Language” on our Code of Conduct page](/code-of-conduct) before giving your talk. We will enforce the [Code of Conduct](/code-of-conduct) with anyone who participates in JSConf EU, including speakers.
+
 ## Technical Information and Schedule
 
 * The day will start at 8:30am with breakfast and registration; talks will begin at 9:30am. You should arrive before 9:30am, so that we can set up your notebook for a test run and make sure everything works well.
@@ -70,6 +74,7 @@ We're all on the "wwwtf.berlin" Slack instance that you've been invited to.
 * All talks will be professionally recorded and released after the conference. They will be publicly accessible for free, so that everyone can learn from the awesome presentations you delivered. If you wish not to have your talk recorded and published, or have any issues regarding copyright (incl. embedded images, music or similar), please let us know in advance.
 
 ## Accessibility
+
 One item of frequent feedback from past years that we wanted to share with you:
 
 Attendees often have trouble reading code on the projector screens. This is true for code on slides (we understand if it is too late to change, just wanted to mention it) where it is usually best to choose the biggest possible font size that would fit on the slide all aesthetics aside – but it is even more true for code in your editor during live coding. Please take a moment to find out how to adjust font size in your favorite editor or tool such as Chrome DevTools and then switch to something in the range of 24px text.
