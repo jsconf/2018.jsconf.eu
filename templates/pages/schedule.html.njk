@@ -145,18 +145,18 @@ nav a.active {
   list-style: none;
 }
 .day {
-  padding-top: 93px;
-  padding-bottom: 46px;
+  padding-top: 5rem;
+  padding-bottom: 2.8rem;
 }
 
 .day h2 {
   margin: 0;
-  padding: 4px 0;
+  padding: 0.25rem 0;
   font-size: 3em;
   color: var(--promiselinen);
 }
 .day li {
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 .day .time {
   margin-top: 0;
@@ -172,7 +172,7 @@ nav a.active {
   --text-color: var(--promiselinen);
   --invert-text-color: var(--evalblack);
 
-  margin: 24px 0;
+  margin: 1.5rem 0;
   display: flex;
   position: relative;
   overflow-x: hidden;
@@ -192,8 +192,8 @@ nav a.active {
   content: '';
   background-color: var(--primary-color);
   flex: 0 0 4px;
-  margin-right: 12px;
-  margin-left: 35px;
+  margin-right: 0.75rem;
+  margin-left: 2.125rem;
 }
 
 .day .session time {
@@ -206,7 +206,7 @@ nav a.active {
   color: var(--primary-color);
 }
 .day .session div time {
-  top: 14px;
+  top: 0.875rem;
 }
 .day .session h3 {
   margin-top: 0;
@@ -220,8 +220,7 @@ nav a.active {
 .day .session a,
 .day .session > div {
   text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 0.635em 0;
   color: inherit;
 }
 article.with-description {
@@ -230,7 +229,7 @@ article.with-description {
 .day .session article.with-description:not(.active) h3::after {
   font-family: "jaf-domus";
   content: ' →';
-  padding: 5px 0;
+  padding: 0.31em 0;
 }
 .day .session article > p,
 .day .session div > p {
@@ -281,31 +280,28 @@ article.with-description {
   text-align: center;
 }
 
-.in-the-past{
-  color: hotpink;
-}
-
 .notice {
   position:fixed;
-  bottom:0px;
-  width:100%;
-  color: #fff;
-  padding:0 20px;
-  background-color: #ff0079;
+  bottom: 0; left: 0; right: 0;
+  width: 100vw;
+  color: var(--evalblack);
+  padding: 0 2em;
+  background-color: var(--promiselinen);
   opacity: 1;
   visibility: visible;
-  transition: visibility 0s, opacity 0.5s ease-in-out;
+  transition: visibility 0s, opacity 0.5s ease-in-out, transform 0.16s ease-out;
 }
 .notice[hidden] {
   opacity: 0;
   display: block;
+  transform: translateY(100%);
   visibility: hidden;
+  transition: visibility 1s, opacity 0.3s ease-in-out, transform 0.3s ease-out;
 }
 .notice a{
-  color: #fff;
+  color: inherit;
 }
-
-  </style>
+</style>
 
 </head>
 
@@ -459,7 +455,7 @@ function scrollTimeIntoView(onload) {
 }
 
 function checkCurrent() {
-  return
+  // return
   fetch('/schedule/', {cache: 'reload'}).then(function(response) {
     if (response.ok) {
       response.text().then(function(text) {
