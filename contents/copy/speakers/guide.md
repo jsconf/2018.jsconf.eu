@@ -21,7 +21,7 @@ If you're arriving by public transport, the closest stations are:
 
 - **Warschauer Straße** (S-Bahn, U-Bahn, Bus, Tram) — This station is serviced by the S3, S5, S7, and S9 S-Bahn lines, as well as the U1 subway line. It's also a Tram (M10) terminus station.
 - **Stralauer Allee** (Bus) — Serviced by the 347 bus line.
-- **Schlesisches Tor** (U-Bahn, Bus) — Serviced by the U1 subway as well as various city-bound bus lines.
+- **Schlesisches Tor** (U-Bahn, Bus) — Serviced by the U1/U3 subway as well as various city-bound bus lines.
 
 You will only need an *AB Ticket* to get there. For more information, refer to the transport section.
 
@@ -53,7 +53,6 @@ We're all on the "wwwtf.berlin" Slack instance that you've been invited to.
 - **Malte,** [malte@jsconf.eu](mailto:malte@jsconf.eu), [@cramforce](http://twitter.com/cramforce)
 - **Simone,** [simone@jsconf.eu](mailto:simone@jsconf.eu), [@haas_simone](http://twitter.com/haas_simone)
 
-
 ## Technical Information and Schedule
 
 * The day will start at 8:30am with breakfast and registration; talks will begin at 9:30am. You should arrive before 9:30am, so that we can set up your notebook for a test run and make sure everything works well.
@@ -69,7 +68,6 @@ We're all on the "wwwtf.berlin" Slack instance that you've been invited to.
 * Each talk slot is 25 minutes, no Q&A. We believe it’s much better to discuss things in smaller groups afterwards and you’ll have enough time and space to do that.
 * Please arrive at the stage about 10 minutes before your talk, so you can set up properly. The MC who will introduce you will be your contact person before the talk.
 * All talks will be professionally recorded and released after the conference. They will be publicly accessible for free, so that everyone can learn from the awesome presentations you delivered. If you wish not to have your talk recorded and published, or have any issues regarding copyright (incl. embedded images, music or similar), please let us know in advance.
-
 
 ## Accessibility
 One item of frequent feedback from past years that we wanted to share with you:
@@ -129,6 +127,5 @@ Berlin has two airports:
 - Being a capital city, most people in Berlin speak or at least understand English, so there's no need to learn German just for this event.
 - If you need hygiene or sanitary products, most corner shops (colloquially called "Spätis") sell those.
 - Generally, if you need anything late at night, those corner shops are open until after midnight and have a good selection of common products you'd need.
-
 
 See you all in Berlin!
