@@ -236,7 +236,7 @@ function checkCurrent() {
           var d = new DOMParser()
           var doc = d.parseFromString(text, 'text/html')
           activate(doc);
-          setDOM(doc, doc.documentElement);
+          setDOM(document, doc.documentElement);
           // If the version of this file changes, reload
           if (version != document.documentElement.getAttribute('version')) {
             location.reload();

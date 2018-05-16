@@ -389,7 +389,7 @@ function checkCurrent() {
           var d = new DOMParser()
           var doc = d.parseFromString(text, 'text/html')
           markItemsAsInThePast(doc);
-          setDOM(doc, doc.documentElement);
+          setDOM(document, doc.documentElement);
           document.querySelector('.notice').removeAttribute('hidden');
           setTimeout(function() {
              document.querySelector('.notice').setAttribute('hidden', '');
