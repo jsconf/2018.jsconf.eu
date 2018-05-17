@@ -425,7 +425,7 @@ function updateActivateDay() {
   var active = day1;
   var notActive = day2;
   if (document.scrollingElement.scrollTop >=
-      document.getElementById('day2').offsetTop -93) {
+      document.getElementById('day2').offsetTop - 95) {
     active = day2;
     notActive = day1;
   }
@@ -437,7 +437,8 @@ function updateActivateDay() {
   }
 }
 window.onscroll = updateActivateDay;
-updateActivateDay()
+document.addEventListener('DOMContentLoaded', updateActivateDay);
+
 
 function markItemsAsInThePast(doc) {
   var now = dateNow();
