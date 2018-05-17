@@ -419,6 +419,26 @@ Array.from(document.querySelector('nav').children).forEach(function(btn) {
   };
 });
 
+var day1 = document.getElementById('nav_day1');
+var day2 = document.getElementById('nav_day2');
+function updateActivateDay() {
+  var active = day1;
+  var notActive = day2;
+  if (document.scrollingElement.scrollTop >=
+      document.getElementById('day2').offsetTop -93) {
+    active = day2;
+    notActive = day1;
+  }
+  if (!active.classList.contains('active')) {
+    active.classList.add('active')
+  }
+  if (notActive.classList.contains('active')) {
+    notActive.classList.remove('active')
+  }
+}
+window.onscroll = updateActivateDay;
+updateActivateDay()
+
 function markItemsAsInThePast(doc) {
   var now = dateNow();
   Array.from(doc.querySelectorAll('[datetime]')).forEach(function(talk) {
@@ -469,6 +489,7 @@ function checkCurrent() {
           var d = new DOMParser()
           var doc = d.parseFromString(text, 'text/html')
           markItemsAsInThePast(doc);
+          updateActivateDay();
           setDOM(document, doc.documentElement);
           document.querySelector('.notice').removeAttribute('hidden');
           setTimeout(function() {
