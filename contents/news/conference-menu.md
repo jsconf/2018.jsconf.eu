@@ -20,7 +20,6 @@ We can't wait to welcome you all at Arena Berlin in just over 2 weeks. To shorte
 - Marmalade specialties: Strawberry vanilla, cherry chocolate & apricot
 - Pancakes with maple syrup fresh from the oven
 
-
 ## LUNCH
 
 ###  SALAD
@@ -61,7 +60,7 @@ We can't wait to welcome you all at Arena Berlin in just over 2 weeks. To shorte
 - Marmalade specialties: Strawberry vanilla, cherry chocolate & apricot
 - Belgian waffles with raspberries
 - Butter, pastries, baguette and croissants
-- Vegan alternatives to scrambled eggs, yoghurt, muesli, fruit salad, pastries, pancakes and marmalade will be available.
+- Vegan alternatives to scrambled eggs, yogurt, muesli, fruit salad, pastries, pancakes and marmalade will be available.
 
 ## LUNCH
 
@@ -69,9 +68,9 @@ We can't wait to welcome you all at Arena Berlin in just over 2 weeks. To shorte
 
 Lentil salad with mango, cucumber and balm
 
-### INDIAN DISHES
+### CURRIES
 
-- Yellow Masala Curry with chickpeas, Indian cream cheese and fragrant rice
+- Yellow Masala Curry with chickpeas, cream cheese and fragrant rice
 - Cauliflower korma with potatoes, cumin, ginger and naan bread
 
 ### SNACKS
@@ -88,17 +87,17 @@ Lentil salad with mango, cucumber and balm
 
 ## CHILDRENS MENU
 
-### LUNCH
-- Potato-gnocchis with Parmesan and cherry tomatos
+### CHILDRENS LUNCH
+- Potato gnocchis with parmesan and cherry tomatos
 - Eggplant salad
 - Dessert of the day
 
-### DINNER
+### CHILDRENS DINNER
 
-- Fried rice with asian vegetables and egg omelet
+- Fried rice with vegetables and egg omelet
 - Tomato rice with cherry tomatoes, grilled watermelon and fresh mint
 - Dessert of the day
 
-### LUNCH DAY 2
-- Spaetzle with cheese cream sauce and chive
+### CHILDRENS LUNCH DAY 2
+- Spätzle with cheese cream sauce and chive
 - Dessert from the truck: Sweet potato fries with apple puree and cinnamonsugar
