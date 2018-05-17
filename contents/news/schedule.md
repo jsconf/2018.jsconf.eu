@@ -4,6 +4,7 @@ filename: :file/index.html
 
 title: Full Schedule
 date: 2018-05-18
+image: contents:images/schedule-sample.png
 ----
 
 Below you'll find a high level overview of the events. See the **[full timetable of talks](/schedule/)** for the schedule during the main conference days.
