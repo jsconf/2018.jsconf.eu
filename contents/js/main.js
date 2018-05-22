@@ -14,6 +14,7 @@ function executeEarlyish() {
     return;
   }
   ranOnce = true;
+  addLink('prefetch', '/news/schedule/');
   addLink('prefetch', '/schedule/');
   prefetchTito();
   pingTypekit();
