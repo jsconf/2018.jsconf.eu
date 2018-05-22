@@ -1,11 +1,7 @@
 {
   "info": {
     "currentDay": 1,
-<<<<<<< HEAD
-    "generationTime": "Tue May 22 2018 15:10:10 GMT+0200 (CEST)"
-=======
-    "generationTime": "Tue May 15 2018 17:23:01 GMT+0200 (CEST)"
->>>>>>> Add dateTime to JSON to make processing easier.
+    "generationTime": "Tue May 22 2018 15:11:29 GMT+0200 (CEST)"
   },
   "schedule": {
     "1": {
@@ -101,12 +97,8 @@
           "duration": 30,
           "number": 16,
           "who": "Neha Sharma",
-<<<<<<< HEAD
-          "what": "Journey of JS community from 2 to 2k members"
-=======
           "what": "Journey of JS community from 2 to 2k members",
           "dateTime": "2018-06-02 11:30 GMT+0200"
->>>>>>> Add dateTime to JSON to make processing easier.
         }
       ],
       "12.00": [
@@ -131,12 +123,8 @@
           "duration": 30,
           "number": 17,
           "who": "Willian Martins",
-<<<<<<< HEAD
-          "what": "Back to the future of JS: the next features and amazing proposals"
-=======
           "what": "Back to the future of JS: the next features and amazing proposals",
           "dateTime": "2018-06-02 12:00 GMT+0200"
->>>>>>> Add dateTime to JSON to make processing easier.
         }
       ],
       "12.30": [
@@ -407,7 +395,8 @@
           "duration": 30,
           "number": 25,
           "who": "Jason Laster",
-          "what": "Time travel debugging: A step-by-step guide. "
+          "what": "Time travel debugging: A step-by-step guide. ",
+          "dateTime": "2018-06-02 17:45 GMT+0200"
         }
       ],
       "18.15": [
@@ -520,8 +509,8 @@
           "duration": 30,
           "number": 1,
           "who": "Ivan Moreno",
-<<<<<<< HEAD
-          "what": "Photorealistic Real Time Computer Graphics with Javascript"
+          "what": "Photorealistic Real Time Computer Graphics with Javascript",
+          "dateTime": "2018-06-03 10:00 GMT+0200"
         },
         {
           "day": 2,
@@ -532,11 +521,8 @@
           "duration": 30,
           "number": 14,
           "who": "Adrien Trauth",
-          "what": "Build Advanced Search Experiences with a Custom Query Language"
-=======
-          "what": "Photorealistic Real Time Computer Graphics with Javascript",
+          "what": "Build Advanced Search Experiences with a Custom Query Language",
           "dateTime": "2018-06-03 10:00 GMT+0200"
->>>>>>> Add dateTime to JSON to make processing easier.
         }
       ],
       "10.30": [
@@ -612,14 +598,9 @@
           "startTime": "11.45",
           "duration": 30,
           "number": 17,
-<<<<<<< HEAD
           "who": "AG Grid",
-          "what": "Visualising Enterprise Data with D3"
-=======
-          "who": "Brian Terlson & Benedikt Meurer",
-          "what": "What makes a JavaScript VM?",
+          "what": "Visualising Enterprise Data with D3",
           "dateTime": "2018-06-03 11:45 GMT+0200"
->>>>>>> Add dateTime to JSON to make processing easier.
         }
       ],
       "12.15": [
@@ -803,14 +784,9 @@
           "startTime": "16.45",
           "duration": 30,
           "number": 11,
-<<<<<<< HEAD
           "who": "Brian Terlson & Benedikt Meurer",
-          "what": "What makes a JavaScript VM?"
-=======
-          "who": "Datadog",
-          "what": "Talk",
+          "what": "What makes a JavaScript VM?",
           "dateTime": "2018-06-03 16:45 GMT+0200"
->>>>>>> Add dateTime to JSON to make processing easier.
         }
       ],
       "17.15": [
