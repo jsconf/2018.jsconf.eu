@@ -12,8 +12,12 @@ Below you'll find a high level overview of the events. See the **[full timetable
 ## Before the conference
 
 - Week before and after the conference: **[WhatTheFest Berlin](http://wwwtf.berlin/)**.
+- May 31st, Thursday, 19:00: CSSconf EU welcome evening (open to JSConf EU attendees). [Info](/news/warm-up-events/#thursday-may-31st-19-00)
+
+## June 1, Friday
+
 - June 1, Friday: **[CSSConf EU (Tickets sold separately)](https://2018.cssconf.eu/)**.
-- June 1, Friday: **JSConf EU Opening Party**, Location TBA, from 20:00.
+- June 1, Friday at 20:00: **JSConf EU Opening Party and Pre-Registration**. [Info](/news/warm-up-events/#friday-june-1st-jsconf-eu-pre-party-20-00).
 
 ## June 2, Saturday: **JSConf EU Day 1**, Arena Berlin
 
