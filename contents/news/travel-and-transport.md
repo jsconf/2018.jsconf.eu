@@ -31,3 +31,6 @@ Below are a two hotels we recommend, both a short walk away from our venue. If n
 
 If you’d like to team up with other attendees to travel to or stay in Berlin, let us and the community know on Twitter: @jsconfeu – we will help spread the word!
 
+# Venue
+
+Check out our [finding the entrance](/news/entrance/) page.
