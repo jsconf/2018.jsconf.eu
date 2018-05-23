@@ -40,7 +40,7 @@ We can't wait to welcome you all at Arena Berlin in just over 2 weeks. To shorte
 
 ### RICE
 
-- Fried rice with asian vegetables, egg omelet, chili and caramelized cashew nuts
+- Fried rice with vegetables, egg omelet, chili and caramelized cashew nuts
 - Warm rice salad: steamed fragrant rice with balm, baby spinach, rocket, orache and basil pesto
 - Tomato rice with cherry tomatoes, grilled watermelon and mint
 
@@ -58,7 +58,7 @@ We can't wait to welcome you all at Arena Berlin in just over 2 weeks. To shorte
 - Fruit salad and fruits
 - Bircher muesli and natural muesli
 - Marmalade specialties: Strawberry vanilla, cherry chocolate & apricot
-- Belgian waffles with raspberries
+- Hot Belgian waffles with raspberries
 - Butter, pastries, baguette and croissants
 - Vegan alternatives to scrambled eggs, yogurt, muesli, fruit salad, pastries, pancakes and marmalade will be available.
 
