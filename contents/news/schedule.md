@@ -21,7 +21,7 @@ Below you'll find a high level overview of the events. See the **[full timetable
 
 ## June 2, Saturday: **JSConf EU Day 1**, Arena Berlin
 
-- Breakfast from 8:30.
+- Breakfast from 8:30. [Find the entrance of our venue](/news/entrance/).
 - Grand opening at 09:30 (Seriously, do not miss this).
 - **[Detailed timetable of talks](/schedule/#day1)**
 - Dinner at around 19:30.

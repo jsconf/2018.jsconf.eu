@@ -273,7 +273,7 @@
   position: relative;
 }
 
-.responsive-image-wrapper img {
+.responsive-image-wrapper img, .responsive-image-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
