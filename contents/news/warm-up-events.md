@@ -11,7 +11,7 @@ In case you're arriving a few days early, we'd love to meet you at these events:
 
 ## Thursday, May 31st, 19:00
 
-CSSconf EU welcome evening (all JSConf attendees welcome) at [Oberhafenkantine](http://www.oberhafenkantine-berlin.de/).
+CSSconf Warmup sponsored by talent.io (all JSConf attendees welcome) at [Oberhafenkantine](http://www.oberhafenkantine-berlin.de/).
 
 ![Image of Oberhafenkantine Berlin](https://payload204.cargocollective.com/1/13/433503/6394823/OberhafenkantineReplikaBerlin_1340_c.jpg)
 
@@ -21,7 +21,7 @@ CSSconf EU welcome evening (all JSConf attendees welcome) at [Oberhafenkantine](
 
 If you're in Berlin on Friday, [consider going to CSSconf EU.](https://2018.cssconf.eu/)
 
-## Friday June 1st, JSConf EU Pre Party, 20:00
+## Friday June 1st, JSConf EU Pre Party, 21:00
 
 We're joining the CSSconf EU after-party for a chill night before JSConf EU.
 
