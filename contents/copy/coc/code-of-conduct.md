@@ -36,7 +36,7 @@ You can [make an anonymous report here](https://goo.gl/forms/JTszjaub5cJ3stO82).
 
 You can make a personal report by:
 
-*   Contacting a staff member, identified by STAFF badges, buttons, or shirts.
+*   Contacting a TEAM member, identified by TEAM buttons.
 *   Emailing us: [contact@jsconf.eu](mailto:contact@jsconf.eu).
 *   Calling us: We’ll publish a phone number that is staffed during main conference hours.
 
@@ -53,8 +53,7 @@ Our team will be happy to help you contact hotel/venue security, local law enfor
 
 We will have colored lanyards for attendees to indicate their comfort level with being photographed:
 
-*   **Black**: ask beforehand
-*   **Green**: fine to photograph
+*   **Black**: fine to photograph
 *   **Red**: do not photograph
 
 In case of any doubt, please ask before taking photographs of attendees, speakers or staff.
