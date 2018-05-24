@@ -5,24 +5,20 @@ As being responsible for this website, we take the protection of your personal d
 
 ## Responsible for the Website:
 
-```txt
-SinnerSchrader Deutschland GmbH | SinnerSchrader Group
-Völckersstraße 38 22765 Hamburg
+SinnerSchrader Deutschland GmbH | SinnerSchrader Group<br>
+Völckersstraße 38 22765 Hamburg<br>
 Germany
-```
 
 Managing Board: Matthias Schrader (CEO), Jürgen Alker, Dr. Axel Averdung, Holger Blank, Thomas Dyckhoff, Dr. Lars Finke, Martin Gassner, Peggy Hutchinson
 
 ## Responsible for Data Protection:
 
-```txt
-SinnerSchrader Deutschland GmbH | SinnerSchrader Group
-Data Protection Officer
-Völckersstraße 38
-22765 Hamburg
-Germany
+SinnerSchrader Deutschland GmbH | SinnerSchrader Group<br>
+Data Protection Officer<br>
+Völckersstraße 38<br>
+22765 Hamburg<br>
+Germany<br>
 datenschutz-ag@sinnerschrader.com
-```
 
 ## Visiting our Website:
 
