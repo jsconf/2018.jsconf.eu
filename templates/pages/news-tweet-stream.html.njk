@@ -3,7 +3,7 @@
 {% block content %}
   <article class="grid">
     <div class="grid-item-center md-content">
-      {{ page.html }}
+      {{ page.html | contentUrls(contents) }}
 
       <section id="tweets" style="min-height:{{ page.metadata.tweets.length * 300 }}px">
       </section>
