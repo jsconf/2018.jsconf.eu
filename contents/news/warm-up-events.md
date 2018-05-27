@@ -21,7 +21,7 @@ CSSconf Warmup sponsored by talent.io (all JSConf attendees welcome) at [Oberhaf
 
 If you're in Berlin on Friday, [consider going to CSSconf EU.](https://2018.cssconf.eu/)
 
-## Friday June 1st, JSConf EU Pre Party, 21:00
+## Friday June 1st, JSConf EU Warm Up, 21:00
 
 We're joining the CSSconf EU after-party for a chill night before JSConf EU.
 
