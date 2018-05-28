@@ -5,7 +5,6 @@ filename: :file/index.html
 title: We are officially sold out
 date: 2018-05-28
 tweets:
-  - "1000700965413179392"
   - "1000271127002992641"
   - "997826447002697728"
   - "997031210357592065"
