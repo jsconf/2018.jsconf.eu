@@ -168,6 +168,14 @@ async function main(params) {
   // ---- parse and generate markdown-files
   console.log(chalk.gray('awesome, that worked.'));
   Object.keys(sheets).forEach(sheetId => {
+    if (!sheetId) {
+      // Published pages create unnamed sheets.
+      return;
+    }
+    if (!sheetParams[sheetId]) {
+      console.log(chalk.red('Missing metadata for'), sheetId);
+      return;
+    }
     const {templateGlobals, dataFieldName, contentPath, parseSchedule} = sheetParams[sheetId];
     if (parseSchedule) {
       processSchedule(sheets[sheetId]);
