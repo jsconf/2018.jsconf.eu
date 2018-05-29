@@ -310,6 +310,19 @@ article.with-description {
 .notice a{
   color: inherit;
 }
+
+@media (min-width: 767px) {
+  .time-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .time-row-item{
+    flex: 1 0 0;
+  }
+}
+
 </style>
 
 </head>
@@ -335,6 +348,7 @@ article.with-description {
     <h2>Day {{ day }}</h2>
     <ul class="events">
       {% for session, talks in sessions %}
+        <div class="time-row">
         <li class="time" id="day{{ day }}-{{ session | replace('.', '-') }}">
           <h3>{{ session }}</h3>
         </li>
@@ -352,7 +366,7 @@ article.with-description {
           {% endfor %}
           <li
               datetime="{{ talk.dateTime }}"
-              class="session {{ talk.trackId }}"
+              class="session {{ talk.trackId }} time-row-item"
               {% if talkPage %}
                 id="talk-{{ talkPage.metadata.speaker.id }}"
               {% else %}
@@ -388,6 +402,7 @@ article.with-description {
             </article>
           </li>
         {% endfor %}
+        </div>
       {% endfor %}
     </ul>
     </div>
