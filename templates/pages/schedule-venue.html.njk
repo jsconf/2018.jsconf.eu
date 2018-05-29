@@ -1,5 +1,5 @@
 <!doctype html>
-<html generated="{{ Date.now() }}" version="2">
+<html generated="{{ Date.now() }}" version="3">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -19,18 +19,26 @@
   </style>
 
   <style id="style">
+
+
     body {
-        margin: 0;
-        padding: 0;
-        font-family: "jaf-domus", Arial, sans-serif;
-        background: #0C1222 url({{ contents.svg['schedule-header.svg'].url }}) 0 0 repeat;
-        color: white;
-        font-size: 2em;
+      margin: 0;
+      padding: 0;
+      font-family: "jaf-domus", Arial, sans-serif;
+      font-size: 2em;
+      color: #303F62;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      border: 0;
     }
     .wrapper{
-        background: rgba(12, 18, 34,.8);
-        height: 100vh;
-        width: 100vw;
+
         display: flex;
         align-items: center;
     }
@@ -39,6 +47,10 @@
       height: 100vh;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+    }
+    section:nth-child(2n) {
+      flex-basis: 100%;
     }
     header{
         font-family: "jaf-domus", 'Arial Narrow', sans-serif;
@@ -100,6 +112,9 @@
 </head>
 
 <body>
+<iframe
+    class="background"
+    src="https://paint-blobs.surge.sh/?preset=infoscreen&fullscreen"></iframe>
 <div class="wrapper">
   {% for day, sessions in schedule.schedule %}
       {% for session, talks in sessions %}
@@ -220,8 +235,14 @@ if (location.href.includes('cycle')) {
   }, 5000);
 }
 
+var startTime = 0
+if (startTime = location.hash.match(/\d+/)) {
+  overriddenTime = startTime[0];
+}
+
 var version = document.documentElement.getAttribute('version');
 var script = document.getElementById('inline').textContent;
+var lastText = '';
 function checkCurrent() {
   fetch('/schedule/venue.html', {cache: 'reload'}).then(function(response) {
     if (response.ok) {
@@ -232,6 +253,12 @@ function checkCurrent() {
           return;
         }
         if (generationTime != document.documentElement.getAttribute('generated')) {
+          var textWithoutTime = text.replace(generationTime, '');
+          if (textWithoutTime == lastText) {
+            console.info('Schedule unchanged except for generation time', generationTime);
+            return;
+          }
+          lastText = textWithoutTime;
           console.info('Updating schedule', generationTime);
           var d = new DOMParser()
           var doc = d.parseFromString(text, 'text/html')
