@@ -323,6 +323,72 @@ article.with-description {
   }
 }
 
+
+@media print {
+
+
+
+  header {
+    display: none;
+  }
+
+  li {
+    page-break-inside: avoid;
+  }
+
+  .notice{
+    display: none;
+  }
+
+  nav{
+    display: none;
+  }
+
+  .time-row{
+    display: flex;
+    flex-wrap: wrap;;
+    justify-content: flex-start;
+    page-break-inside: avoid;
+    border-bottom: 1px solid;
+  }
+
+  .time-row-item{
+    flex: 1 0 0;
+  }
+
+  .day{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  body{
+    color: black;
+    background-color: white;
+  }
+
+  .day h2{
+    color: black;
+  }
+
+  .day .session h3{
+    color: black;
+  }
+
+  .day .session h3 .speaker{
+    color: #A9A9A9;
+  }
+
+  .day .session .track{
+    color: #A9A9A9;
+  }
+
+  .day .session time {
+    color: black;
+  }
+
+}
+
+
 </style>
 
 </head>
