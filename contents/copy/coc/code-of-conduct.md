@@ -30,7 +30,7 @@ If someone makes you or anyone else feel unsafe or unwelcome, please report it a
 
 ### Anonymous report
 
-You can [make an anonymous report here](https://goo.gl/forms/JTszjaub5cJ3stO82). We can’t follow up an anonymous report with you directly, but we will fully investigate it and take whatever action is necessary to prevent a recurrence.
+You can [make an anonymous report here](https://docs.google.com/forms/d/e/1FAIpQLSebVmHYCWaf-vfQWA-OhIk3vtIEZwzaEPiTIOH-GOCquUZpjg/viewform). We can’t follow up an anonymous report with you directly, but we will fully investigate it and take whatever action is necessary to prevent a recurrence.
 
 ### Personal report
 
