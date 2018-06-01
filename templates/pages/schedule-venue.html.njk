@@ -243,10 +243,17 @@ if (startTime = location.hash.match(/\d+/)) {
   overriddenTime = startTime[0];
 }
 
+var pageLoadTime = Date.now();
+
 var version = document.documentElement.getAttribute('version');
 var script = document.getElementById('inline').textContent;
 var lastText = '';
 function checkCurrent() {
+  // Reload once per hour at 15 after to be robust for memory leaks.
+  if (Date.now() - pageLoadTime > 60 * 1000 * 60 && new Date().getMinutes() > 15) {
+    console.info('Memory reload')
+    location.href = location.href;
+  }
   fetch('/schedule/venue.html', {cache: 'reload'}).then(function(response) {
     if (response.ok) {
       response.text().then(function(text) {
@@ -285,7 +292,7 @@ function checkCurrent() {
   });
 }
 
-setInterval(checkCurrent, 1000 * 5);  // Check every 30 seconds
+setInterval(checkCurrent, 1000 * 5);  // Check every 5 seconds
 setInterval(activate.bind(null, document), 500);
 
 </script>
