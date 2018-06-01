@@ -85,7 +85,7 @@
       display: flex;
       align-items: center;
       transform: translateX(-1000px) translateZ(0);
-      transition: transform 2s ease-in-out;
+      /*transition: transform 2s ease-in-out;*/
       display:none;
     }
     .session.active {
@@ -93,7 +93,7 @@
     }
     .session.previous {
       transform: translateX(2000px) translateZ(0);
-      transition: transform 2s ease-in-out;
+      /*transition: transform 2s ease-in-out;*/
     }
     .session.inplay {
       display: flex;
@@ -101,8 +101,8 @@
 
     .session .info > * {
       transform: translateY(-1000px) translateZ(0);
-      transition: transform 2s;
-      transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+      /*transition: transform 2s;
+      transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);*/
     }
     .session.active .info > * {
       transform: translateY(0) translateZ(0) !important;
@@ -121,6 +121,7 @@
         {% set talkIndex = 0 %}
         <div class="session" id="session-{{day}}-{{ session | replace('.', '-') }}">
         {% for talk in talks %}
+          {% if talkIndex < 2 %}
           {% set talkIndex = talkIndex + 1 %}
           {% set talkPage = '' %}
           {% for page in contents.speakers._.pages %}
@@ -148,6 +149,7 @@
               <div class=talk>{{ talk.who }}</div>
             </div>
           </section>
+          {% endif %}
         {% endfor %}
         </div>
       {% endfor %}
@@ -232,6 +234,7 @@ if (location.href.includes('cycle')) {
   setInterval(function() {
     var cur = document.querySelector('.active section');
     overriddenTime = Date.parse(cur.getAttribute('datetime'));
+    console.info('New time', new Date(overriddenTime))
   }, 5000);
 }
 
