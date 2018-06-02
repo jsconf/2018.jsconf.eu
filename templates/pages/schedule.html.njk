@@ -534,11 +534,26 @@ function updateActivateDay() {
 window.onscroll = updateActivateDay;
 document.addEventListener('DOMContentLoaded', updateActivateDay);
 
+/**
+ * Date.parse isn't working in Safari for our datetime strings so thank you Stackoverflow
+ */
+function parseDate(date) {
+  if (!date) {
+    return NaN;
+  }
+
+  const parsed = Date.parse(date);
+  if (!isNaN(parsed)) {
+    return parsed;
+  }
+
+  return Date.parse(date.replace(/-/g, '/').replace(/[a-z]+/gi, ' '));
+}
 
 function markItemsAsInThePast(doc) {
   var now = dateNow();
   Array.from(doc.querySelectorAll('[datetime]')).forEach(function(talk) {
-    var time = Date.parse(talk.getAttribute('datetime'));
+    var time = parseDate(talk.getAttribute('datetime'));
     if (time < now) {
       if (!talk.classList.contains('in-the-past')) {
         talk.classList.add('in-the-past')
