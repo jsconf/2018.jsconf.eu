@@ -473,16 +473,18 @@
           "who": "all",
           "what": "Dinner and expo time in the festival and sponsors area",
           "dateTime": "2018-06-02 19:16 GMT+0200"
-        },
+        }
+      ],
+      "19.45": [
         {
           "day": 1,
           "date": "2018-06-02",
           "track": "Community Lounge",
           "trackId": "community",
-          "startTime": "19.16",
+          "startTime": "19.45",
           "what": "Meet and Greet (30 mins) & VR installations",
           "detail": "All the Community Lounge speakers will be here to hangout and answer your questions about their talks.\n\nVR Installations:\n- Wilde Eastern / Christina Elizabeth Hall\n- Pore / Andrés Cuervo",
-          "dateTime": "2018-06-02 19:16 GMT+0200"
+          "dateTime": "2018-06-02 19:45 GMT+0200"
         }
       ],
       "21.00": [
