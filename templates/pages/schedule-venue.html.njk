@@ -176,7 +176,7 @@ function activate(doc) {
   sections.forEach(function(section, index) {
     var session = section.parentElement;
     var time = Date.parse(section.getAttribute('datetime'));
-    var future = now() < time;
+    var future = now() < (time + 5 * 60 * 1000); // 5 minutes offset
     section.setAttribute('in-future', future);
     if (future && inFuture == 0) {
       if (!session.classList.contains('active')) {
@@ -233,7 +233,7 @@ function now() {
 if (location.href.includes('cycle')) {
   setInterval(function() {
     var cur = document.querySelector('.active section');
-    overriddenTime = Date.parse(cur.getAttribute('datetime'));
+    overriddenTime = Date.parse(cur.getAttribute('datetime')) + 6 * 60 * 1000;
     console.info('New time', new Date(overriddenTime))
   }, 5000);
 }
