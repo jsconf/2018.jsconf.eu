@@ -1,0 +1,4 @@
+{
+  "template": "pages/redirect.html.njk",
+  "redirectUrl": "/speakers/benedikt-meurer-what-makes-a-javascript-vm.html"
+}
