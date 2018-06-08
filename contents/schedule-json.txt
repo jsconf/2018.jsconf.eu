@@ -1,7 +1,7 @@
 {
   "info": {
-    "currentDay": 1,
-    "generationTime": "Tue May 29 2018 18:13:26 GMT+0200 (CEST)"
+    "currentDay": 2,
+    "generationTime": "Thu Jun 07 2018 12:44:39 GMT+0200 (CEST)"
   },
   "schedule": {
     "1": {
@@ -82,6 +82,16 @@
           "startTime": "11.00",
           "what": "Break Program",
           "detail": "_Talks begin at 11:05_\n- BerlinJS / Robin Mehner\n- Choose Your Own Instrument / Tiffany Conroy",
+          "dateTime": "2018-06-02 11:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "11.00",
+          "what": "Break Program",
+          "detail": "- Web Standards / Google Cloud Platform",
           "dateTime": "2018-06-02 11:00 GMT+0200"
         }
       ],
@@ -187,6 +197,18 @@
           "dateTime": "2018-06-02 13:00 GMT+0200"
         }
       ],
+      "13.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "13.30",
+          "what": "Lunch Program",
+          "detail": "- V8 / Google Cloud Platform",
+          "dateTime": "2018-06-02 13:30 GMT+0200"
+        }
+      ],
       "14.00": [
         {
           "day": 1,
@@ -286,6 +308,16 @@
           "startTime": "15.30",
           "what": "Break Program",
           "detail": "_Talks begin at 15:35_\n- Up.front / Katharina Jockenhöfer\n- Code Curious / Ferdous Nasri",
+          "dateTime": "2018-06-02 15:30 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "15.30",
+          "what": "Break Program",
+          "detail": "- Front-end frameworks / Google Cloud Platform",
           "dateTime": "2018-06-02 15:30 GMT+0200"
         }
       ],
@@ -492,11 +524,39 @@
           "track": "Back Track",
           "trackId": "backtrack",
           "startTime": "21.00",
-          "duration": 30,
+          "duration": 15,
           "number": 15,
-          "who": "Lin Clark",
-          "what": "Secret Talk",
+          "who": "Re-run of Conf Opening",
+          "what": "Live:JS and Nested Loops",
           "dateTime": "2018-06-02 21:00 GMT+0200"
+        }
+      ],
+      "21.15": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "21.15",
+          "duration": 10,
+          "number": 16,
+          "who": "Lin Clark",
+          "what": "Baby’s First Rust+WebAssembly module: Say hi to JSConf EU!",
+          "dateTime": "2018-06-02 21:15 GMT+0200"
+        }
+      ],
+      "21.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "21.30",
+          "duration": null,
+          "number": 17,
+          "who": "all",
+          "what": "Party Day 1",
+          "dateTime": "2018-06-02 21:30 GMT+0200"
         }
       ]
     },
@@ -717,8 +777,20 @@
           "trackId": "community",
           "startTime": "13.15",
           "what": "Lunch Program",
-          "detail": "_Talks begin at 13:05_\n- ClojureBridge / Danielle Tomlinson\n- OMGDPR / Chris Adams\n- Afrotech Fest / Debs Durojaiye\n- ReDI School / Inana Daher, Obay Mardini\n- Spektrum / Wolf Bittner\n\nVR Installation:\nPore / Andrés Cuervo",
+          "detail": "_Talks begin at 13:20_\n- ClojureBridge / Danielle Tomlinson\n- OMGDPR / Chris Adams\n- Afrotech Fest / Debs Durojaiye\n- ReDI School / Inana Daher, Obay Mardini\n- Spektrum / Wolf Bittner\n\nVR Installation:\nPore / Andrés Cuervo",
           "dateTime": "2018-06-03 13:15 GMT+0200"
+        }
+      ],
+      "13.45": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "13.45",
+          "what": "Lunch Program",
+          "detail": "- Google booth: Node.js TSC / Google Cloud Platform\n- Mozilla booth: Intro to Rust (and into the Arch!\n- 1&1 booth: Lottery drawing",
+          "dateTime": "2018-06-03 13:45 GMT+0200"
         }
       ],
       "14.15": [
@@ -809,6 +881,16 @@
           "what": "Break Program",
           "detail": "_Talks begin at 15:50_\n- PyLadies / Jessica Greene\n- NodeSchool Berlin / Finn Pauls\n- Open Tech School / Mohamed Oun",
           "dateTime": "2018-06-03 15:45 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "15.45",
+          "what": "Break Program",
+          "detail": "- AMP & PWA / Google Cloud Platform",
+          "dateTime": "2018-06-03 15:45 GMT+0200"
         }
       ],
       "16.15": [
@@ -847,7 +929,7 @@
           "duration": 30,
           "number": 11,
           "who": "Mathias Bynens & Benedikt Meurer",
-          "what": "What makes a JavaScript VM?",
+          "what": "JavaScript Engines: The Good Parts™",
           "dateTime": "2018-06-03 16:45 GMT+0200"
         }
       ],
