@@ -1,0 +1,110 @@
+----
+template: pages/news-item.html.njk
+filename: :file/index.html
+
+title: Photos of JSConf EU 2018
+date: 2018-06-01
+image: contents:images/2018/JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4011.jpg
+imageGallery:
+  directory: 2018
+  files:
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-3858.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-3877.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-3967.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-3976.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-3991.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4011.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4045.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4055.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4122.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4225.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4231.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4253.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4289.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4310.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4406.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4425.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4458.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4480.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4485.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4520.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4560.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4630.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4634.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4738.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4782.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4825.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4855.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4873.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4917.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-4947.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5078.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5109.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5176.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5276.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5289.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5326.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5351.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5443.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5476.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5503.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5640.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5750.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5798.jpg
+    - JSConf_2018_Day_1_JuliaLukaLilaNitzschke_Zoooi-5834.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-5931.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-5949.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6000.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6030.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6127.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6194.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6238.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6257.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6282.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6340.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6347.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6400.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6443.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6460.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6474.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6519.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6551.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6616.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6758.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6780.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6799.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6839.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6938.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6995.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7023.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7086.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7122.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7193.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7261.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7292.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7347.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7458.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7465.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7569.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7577.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7601.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7680.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7712.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7745.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7815.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7866.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7876.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7877.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7882.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7888.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7960.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-7974.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-8021.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-8043.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-8067.jpg
+    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-8109.jpg
+----
+
+Thanks everyone for coming! Enjoy this selection of photos from JSConf EU 2018! For a nicer grid and full resolution, check out the [Google Photos album](https://photos.google.com/share/AF1QipPqc9JDLNvcbtLFJ27LSHJUE1QK3C51XIMRD8rjwQm5jQQw4UNJdZsieNZ8PzHC7g?key=VU4zN2l0eWVSeDB1QmxTaWV6TDFSM0hURXA5RXJR).
+
+(c) All pictures taken by [Julia Luka Lila Nitschke](http://zoooi.de/).
