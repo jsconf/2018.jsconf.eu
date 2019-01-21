@@ -62,7 +62,6 @@ imageGallery:
     - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6257.jpg
     - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6282.jpg
     - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6340.jpg
-    - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6347.jpg
     - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6400.jpg
     - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6443.jpg
     - JSConf_2018_Day_2_JuliaLukaLilaNitzschke_Zoooi-6460.jpg
