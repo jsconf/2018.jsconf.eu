@@ -69,3 +69,4 @@ In the sources-panel, search for and open (Cmd+O) the file `plugins/nunjucks.js`
 [templating docs]: https://mozilla.github.io/nunjucks/templating.html
 [wintersmith-documentation]: https://github.com/jnordberg/wintersmith#quick-start
 [frontmatter]: https://jekyllrb.com/docs/frontmatter/
+
