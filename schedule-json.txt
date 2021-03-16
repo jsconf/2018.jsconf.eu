@@ -1,0 +1,1032 @@
+{
+  "info": {
+    "currentDay": 2,
+    "generationTime": "Thu Jun 07 2018 12:44:39 GMT+0200 (CEST)"
+  },
+  "schedule": {
+    "1": {
+      "8.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "8.30",
+          "duration": 60,
+          "number": null,
+          "who": "all",
+          "what": "Breakfast",
+          "dateTime": "2018-06-02 8:30 GMT+0200"
+        }
+      ],
+      "9.27": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "9.27",
+          "duration": 30,
+          "number": 0,
+          "who": "Curators",
+          "what": "Opening JSConf EU 2018",
+          "dateTime": "2018-06-02 9:27 GMT+0200"
+        }
+      ],
+      "10.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "10.00",
+          "duration": 30,
+          "number": 1,
+          "who": "Sarah Groff Hennigh-Palermo",
+          "what": "Kablooie: A History of Errors & a Future of Solutions",
+          "dateTime": "2018-06-02 10:00 GMT+0200"
+        }
+      ],
+      "10.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "10.30",
+          "duration": 30,
+          "number": 2,
+          "who": "Patricia Realini",
+          "what": "Existential Engineering or How Ethics Precedes Error Handling",
+          "dateTime": "2018-06-02 10:30 GMT+0200"
+        }
+      ],
+      "11.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "11.00",
+          "duration": 30,
+          "number": null,
+          "who": "all",
+          "what": "Break",
+          "dateTime": "2018-06-02 11:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "11.00",
+          "what": "Break Program",
+          "detail": "_Talks begin at 11:05_\n- BerlinJS / Robin Mehner\n- Choose Your Own Instrument / Tiffany Conroy",
+          "dateTime": "2018-06-02 11:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "11.00",
+          "what": "Break Program",
+          "detail": "- Web Standards / Google Cloud Platform",
+          "dateTime": "2018-06-02 11:00 GMT+0200"
+        }
+      ],
+      "11.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "11.30",
+          "duration": 30,
+          "number": 3,
+          "who": "Daniel Ehrenberg",
+          "what": "Native BigInts in JavaScript: A Case Study in TC39",
+          "dateTime": "2018-06-02 11:30 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "11.30",
+          "duration": 30,
+          "number": 16,
+          "who": "Neha Sharma",
+          "what": "Journey of JS community from 2 to 2k members",
+          "dateTime": "2018-06-02 11:30 GMT+0200"
+        }
+      ],
+      "12.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "12.00",
+          "duration": 30,
+          "number": 4,
+          "who": "Marcy Sutton",
+          "what": "Empathy-Driven Development",
+          "dateTime": "2018-06-02 12:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "12.00",
+          "duration": 30,
+          "number": 17,
+          "who": "Willian Martins",
+          "what": "Back to the future of JS: the next features and amazing proposals",
+          "dateTime": "2018-06-02 12:00 GMT+0200"
+        }
+      ],
+      "12.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "12.30",
+          "duration": 30,
+          "number": 5,
+          "who": "Erin Zimmer",
+          "what": "Further Adventures of the Event Loop",
+          "dateTime": "2018-06-02 12:30 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "12.30",
+          "duration": 30,
+          "number": 18,
+          "who": "Igor Trindade Oliveira",
+          "what": "Tales From the Trenches: Fingerprints on the Web",
+          "dateTime": "2018-06-02 12:30 GMT+0200"
+        }
+      ],
+      "13.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "13.00",
+          "duration": 60,
+          "number": null,
+          "who": "all",
+          "what": "Lunch",
+          "dateTime": "2018-06-02 13:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "13.00",
+          "what": "Lunch Program",
+          "detail": "_Talks begin at 13:05_\n- RailsGirls Summer of Code / Laura\n- Women Tech Makers Berlin / Corina Gheorghe\n- Alva / Julian, Markus, Tilman\n- Common Voice / Michael Henretty\n- codebar Berlin / Amber Wilson",
+          "dateTime": "2018-06-02 13:00 GMT+0200"
+        }
+      ],
+      "13.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "13.30",
+          "what": "Lunch Program",
+          "detail": "- V8 / Google Cloud Platform",
+          "dateTime": "2018-06-02 13:30 GMT+0200"
+        }
+      ],
+      "14.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "14.00",
+          "duration": 30,
+          "number": 6,
+          "who": "Shelley Vohr",
+          "what": "Asynchrony: Under the Hood",
+          "dateTime": "2018-06-02 14:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "14.00",
+          "duration": 30,
+          "number": 19,
+          "who": "Rich Harris",
+          "what": "Computer, build me an app",
+          "dateTime": "2018-06-02 14:00 GMT+0200"
+        }
+      ],
+      "14.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "14.30",
+          "duration": 30,
+          "number": 7,
+          "who": "Emil Bay",
+          "what": "Hand-crafting WebAssembly",
+          "dateTime": "2018-06-02 14:30 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "14.30",
+          "duration": 30,
+          "number": 20,
+          "who": "Hannes Schluchtmann",
+          "what": "Quirks and surprises of webdev in China",
+          "dateTime": "2018-06-02 14:30 GMT+0200"
+        }
+      ],
+      "15.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "15.00",
+          "duration": 30,
+          "number": 8,
+          "who": "Kim Crayton",
+          "what": "Unintended Consequences: How to Reduce Exclusionary Practices In Our Organizations and Communities",
+          "dateTime": "2018-06-02 15:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "15.00",
+          "duration": 30,
+          "number": 21,
+          "who": "Georgios Kaleadis",
+          "what": "About Coding Kids and Screaming Carrots",
+          "dateTime": "2018-06-02 15:00 GMT+0200"
+        }
+      ],
+      "15.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "15.30",
+          "duration": 30,
+          "number": null,
+          "who": "all ",
+          "what": "Break",
+          "dateTime": "2018-06-02 15:30 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "15.30",
+          "what": "Break Program",
+          "detail": "_Talks begin at 15:35_\n- Up.front / Katharina Jockenhöfer\n- Code Curious / Ferdous Nasri",
+          "dateTime": "2018-06-02 15:30 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "15.30",
+          "what": "Break Program",
+          "detail": "- Front-end frameworks / Google Cloud Platform",
+          "dateTime": "2018-06-02 15:30 GMT+0200"
+        }
+      ],
+      "16.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "16.00",
+          "duration": 30,
+          "number": 9,
+          "who": "Florence Okoye",
+          "what": "Hey you, do you even design?",
+          "dateTime": "2018-06-02 16:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "16.00",
+          "duration": 30,
+          "number": 22,
+          "who": "Tejas Kumar",
+          "what": "From You Can't to You Can: The Welcoming Nature of Javascript",
+          "dateTime": "2018-06-02 16:00 GMT+0200"
+        }
+      ],
+      "16.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "16.30",
+          "duration": 30,
+          "number": 10,
+          "who": "Valerie Woolard Srinivasan",
+          "what": "Logging Off: Improving Low-Connectivity Experiences on the Web",
+          "dateTime": "2018-06-02 16:30 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "16.30",
+          "duration": 30,
+          "number": 23,
+          "who": "Myles Borins",
+          "what": "Please wait... loading: a tale of two loaders",
+          "dateTime": "2018-06-02 16:30 GMT+0200"
+        }
+      ],
+      "17.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "17.00",
+          "duration": 30,
+          "number": 11,
+          "who": "Stephanie Nemeth",
+          "what": "Haute Codeture: Clothing as a Canvas",
+          "dateTime": "2018-06-02 17:00 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "17.00",
+          "duration": 30,
+          "number": 24,
+          "who": "Alaina Kafkes",
+          "what": "When Chomsky Met JavaScript: Exploring the Linguistics Behind Regular Expressions",
+          "dateTime": "2018-06-02 17:00 GMT+0200"
+        }
+      ],
+      "17.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "17.30",
+          "duration": 15,
+          "number": null,
+          "who": "all",
+          "what": "Break",
+          "dateTime": "2018-06-02 17:30 GMT+0200"
+        }
+      ],
+      "17.45": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "17.45",
+          "duration": 30,
+          "number": 12,
+          "who": "Tracy Hinds",
+          "what": "Merge Conflict: a case study and application of peer conflict management training in Node.js",
+          "dateTime": "2018-06-02 17:45 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "17.45",
+          "duration": 30,
+          "number": 25,
+          "who": "Jason Laster",
+          "what": "Time travel debugging: A step-by-step guide. ",
+          "dateTime": "2018-06-02 17:45 GMT+0200"
+        }
+      ],
+      "18.15": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "18.15",
+          "duration": 30,
+          "number": 13,
+          "who": "Alvaro Videla",
+          "what": "Metaphors We Compute By",
+          "dateTime": "2018-06-02 18:15 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "18.15",
+          "duration": 30,
+          "number": 26,
+          "who": "Miguel Jiménez Esún",
+          "what": "Metro: Scaling JavaScript Build Systems",
+          "dateTime": "2018-06-02 18:15 GMT+0200"
+        }
+      ],
+      "18.45": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "18.45",
+          "duration": 30,
+          "number": 14,
+          "who": "Ryan Dahl",
+          "what": "10 Things I Regret About Node.js",
+          "dateTime": "2018-06-02 18:45 GMT+0200"
+        }
+      ],
+      "19.15": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "19.15",
+          "duration": 1,
+          "number": null,
+          "who": "Curators",
+          "what": "Closing Day 1",
+          "dateTime": "2018-06-02 19:15 GMT+0200"
+        }
+      ],
+      "19.16": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "19.16",
+          "duration": 104,
+          "number": null,
+          "who": "all",
+          "what": "Dinner and expo time in the festival and sponsors area",
+          "dateTime": "2018-06-02 19:16 GMT+0200"
+        },
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "19.16",
+          "what": "Meet and Greet (30 mins) & VR installations",
+          "detail": "All the Community Lounge speakers will be here to hangout and answer your questions about their talks.\n\nVR Installations:\n- Wilde Eastern / Christina Elizabeth Hall\n- Pore / Andrés Cuervo",
+          "dateTime": "2018-06-02 19:16 GMT+0200"
+        }
+      ],
+      "21.00": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "21.00",
+          "duration": 15,
+          "number": 15,
+          "who": "Re-run of Conf Opening",
+          "what": "Live:JS and Nested Loops",
+          "dateTime": "2018-06-02 21:00 GMT+0200"
+        }
+      ],
+      "21.15": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "21.15",
+          "duration": 10,
+          "number": 16,
+          "who": "Lin Clark",
+          "what": "Baby’s First Rust+WebAssembly module: Say hi to JSConf EU!",
+          "dateTime": "2018-06-02 21:15 GMT+0200"
+        }
+      ],
+      "21.30": [
+        {
+          "day": 1,
+          "date": "2018-06-02",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "21.30",
+          "duration": null,
+          "number": 17,
+          "who": "all",
+          "what": "Party Day 1",
+          "dateTime": "2018-06-02 21:30 GMT+0200"
+        }
+      ]
+    },
+    "2": {
+      "9.00": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "9.00",
+          "duration": 60,
+          "number": null,
+          "who": "all",
+          "what": "Breakfast",
+          "dateTime": "2018-06-03 9:00 GMT+0200"
+        }
+      ],
+      "9.55": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "9.55",
+          "duration": 30,
+          "number": 0,
+          "who": "MCs",
+          "what": "Opening Day 2",
+          "dateTime": "2018-06-03 9:55 GMT+0200"
+        }
+      ],
+      "10.00": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "10.00",
+          "duration": 30,
+          "number": 1,
+          "who": "Ivan Moreno",
+          "what": "Photorealistic Real Time Computer Graphics with Javascript",
+          "dateTime": "2018-06-03 10:00 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "10.00",
+          "duration": 30,
+          "number": 14,
+          "who": "Adrien Trauth",
+          "what": "Build Advanced Search Experiences with a Custom Query Language",
+          "dateTime": "2018-06-03 10:00 GMT+0200"
+        }
+      ],
+      "10.30": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "10.30",
+          "duration": 30,
+          "number": 2,
+          "who": "Charlie Gerard",
+          "what": "Look mum, no hands! — Brain controlled JavaScript",
+          "dateTime": "2018-06-03 10:30 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "10.30",
+          "duration": 30,
+          "number": 15,
+          "who": "Ali Tabibzadeh",
+          "what": "Essence of Community and Inclusiveness Profits from EU to Iran",
+          "dateTime": "2018-06-03 10:30 GMT+0200"
+        }
+      ],
+      "11.00": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "11.00",
+          "duration": 30,
+          "number": 3,
+          "who": "Ashi Krishnan",
+          "what": "Deep Learning in JS",
+          "dateTime": "2018-06-03 11:00 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "11.00",
+          "duration": 30,
+          "number": 16,
+          "who": "Gabrielle von Koss",
+          "what": "When you assume, you make an error out of you and me",
+          "dateTime": "2018-06-03 11:00 GMT+0200"
+        }
+      ],
+      "11.30": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "11.30",
+          "what": "Break Program",
+          "detail": "VR Installation:\nPore / Andrés Cuervo",
+          "dateTime": "2018-06-03 11:30 GMT+0200"
+        }
+      ],
+      "11.45": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "11.45",
+          "duration": 30,
+          "number": 4,
+          "who": "Brittany Storoz",
+          "what": "The Etymology of Programming",
+          "dateTime": "2018-06-03 11:45 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "11.45",
+          "duration": 30,
+          "number": 17,
+          "who": "Sean Landsman",
+          "what": "Visualising Enterprise Data with D3",
+          "dateTime": "2018-06-03 11:45 GMT+0200"
+        }
+      ],
+      "12.15": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "12.15",
+          "duration": 30,
+          "number": 5,
+          "who": "James Coglan",
+          "what": "Breaking Changes",
+          "dateTime": "2018-06-03 12:15 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "12.15",
+          "duration": 30,
+          "number": 18,
+          "who": "Ben Greenberg",
+          "what": "From Rabbi to Coder: How To Prepare for the Technical Interview",
+          "dateTime": "2018-06-03 12:15 GMT+0200"
+        }
+      ],
+      "12.45": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "12.45",
+          "duration": 30,
+          "number": 6,
+          "who": "Phil Nash",
+          "what": "Aggressive Web Apps",
+          "dateTime": "2018-06-03 12:45 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "12.45",
+          "duration": 30,
+          "number": 19,
+          "who": "Patima Tantiprasut",
+          "what": "Burn bright but don't burn out",
+          "dateTime": "2018-06-03 12:45 GMT+0200"
+        }
+      ],
+      "13.15": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "13.15",
+          "duration": 60,
+          "number": null,
+          "who": "all",
+          "what": "Lunch",
+          "dateTime": "2018-06-03 13:15 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "13.15",
+          "what": "Lunch Program",
+          "detail": "_Talks begin at 13:20_\n- ClojureBridge / Danielle Tomlinson\n- OMGDPR / Chris Adams\n- Afrotech Fest / Debs Durojaiye\n- ReDI School / Inana Daher, Obay Mardini\n- Spektrum / Wolf Bittner\n\nVR Installation:\nPore / Andrés Cuervo",
+          "dateTime": "2018-06-03 13:15 GMT+0200"
+        }
+      ],
+      "13.45": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "13.45",
+          "what": "Lunch Program",
+          "detail": "- Google booth: Node.js TSC / Google Cloud Platform\n- Mozilla booth: Intro to Rust (and into the Arch!\n- 1&1 booth: Lottery drawing",
+          "dateTime": "2018-06-03 13:45 GMT+0200"
+        }
+      ],
+      "14.15": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "14.15",
+          "duration": 30,
+          "number": 7,
+          "who": "Patrick Hamann",
+          "what": "To push, or not to push?! - The future of HTTP/2 server push",
+          "dateTime": "2018-06-03 14:15 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "14.15",
+          "duration": 30,
+          "number": 20,
+          "who": "Mike Samuel",
+          "what": "A Node.js Security Roadmap",
+          "dateTime": "2018-06-03 14:15 GMT+0200"
+        }
+      ],
+      "14.45": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "14.45",
+          "duration": 30,
+          "number": 8,
+          "who": "Paul Frazee",
+          "what": "Formalizing user rights on the Web",
+          "dateTime": "2018-06-03 14:45 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "14.45",
+          "duration": 30,
+          "number": 21,
+          "who": "Jordan Santell",
+          "what": "Exploring Augmented Reality on the Web",
+          "dateTime": "2018-06-03 14:45 GMT+0200"
+        }
+      ],
+      "15.15": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "15.15",
+          "duration": 30,
+          "number": 9,
+          "who": "TC39",
+          "what": "Panel",
+          "dateTime": "2018-06-03 15:15 GMT+0200"
+        }
+      ],
+      "15.45": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "15.45",
+          "duration": 30,
+          "number": null,
+          "who": "all",
+          "what": "Break",
+          "dateTime": "2018-06-03 15:45 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "15.45",
+          "what": "Break Program",
+          "detail": "_Talks begin at 15:50_\n- PyLadies / Jessica Greene\n- NodeSchool Berlin / Finn Pauls\n- Open Tech School / Mohamed Oun",
+          "dateTime": "2018-06-03 15:45 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Sponsor Booth",
+          "trackId": "sponsor",
+          "startTime": "15.45",
+          "what": "Break Program",
+          "detail": "- AMP & PWA / Google Cloud Platform",
+          "dateTime": "2018-06-03 15:45 GMT+0200"
+        }
+      ],
+      "16.15": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "16.15",
+          "duration": 30,
+          "number": 10,
+          "who": "Katie Fenn",
+          "what": "Securing your site like it's 1999",
+          "dateTime": "2018-06-03 16:15 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Side Track",
+          "trackId": "sidetrack",
+          "startTime": "16.15",
+          "duration": 30,
+          "number": 23,
+          "who": "Ola Gasidlo",
+          "what": "TCP - A story about hope, (pkg) loss && the missing link",
+          "dateTime": "2018-06-03 16:15 GMT+0200"
+        }
+      ],
+      "16.45": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "16.45",
+          "duration": 30,
+          "number": 11,
+          "who": "Mathias Bynens & Benedikt Meurer",
+          "what": "JavaScript Engines: The Good Parts™",
+          "dateTime": "2018-06-03 16:45 GMT+0200"
+        }
+      ],
+      "17.15": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "17.15",
+          "duration": 15,
+          "number": null,
+          "who": "all",
+          "what": "Break",
+          "dateTime": "2018-06-03 17:15 GMT+0200"
+        },
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Community Lounge",
+          "trackId": "community",
+          "startTime": "17.15",
+          "what": "Meet and Greet (15 mins)",
+          "detail": "All the Community Lounge speakers will be here to hangout and answer your questions about their talks.",
+          "dateTime": "2018-06-03 17:15 GMT+0200"
+        }
+      ],
+      "17.30": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "17.30",
+          "duration": 30,
+          "number": 12,
+          "who": "Tara Vancil",
+          "what": "Imagine This: A Web Without Servers",
+          "dateTime": "2018-06-03 17:30 GMT+0200"
+        }
+      ],
+      "18.00": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "18.00",
+          "duration": 30,
+          "number": 13,
+          "who": "Remy Sharp",
+          "what": "Using a modern web to recreate 1980s horribly slow and loud loading screens",
+          "dateTime": "2018-06-03 18:00 GMT+0200"
+        }
+      ],
+      "18.30": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "18.30",
+          "duration": 5,
+          "number": null,
+          "who": "Curators",
+          "what": "Closing Conference; Instructions for Party",
+          "dateTime": "2018-06-03 18:30 GMT+0200"
+        }
+      ],
+      "18.35": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "18.35",
+          "duration": 15,
+          "number": null,
+          "who": "all",
+          "what": "Group Foto",
+          "dateTime": "2018-06-03 18:35 GMT+0200"
+        }
+      ],
+      "19.00": [
+        {
+          "day": 2,
+          "date": "2018-06-03",
+          "track": "Back Track",
+          "trackId": "backtrack",
+          "startTime": "19.00",
+          "duration": null,
+          "number": null,
+          "who": "all",
+          "what": "Party Day 2 — by TBD",
+          "dateTime": "2018-06-03 19:00 GMT+0200"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+.break-test{background:red}@media (min-width:40rem){.break-test{background:blue}}@media (min-width:60rem){.break-test{background:#ff0}}@media (min-width:87.5rem){.break-test{background:pink}}
