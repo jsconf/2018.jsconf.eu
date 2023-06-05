@@ -5,20 +5,20 @@ As being responsible for this website, we take the protection of your personal d
 
 ## Responsible for the Website:
 
-SinnerSchrader Deutschland GmbH | SinnerSchrader Group<br>
-Völckersstraße 38 22765 Hamburg<br>
+Neighbourhoodie Software GmbH<br>
+Lausitzer Str. 10<br>
+10999 Berlin<br>
 Germany
 
-Managing Board: Matthias Schrader (CEO), Jürgen Alker, Dr. Axel Averdung, Holger Blank, Thomas Dyckhoff, Dr. Lars Finke, Martin Gassner, Peggy Hutchinson
+Managing Board: Simone Haas (CEO), Jan Lehnardt (CEO)
 
 ## Responsible for Data Protection:
 
-SinnerSchrader Deutschland GmbH | SinnerSchrader Group<br>
-Data Protection Officer<br>
-Völckersstraße 38<br>
-22765 Hamburg<br>
+Neighbourhoodie Software GmbH<br>
+Lausitzer Str. 10<br>
+10999 Berlin<br>
 Germany<br>
-datenschutz-ag@sinnerschrader.com
+[hi@neighbourhood.ie](mailto:hi@neighbourhood.ie)
 
 ## Visiting our Website:
 
@@ -109,7 +109,7 @@ Without prejudice to any other administrative or judicial remedy, you have the r
 
 The supervisory authority to which the complaint has been lodged shall inform the complainant of the status and results of the complaint, including the possibility of a judicial remedy according to Art. 78 GDPR.
 
-In order to process your request (please mail: [datenschutz-de@sinnerschrader.com](mailto:datenschutz-ag@sinnerschrader.com)), we are obliged to check your identity carefully. Please understand that we reserve the right - depending on the criticality of the data - to request further information or proof of identity. This serves in particular to protect your personal data from unauthorized access by third parties. We would like to point out that we reserve the right not to process requests that are received inappropriately frequently or without corresponding proof of identity. We will inform you of this in writing (via E-Mail).
+In order to process your request (please mail: [hi@neighbourhood.ie](mailto:hi@neighbourhood.ie)), we are obliged to check your identity carefully. Please understand that we reserve the right - depending on the criticality of the data - to request further information or proof of identity. This serves in particular to protect your personal data from unauthorized access by third parties. We would like to point out that we reserve the right not to process requests that are received inappropriately frequently or without corresponding proof of identity. We will inform you of this in writing (via E-Mail).
 
 ## Children
 
@@ -173,7 +173,7 @@ You will be asked to consent to the use of your personal data to receive our new
 
 #### JSConf EU
 
-"By entering your e-mail address and clicking the button below, you confirm that you are 16 years or older. You agree that the JSConf EU (represented by SinnerSchrader Deutschland GmbH, Völckersstraße 38, 22765 Hamburg) will use the data and information provided by you in connection with the use of the newsletter to regularly send you information about the JSConf EU by e-mail. By clicking below, you agree that JSconf EU may process your information in accordance with these terms. You can change your mind at any time by clicking the unsubscribe link in the footer of any e-mail you receive from us, or by contacting us at contact@jsconf.eu. JSConf EU will treat your information with respect. For further information, please see our privacy policy on our website."
+"By entering your e-mail address and clicking the button below, you confirm that you are 16 years or older. You agree that the JSConf EU (represented by Neighbourhoodie Software GmbH, Lausitzer Str. 10, 10999 Berlin, Germany) will use the data and information provided by you in connection with the use of the newsletter to regularly send you information about the JSConf EU by e-mail. By clicking below, you agree that JSconf EU may process your information in accordance with these terms. You can change your mind at any time by clicking the unsubscribe link in the footer of any e-mail you receive from us, or by contacting us at contact@jsconf.eu. JSConf EU will treat your information with respect. For further information, please see our privacy policy on our website."
 
 ### Statistical survey and analysis
 
